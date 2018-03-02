@@ -1,0 +1,7 @@
+app_key: 2rE6OpmrxTVKaZ1qIi7Cfvwsj79h7O3F
+locales:
+  en:
+    full: en_US
+    name: English
+    url: http://johnsonjones.test/
+timezone: UTC
