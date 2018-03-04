@@ -1,1 +1,84 @@
-body{background: #f4f4f4;}
+//Grid variables
+$col-1-width: 8%;
+
+//Grid MIXINS
+@mixin col-width($foo) {
+    flex-basis: $col-1-width * $foo;
+}
+
+//Grid basics
+
+%flex{
+    display: -webkit-flex;
+    display: flex;
+}
+
+%columns{
+    @extend %flex;
+    flex-direction: column;
+}
+
+
+.container {
+    width: 100%;
+}
+
+.padding{
+    padding: 16px; 
+}
+
+.row {
+    @extend %flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+//Columns
+.col-1 {
+    @extend %columns;
+    @include col-width(1);
+}
+.col-2 {
+    @extend %columns;
+    @include col-width(2);
+}
+.col-3 {
+    @extend %columns;
+    @include col-width(3);
+}
+.col-4 {
+    @extend %columns;
+    @include col-width(4);
+}
+.col-5 {
+    @extend %columns;
+    @include col-width(5);
+}
+.col-6 {
+    @extend %columns;
+    @include col-width(6);
+}
+.col-7 {
+    @extend %columns;
+    @include col-width(7);
+}
+.col-8 {
+    @extend %columns;
+    @include col-width(8);
+}
+.col-9 {
+    @extend %columns;
+    @include col-width(9);
+}
+.col-10 {
+    @extend %columns;
+    @include col-width(10);
+}
+.col-11 {
+    @extend %columns;
+    @include col-width(11);
+}
+.col-12 {
+    @extend %columns;
+    @include col-width(12);
+}
