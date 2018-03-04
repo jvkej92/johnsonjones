@@ -92,30 +92,6 @@ body blockquote:before {
   vertical-align: -1rem;
 }
 
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row {
   display: flex;
 }
@@ -135,6 +111,8 @@ body {
 .row {
   flex-direction: row;
   flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
 }
 
 .col-1 {
@@ -183,42 +161,6 @@ body {
 
 .col-12 {
   flex-basis: 96%;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
-}
-
-body {
-  background: #f4f4f4;
 }
 
 /*# sourceMappingURL=johnson.css.map */

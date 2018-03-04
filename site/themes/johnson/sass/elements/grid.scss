@@ -31,6 +31,8 @@ $col-1-width: 8%;
     @extend %flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
 }
 
 //Columns
