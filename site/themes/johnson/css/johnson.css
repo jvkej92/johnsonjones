@@ -3,7 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://use.typekit.net/rns0sjx.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald:500");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,42 +54,44 @@ table {
   border-spacing: 0;
 }
 
+h1, h2, h3, blockquote {
+  font-family: "oswald", sans-serif;
+  font-weight: 500;
+}
+
 body {
-  font-family: "neuzeit-grotesk", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.7;
 }
 
-body h1 {
+h1 {
   font-size: 3rem;
-  font-weight: 300;
 }
 
-body h2 {
+h2 {
   font-size: 2.5rem;
-  font-weight: 400;
 }
 
-body h3 {
+h3 {
   font-size: 2rem;
-  font-weight: 600;
 }
 
-body blockquote {
+blockquote {
   margin-top: 1rem;
   font-size: 1.7rem;
-  font-weight: 500;
   line-height: 1.3;
 }
 
-body blockquote:before {
+blockquote:before {
   color: #ccc;
   content: '“';
   font-size: 4.5rem;
   line-height: 0.1rem;
+  margin-left: -2.6rem;
   margin-right: 0.75rem;
-  vertical-align: -1rem;
+  vertical-align: -2rem;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row {
@@ -161,6 +163,11 @@ body blockquote:before {
 
 .col-12 {
   flex-basis: 96%;
+}
+
+body {
+  background: #f9f5f2;
+  color: #003359;
 }
 
 /*# sourceMappingURL=johnson.css.map */

@@ -31,3 +31,12 @@
 @import "layouts/contact.scss";
 @import "layouts/main-articles.scss";
 @import "layouts/articles.scss";
+
+  ///////////////////////
+ //  Universal Rules  //
+///////////////////////
+
+body{
+  background: $soft-white;
+  color: $navy-dark;
+}

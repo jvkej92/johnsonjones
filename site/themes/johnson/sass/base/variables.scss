@@ -1,21 +1,20 @@
 //Imports
-@import url("https://use.typekit.net/rns0sjx.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald:500');
 
 // Colors
 
-// $primary
-// $light
-// $faded
-// $secondary
-// $warning
-// $success
-// $dark
-// $muted
-// $bold
+$navy-dark: #003359;
+$navy-medium: #406683;
+$navy-light: #a6b8c5;
+$soft-white: #f9f5f2; 
+$red: #f12c3e;
+$light-blue: #64cfe9;
+$light-blue-2: #8bdbef;
+$light-blue-3: #c9eef7;
+$black-steel: #080706;
 
 //Fonts
-$typeface: "neuzeit-grotesk" ,sans-serif;
-$font-light: 300;
-$font-regular: 400;
-$font-semi-bold: 500;
-$font-bold: 600;
+$heading-font: "oswald", sans-serif;
+$body-font: "Open Sans" ,sans-serif;
+$font-regular: 300;
+$font-medium: 500;
