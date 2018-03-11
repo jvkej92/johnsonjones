@@ -17,6 +17,6 @@ elixir.config.publicPath = './';
 
 elixir(function(mix) {
     mix.sass(theme + '.scss', 'css/' + theme + '.css')
-        .browserSync({proxy: 'johnsonjones.test'});
+        .browserSync({proxy: 'johnsonjonesgroup.test'});
     mix.version('css/' + theme + '.css');
 });

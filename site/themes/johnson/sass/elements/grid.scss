@@ -11,11 +11,15 @@ $col-1-width: 8%;
 %flex{
     display: -webkit-flex;
     display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 %columns{
     @extend %flex;
-    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -29,10 +33,9 @@ $col-1-width: 8%;
 
 .row {
     @extend %flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 //Columns
@@ -83,4 +86,38 @@ $col-1-width: 8%;
 .col-12 {
     @extend %columns;
     @include col-width(12);
+}
+
+.col-stretch{
+    flex-basis: 100%;
+}
+
+//Alignment Classes
+
+.justify-around{
+    justify-content: space-around;
+}
+
+.justify-even{
+    justify-content: space-evenly;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-start{
+    justify-content: flex-start;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
+
+.justify-stretch{
+    justify-content: stretch;
+}
+
+.justify-center{
+    justify-content: center;
 }

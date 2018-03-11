@@ -8,6 +8,7 @@ $navy-medium: #406683;
 $navy-light: #a6b8c5;
 $soft-white: #f9f5f2; 
 $red: #f12c3e;
+$light-red: #f9acb3;
 $light-blue: #64cfe9;
 $light-blue-2: #8bdbef;
 $light-blue-3: #c9eef7;
@@ -18,3 +19,55 @@ $heading-font: "oswald", sans-serif;
 $body-font: "Open Sans" ,sans-serif;
 $font-regular: 300;
 $font-medium: 500;
+  /////////////////////////
+ //Color Schemes Classes//
+/////////////////////////
+
+
+//Text Colors
+.primary{
+    color: $navy-dark;
+}
+
+.dark{
+    color: $navy-medium;
+}
+
+.bold{
+    color: $navy-light;
+}
+
+.warning{
+    color: $red;
+}
+
+
+//Block colors
+div.primary{
+    background: $soft-white;
+}
+
+div.dark{
+    background: $navy-dark;
+}
+
+div.bold{
+    background: $navy-medium;
+}
+
+div.warning{
+    background: $light-red;
+}
+
+//Strong Colors
+strong{
+    color: $navy-light;
+}
+
+.bold strong{
+    color: $navy-dark;
+}
+
+.warning strong{
+    color: $soft-white;
+}

@@ -54,9 +54,54 @@ table {
   border-spacing: 0;
 }
 
+.primary {
+  color: #003359;
+}
+
+.dark {
+  color: #406683;
+}
+
+.bold {
+  color: #a6b8c5;
+}
+
+.warning {
+  color: #f12c3e;
+}
+
+div.primary {
+  background: #f9f5f2;
+}
+
+div.dark {
+  background: #003359;
+}
+
+div.bold {
+  background: #406683;
+}
+
+div.warning {
+  background: #f9acb3;
+}
+
+strong {
+  color: #a6b8c5;
+}
+
+.bold strong {
+  color: #003359;
+}
+
+.warning strong {
+  color: #f9f5f2;
+}
+
 h1, h2, h3, blockquote {
   font-family: "oswald", sans-serif;
   font-weight: 500;
+  line-height: 1.2;
 }
 
 body {
@@ -96,10 +141,14 @@ blockquote:before {
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row {
   display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -111,10 +160,9 @@ blockquote:before {
 }
 
 .row {
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .col-1 {
@@ -163,6 +211,38 @@ blockquote:before {
 
 .col-12 {
   flex-basis: 96%;
+}
+
+.col-stretch {
+  flex-basis: 100%;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-even {
+  justify-content: space-evenly;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-stretch {
+  justify-content: stretch;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 body {
