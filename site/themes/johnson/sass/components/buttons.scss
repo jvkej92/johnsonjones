@@ -1,0 +1,21 @@
+.btn{
+    @extend %oswald;
+    font-size: .7rem;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.btn-primary{
+    background: $red;
+    color: $soft-white;
+    border: 1px solid $red;
+    border-radius: 3px;
+}
+
+.btn-primary:hover{
+    background: $light-red;
+}

@@ -23,6 +23,7 @@ time, mark, audio, video {
   font-size: 18px;
   font: inherit;
   vertical-align: baseline;
+  z-index: 2;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -70,6 +71,10 @@ table {
   color: #f12c3e;
 }
 
+.light-text {
+  color: #f9f5f2;
+}
+
 div.primary {
   background: #f9f5f2;
 }
@@ -98,7 +103,11 @@ strong {
   color: #f9f5f2;
 }
 
-h1, h2, h3, blockquote {
+html {
+  font-size: 2vw;
+}
+
+h1, h2, h3, blockquote, .btn {
   font-family: "oswald", sans-serif;
   font-weight: 500;
   line-height: 1.2;
@@ -145,7 +154,7 @@ blockquote:before {
   }
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .hero {
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
@@ -153,7 +162,7 @@ blockquote:before {
 }
 
 @media (max-width: 768px) {
-  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row {
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .hero {
     flex-direction: column;
     flex-basis: 100%;
   }
@@ -252,6 +261,66 @@ blockquote:before {
 
 .justify-center {
   justify-content: center;
+}
+
+.btn {
+  font-size: .7rem;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.btn-primary {
+  background: #f12c3e;
+  color: #f9f5f2;
+  border: 1px solid #f12c3e;
+  border-radius: 3px;
+}
+
+.btn-primary:hover {
+  background: #f9acb3;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center center;
+  min-height: 812px;
+}
+
+.hero-blue-fliter {
+  -webkit-filter: grayscale(100%) brightness(30%) contrast(130%) sepia(100%) hue-rotate(170deg) saturate(300%);
+  filter: grayscale(100%) brightness(30%) contrast(130%) sepia(100%) hue-rotate(170deg) saturate(300%);
+}
+
+.hero-bw-fliter {
+  -webkit-filter: grayscale(100%) brightness(80%) contrast(130%);
+  filter: grayscale(100%) brightness(80%) contrast(130%);
+}
+
+.hero-content {
+  position: relative;
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: 2vh;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+@media (min-width: 968px) {
+  .hero-content {
+    padding: 10%;
+  }
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  padding-bottom: 32px;
 }
 
 .p {

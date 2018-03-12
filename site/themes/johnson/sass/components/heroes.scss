@@ -1,0 +1,42 @@
+.hero {
+    @extend %flex;
+}
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center center;
+    min-height: 812px;
+}
+
+// .hero-bg-img{
+//     position: relative;
+//     width: 100%;
+//     z-index: 1;
+//     height: 100%;
+// }
+.hero-blue-fliter {
+    filter: grayscale(100%) brightness(30%) contrast(130%) sepia(100%) hue-rotate(170deg) saturate(300%);
+}
+
+.hero-bw-fliter {
+    filter: grayscale(100%) brightness(80%) contrast(130%);
+}
+
+.hero-content {
+    position: relative;
+    box-sizing: border-box;
+    @include for-tablet-up{
+        padding: 10%;
+    }
+    padding: 15px;
+    font-size: 2vh;
+    align-self: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    padding-bottom: 32px;
+}

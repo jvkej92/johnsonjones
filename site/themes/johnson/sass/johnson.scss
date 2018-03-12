@@ -7,6 +7,11 @@
 @import "base/variables.scss";
 @import "base/typography.scss";
 
+//elements
+@import "elements/grid.scss";
+@import "elements/lists.scss";
+@import "elements/tables.scss";
+
 
 //components
 @import "components/buttons.scss";
@@ -18,10 +23,6 @@
 @import "components/navs.scss";
 @import "components/players.scss";
 
-//elements
-@import "elements/grid.scss";
-@import "elements/lists.scss";
-@import "elements/tables.scss";
 
 //layouts
 @import "layouts/home.scss";
