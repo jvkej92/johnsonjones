@@ -88,7 +88,7 @@ div.bold {
 }
 
 div.warning {
-  background: #f9acb3;
+  background: #f5616e;
 }
 
 strong {
@@ -154,7 +154,7 @@ blockquote:before {
   }
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .hero {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .callout, .hero {
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
@@ -162,7 +162,7 @@ blockquote:before {
 }
 
 @media (max-width: 768px) {
-  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .hero {
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .callout, .hero {
     flex-direction: column;
     flex-basis: 100%;
   }
@@ -264,7 +264,7 @@ blockquote:before {
 }
 
 .btn {
-  font-size: .7rem;
+  font-size: 20px;
   padding: 8px 16px;
   box-sizing: border-box;
   text-decoration: none;
@@ -281,7 +281,93 @@ blockquote:before {
 }
 
 .btn-primary:hover {
-  background: #f9acb3;
+  background: #f5616e;
+}
+
+.btn-secondary {
+  background: #003359;
+  color: #f9f5f2;
+  border: 1px solid #003359;
+  border-radius: 3px;
+}
+
+.btn-secondary:hover {
+  background: #406683;
+}
+
+.btn-skeleton {
+  background: none;
+  color: #f9f5f2;
+  border: 2px solid #f9f5f2;
+  border-radius: 3px;
+  padding: 7px 17px;
+}
+
+.btn-skeleton:hover {
+  background: #f9f5f2;
+  color: #003359;
+}
+
+.btn-skeleton-navy {
+  background: none;
+  color: #003359;
+  border: 2px solid #003359;
+  border-radius: 3px;
+  padding: 7px 17px;
+}
+
+.btn-skeleton-navy:hover {
+  background: #003359;
+  color: #f9f5f2;
+}
+
+.callout {
+  min-height: 320px;
+  padding: 60px auto 50px;
+}
+
+.callout-bg {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center center;
+  min-height: 320px;
+}
+
+.callout-blue-fliter {
+  -webkit-filter: grayscale(100%) brightness(30%) contrast(130%) sepia(100%) hue-rotate(170deg) saturate(300%);
+  filter: grayscale(100%) brightness(30%) contrast(130%) sepia(100%) hue-rotate(170deg) saturate(300%);
+}
+
+.callout-bw-fliter {
+  -webkit-filter: grayscale(100%) brightness(80%) contrast(130%);
+  filter: grayscale(100%) brightness(80%) contrast(130%);
+}
+
+.callout-content {
+  position: relative;
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: 2vh;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin: 86px auto;
+}
+
+@media (min-width: 968px) {
+  .callout-content {
+    padding: 10%;
+  }
+}
+
+.callout-content h1 {
+  font-size: 2.5rem;
+  padding-bottom: 32px;
+}
+
+.callout-content p {
+  padding-bottom: 32px;
 }
 
 .hero-bg {
