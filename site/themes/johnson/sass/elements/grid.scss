@@ -1,34 +1,63 @@
+//Media Queries
+@mixin for-phone-only {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-up {
+    @media (min-width: 968px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1224px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1824px) {
+        @content;
+    }
+}
+
+//Responsive collapse classes
+.collapse-tablet-down {
+    @include  for-tablet-up{
+        flex-basis: 100%;
+    }
+}
+
 //Grid variables
 $col-1-width: 8%;
-
 //Grid MIXINS
 @mixin col-width($foo) {
     flex-basis: $col-1-width * $foo;
 }
 
 //Grid basics
-
-%flex{
+%flex {
     display: -webkit-flex;
     display: flex;
     box-sizing: border-box;
     flex-direction: row;
     flex-wrap: wrap;
+    @include for-phone-only {
+        flex-direction: column;
+        flex-basis: 100%;
+    }
 }
 
-%columns{
+%columns {
     @extend %flex;
     margin: 0;
     padding: 0;
 }
 
-
 .container {
     width: 100%;
-}
-
-.padding{
-    padding: 16px; 
 }
 
 .row {
@@ -40,84 +69,96 @@ $col-1-width: 8%;
 
 //Columns
 .col-1 {
-    @extend %columns;
     @include col-width(1);
-}
-.col-2 {
     @extend %columns;
-    @include col-width(2);
-}
-.col-3 {
-    @extend %columns;
-    @include col-width(3);
-}
-.col-4 {
-    @extend %columns;
-    @include col-width(4);
-}
-.col-5 {
-    @extend %columns;
-    @include col-width(5);
-}
-.col-6 {
-    @extend %columns;
-    @include col-width(6);
-}
-.col-7 {
-    @extend %columns;
-    @include col-width(7);
-}
-.col-8 {
-    @extend %columns;
-    @include col-width(8);
-}
-.col-9 {
-    @extend %columns;
-    @include col-width(9);
-}
-.col-10 {
-    @extend %columns;
-    @include col-width(10);
-}
-.col-11 {
-    @extend %columns;
-    @include col-width(11);
-}
-.col-12 {
-    @extend %columns;
-    @include col-width(12);
 }
 
-.col-stretch{
+.col-2 {
+    @include col-width(2);
+    @extend %columns;
+}
+
+
+.col-3 {
+    @include col-width(3);
+    @extend %columns;
+}
+
+
+.col-4 {
+    @include col-width(4);
+    @extend %columns;
+}
+
+.col-5 {
+    @include col-width(5);
+    @extend %columns;
+}
+
+.col-6 {
+    @include col-width(6);
+    @extend %columns;
+}
+
+.col-7 {
+    @include col-width(7);
+    @extend %columns;
+}
+
+.col-8 {
+    @include col-width(8);
+    @extend %columns;
+}
+
+.col-9 {
+    @include col-width(9);
+    @extend %columns;
+}
+
+.col-10 {
+    @include col-width(10);
+    @extend %columns;
+}
+
+.col-11 {
+    @include col-width(11);
+    @extend %columns;
+}
+
+.col-12 {
+    @include col-width(12);
+    @extend %columns;
+}
+
+.col-stretch {
     flex-basis: 100%;
 }
 
 //Alignment Classes
-
-.justify-around{
+.justify-around {
     justify-content: space-around;
 }
 
-.justify-even{
+.justify-even {
     justify-content: space-evenly;
 }
 
-.justify-between{
+.justify-between {
     justify-content: space-between;
 }
 
-.justify-start{
+.justify-start {
     justify-content: flex-start;
 }
 
-.justify-end{
+.justify-end {
     justify-content: flex-end;
 }
 
-.justify-stretch{
+.justify-stretch {
     justify-content: stretch;
 }
 
-.justify-center{
+.justify-center {
     justify-content: center;
 }

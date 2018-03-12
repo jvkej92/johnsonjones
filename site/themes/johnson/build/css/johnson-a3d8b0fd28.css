@@ -107,7 +107,7 @@ h1, h2, h3, blockquote {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
 }
 
@@ -139,11 +139,24 @@ blockquote:before {
   vertical-align: -2rem;
 }
 
+@media (min-width: 968px) {
+  .collapse-tablet-down {
+    flex-basis: 100%;
+  }
+}
+
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row {
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row {
+    flex-direction: column;
+    flex-basis: 100%;
+  }
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
@@ -153,10 +166,6 @@ blockquote:before {
 
 .container {
   width: 100%;
-}
-
-.padding {
-  padding: 16px;
 }
 
 .row {
@@ -243,6 +252,73 @@ blockquote:before {
 
 .justify-center {
   justify-content: center;
+}
+
+.p {
+  padding: 16px;
+}
+
+.pt {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.pt {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.pb {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.px {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.pl {
+  padding-left: 16px;
+}
+
+.pr {
+  padding-right: 16px;
+}
+
+.m {
+  margin: 16px;
+}
+
+.mb {
+  margin-bottom: 16px;
+}
+
+.mt {
+  margin-top: 16px;
+}
+
+.my {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.mx {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.ml {
+  margin-left: 16px;
+}
+
+.mr {
+  margin-right: 16px;
 }
 
 body {
