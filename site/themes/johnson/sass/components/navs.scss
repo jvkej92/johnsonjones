@@ -1,0 +1,58 @@
+.nav{
+    @extend %flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 10px
+}
+
+.nav-logo{
+    flex-basis: 20%;
+
+    padding-left: 16px;
+}
+
+.nav-logo img{
+    display: inline;
+    margin: 24px auto 0;
+    @include for-desktop-up{
+        vertical-align: middle;
+    }
+    vertical-align: bottom;
+}
+
+.nav-links{
+    flex-basis: 75%;
+    @extend %flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+}
+
+.nav-item{
+    @extend %flex;
+    @extend %oswald;
+    font-size: 20px;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.nav-link{
+    @include for-desktop-up {
+        margin: 24px 24px 0 24px;
+    }
+    vertical-align: middle;
+    margin: 20px 20px 0 20px;
+    
+    text-decoration: none;
+    color: $navy-dark;
+}
+
+.nav-link:hover{
+    @include for-desktop-up{ margin-left: 4px; }
+    margin-left: 0;
+}
+
+.nav-link:hover::before{
+    content: url(../../../../assets/img/JJ-plus-v1.svg);
+    width: 10px;
+    height: 10px;
+}

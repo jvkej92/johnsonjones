@@ -1,28 +1,3 @@
-//Media Queries
-@mixin for-phone-only {
-    @media (max-width: 768px) {
-        @content;
-    }
-}
-
-@mixin for-tablet-up {
-    @media (min-width: 968px) {
-        @content;
-    }
-}
-
-@mixin for-desktop-up {
-    @media (min-width: 1224px) {
-        @content;
-    }
-}
-
-@mixin for-big-desktop-up {
-    @media (min-width: 1824px) {
-        @content;
-    }
-}
-
 //Responsive collapse classes
 .collapse-tablet-down {
     @include  for-tablet-up{

@@ -34,6 +34,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ol, ul {
@@ -107,21 +109,33 @@ html {
   font-size: 2vw;
 }
 
-h1, h2, h3, blockquote, .btn {
+h1, h2, h3, blockquote, .btn, .nav-item {
   font-family: "oswald", sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
 
-body {
+body, p {
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.7;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+}
+
+@media (min-width: 968px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 h2 {
@@ -129,7 +143,19 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+@media (min-width: 968px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 4rem;
+  }
 }
 
 blockquote {
@@ -154,7 +180,7 @@ blockquote:before {
   }
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .callout, .hero {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .callout, .hero, .nav, .nav-links, .nav-item {
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
@@ -162,7 +188,7 @@ blockquote:before {
 }
 
 @media (max-width: 768px) {
-  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .callout, .hero {
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .callout, .hero, .nav, .nav-links, .nav-item {
     flex-direction: column;
     flex-basis: 100%;
   }
@@ -265,12 +291,14 @@ blockquote:before {
 
 .btn {
   font-size: 20px;
+  line-height: 1;
   padding: 8px 16px;
   box-sizing: border-box;
   text-decoration: none;
   text-transform: capitalize;
   margin-top: 16px;
   margin-bottom: 16px;
+  max-height: 40px;
 }
 
 .btn-primary {
@@ -352,7 +380,6 @@ blockquote:before {
   font-size: 2vh;
   -ms-grid-row-align: center;
   align-self: center;
-  margin: 86px auto;
 }
 
 @media (min-width: 968px) {
@@ -407,6 +434,70 @@ blockquote:before {
 .hero-content h1 {
   font-size: 4rem;
   padding-bottom: 32px;
+}
+
+.nav {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.nav-logo {
+  flex-basis: 20%;
+  padding-left: 16px;
+}
+
+.nav-logo img {
+  display: inline;
+  margin: 24px auto 0;
+  vertical-align: bottom;
+}
+
+@media (min-width: 1224px) {
+  .nav-logo img {
+    vertical-align: middle;
+  }
+}
+
+.nav-links {
+  flex-basis: 75%;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  font-size: 20px;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.nav-link {
+  vertical-align: middle;
+  margin: 20px 20px 0 20px;
+  text-decoration: none;
+  color: #003359;
+}
+
+@media (min-width: 1224px) {
+  .nav-link {
+    margin: 24px 24px 0 24px;
+  }
+}
+
+.nav-link:hover {
+  margin-left: 0;
+}
+
+@media (min-width: 1224px) {
+  .nav-link:hover {
+    margin-left: 4px;
+  }
+}
+
+.nav-link:hover::before {
+  content: url(../../../../assets/img/JJ-plus-v1.svg);
+  width: 10px;
+  height: 10px;
 }
 
 .p {
@@ -474,6 +565,21 @@ blockquote:before {
 
 .mr {
   margin-right: 16px;
+}
+
+.space-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.space-75 {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.space-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 body {
