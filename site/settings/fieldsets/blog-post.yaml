@@ -1,4 +1,20 @@
 taxonomies: false
 title: Blog Post
 create_title: ""
-fields: [ ]
+fields:
+  description:
+    type: text
+    display: Description
+  bard:
+    type: bard
+    display: Bard
+    sets:
+      set_1:
+        display: Set 1
+    spellcheck: true
+    allow_source: true
+    autoLink: true
+    paste:
+      forcePlainText: true
+    container: main
+    folder: /

@@ -41,7 +41,6 @@ $(document).ready(function () {
         });
 
     $(window).scroll(function(){
-        console.log($(window).scrollTop())
         if($(window).scrollTop() >heroSize - 70){
             $('.nav').addClass('nav-scroll');
             $('.nav-logo img').attr('src', 'assets/img/johnsonJonesLogoNavy.png')
