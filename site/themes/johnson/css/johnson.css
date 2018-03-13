@@ -291,11 +291,12 @@ blockquote:before {
 
 .btn {
   font-size: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
   line-height: 1;
   padding: 8px 16px;
   box-sizing: border-box;
-  text-decoration: none;
-  text-transform: capitalize;
   margin-top: 16px;
   margin-bottom: 16px;
   max-height: 40px;
@@ -449,15 +450,28 @@ blockquote:before {
 }
 
 .nav {
+  position: fixed;
+  background: none;
+  top: 0;
+  width: 100%;
   flex-wrap: nowrap;
   justify-content: space-between;
   font-size: 10px;
+  z-index: 100;
 }
 
 @media (max-width: 968px) {
   .nav {
     display: none;
   }
+}
+
+div.nav.nav-scroll {
+  background: #f9f5f2 !important;
+}
+
+.nav-scroll .nav-link {
+  color: #003359;
 }
 
 .nav-logo {
@@ -493,13 +507,17 @@ blockquote:before {
   vertical-align: middle;
   margin: 20px 20px 0 20px;
   text-decoration: none;
-  color: #003359;
+  color: #f9f5f2;
 }
 
 @media (min-width: 1224px) {
   .nav-link, .nav-link-mobile {
     margin: 24px 24px 0 24px;
   }
+}
+
+.nav-link-mobile {
+  color: #003359;
 }
 
 .nav-link:hover {
@@ -513,7 +531,13 @@ blockquote:before {
 }
 
 .nav-link:hover::before {
-  content: url(../../../../assets/img/JJ-plus-v1.svg);
+  content: url(../../../../assets/img/JohnsonJones_Icon_White.svg);
+  width: 10px;
+  height: 10px;
+}
+
+.nav-scroll .nav-link:hover::before {
+  content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
   width: 10px;
   height: 10px;
 }
@@ -556,7 +580,7 @@ blockquote:before {
 }
 
 .nav-link-mobile:active::before {
-  content: url(../../../../assets/img/JJ-plus-v1.svg);
+  content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
   width: 10px;
   height: 10px;
 }
@@ -566,8 +590,11 @@ blockquote:before {
 }
 
 .mobile-menu-items .btn {
-  width: 130px;
-  margin-left: 36px;
+  font-size: 28px;
+  max-width: 155px;
+  vertical-align: middle;
+  padding-top: 4px;
+  margin-left: 30px;
 }
 
 /*!
