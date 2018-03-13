@@ -8,11 +8,18 @@
     }
 }
 
+@mixin for-tablet-only {
+    @media (max-width: 968px) {
+        @content;
+    }
+}
+
 @mixin for-tablet-up {
     @media (min-width: 968px) {
         @content;
     }
 }
+
 
 @mixin for-desktop-up {
     @media (min-width: 1224px) {
