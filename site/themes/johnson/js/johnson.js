@@ -1,9 +1,12 @@
 $(document).ready(function () {
 
+    //Base Animations On Load
+    //Fades the cehvron in on load
     $('.hero-chevron').hide();
-    
     $('.hero-chevron').delay(2000).fadeIn(1500);
 
+
+    //Array for words looped through on load
     let animationRate = 800;
     let heroArray = [
         'marketing',
@@ -13,26 +16,32 @@ $(document).ready(function () {
         'buttholes'
     ]
 
+    //Triggers cycle function
     cycle(animationRate, heroArray);
-    setInterval(function(){
+
+    //Calculates the length of the heroArray and calls the function accordingly
+    setInterval(function () {
         cycle(animationRate, heroArray);
     }, animationRate * heroArray.length);
 
-    function cycle(rate, array){
-        jQuery.each(array, function(index){
-            setTimeout(function(){
+    //Finds span tag with ".cycle" class and replaces it with the next item in the array base on the animation rate
+    function cycle(rate, array) {
+        jQuery.each(array, function (index) {
+            setTimeout(function () {
                 $('.cycle').replaceWith(`<span class="cycle">${array[index]}</span>`);
             }, rate * index);
         });
     }
 
+    //Sets hero height to that of the window.
     $('.mobile-menu-items').css('height', $(window).height - $('.nav-bar').height());
     let heroSize = $(window).height();
     let hero = $('.hero');
     let heroBg = $('.hero-bg');
     resize(heroSize, hero, heroBg);
 
-    let calloutSize = heroSize / 2 ;
+    //Sets callout size to be 50% of the viewport height
+    let calloutSize = heroSize / 2;
     let callout = $('.callout');
     let calloutBg = $('.callout-bg');
     resize(calloutSize, callout, calloutBg);
@@ -42,53 +51,60 @@ $(document).ready(function () {
         resize(calloutSize, callout, calloutBg);
     });
 
+    //Sets the size of elements and sets the child elements max height to that of the parents height
     function resize(target, parent, bg) {
         parent.css('min-height', target);
-        bg.css('min-height', parent.innerHeight());
+        bg.css('max-height', parent.innerHeight());
     }
 
+    //Find and replace for the plus icons
     let plusSignSm = '<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 24" xml:space="preserve" height="24px" width="24px"><polygon fill="#003359" points="19.2,9.6 14.4,9.6 14.4,4.8 14.4,0 9.6,0 9.6,4.8 9.6,9.6 4.8,9.6 0,9.6 0,14.4 4.8,14.4 9.6,14.4 9.6,19.2 9.6,24 14.4,24 14.4,19.2 14.4,14.4 19.2,14.4 24,14.4 24,9.6 "/></svg>';
     let plusSignMed = '<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 24" xml:space="preserve" height="48px" width="48px"><polygon fill="#003359" points="19.2,9.6 14.4,9.6 14.4,4.8 14.4,0 9.6,0 9.6,4.8 9.6,9.6 4.8,9.6 0,9.6 0,14.4 4.8,14.4 9.6,14.4 9.6,19.2 9.6,24 14.4,24 14.4,19.2 14.4,14.4 19.2,14.4 24,14.4 24,9.6 "/></svg>';
     let plusSignLrg = '<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="4 0 18 24" xml:space="preserve" height="64px" width="64px"><polygon fill="#003359" points="19.2,9.6 14.4,9.6 14.4,4.8 14.4,0 9.6,0 9.6,4.8 9.6,9.6 4.8,9.6 0,9.6 0,14.4 4.8,14.4 9.6,14.4 9.6,19.2 9.6,24 14.4,24 14.4,19.2 14.4,14.4 19.2,14.4 24,14.4 24,9.6 "/></svg>';
-    
-    let logo = 
+
     $('.plus, .plus-sm').replaceWith(plusSignSm);
     $('.plus-md').replaceWith(plusSignMed);
     $('.plus-lg').replaceWith(plusSignLrg);
 
+    //Triggers the mobile menu
     $('.hamburger').click(function () {
-            if ($(this).hasClass('is-active')){
-                $(this).removeClass('is-active');
-                $('.mobile-menu-items').slideUp(100);
-            } else {
-                $(this).addClass('is-active');
-                $('.mobile-menu-items').slideDown(100);
-            }
-        });
+        if ($(this).hasClass('is-active')) {
+            $(this).removeClass('is-active');
+            $('.mobile-menu-items').slideUp(100);
+        } else {
+            $(this).addClass('is-active');
+            $('.mobile-menu-items').slideDown(100);
+        }
+    });
 
-    $(window).scroll(function(){
-        if($(window).scrollTop() > heroSize - 130){
+    //Scroll animations
+
+    //Triggers the fade in of the navigation on scroll
+    //Controlls the fade in and out of the chevron
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > heroSize - 130) {
             $('.nav').css('position', 'fixed').addClass('nav-scroll');
             $('.nav-logo img').attr('src', 'assets/img/johnsonJonesLogoNavy.png')
-        }
-        else if($(window).scrollTop() < heroSize){
+        } else if ($(window).scrollTop() < heroSize) {
             $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
             $('.nav-logo img').attr('src', 'assets/img/johnsonJonesLogoWhite.png')
         }
 
-        if($(window).scrollTop() > 110){
+        if ($(window).scrollTop() > 110) {
             $('.hero-chevron img').fadeOut(500);
         }
-        if($(window).scrollTop() < 90 ){
+        if ($(window).scrollTop() < 90) {
             $('.hero-chevron img').fadeIn(500);
         }
     });
 
-    $('.hover-box').mouseover(function(){
+
+    //Hover box animation triggers
+    $('.hover-box').mouseover(function () {
         $(this).find('.hover-box-img').addClass('grow');
         $(this).find('.hover-box-learn-more').css('margin-left', '16px')
     });
-    $('.hover-box').mouseout(function(){
+    $('.hover-box').mouseout(function () {
         $(this).find('.hover-box-img').removeClass('grow');
         $(this).find('.hover-box-learn-more').css('margin-left', '0')
     });
