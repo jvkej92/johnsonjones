@@ -15,11 +15,11 @@
 
 
 <body>
-
+    {{ partial:nav }}
     <div class="container">
         {{ template_content }}
     </div>
-
+    {{ partial:callout }}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{ theme:js }}"></script>
 </body>

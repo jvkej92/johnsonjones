@@ -1,12 +1,38 @@
 $(document).ready(function () {
 
+    $('.hero-chevron').hide();
+    
+    $('.hero-chevron').delay(2000).fadeIn(1500);
+
+    let animationRate = 800;
+    let heroArray = [
+        'marketing',
+        'branding',
+        'etc',
+        'etc x2',
+        'buttholes'
+    ]
+
+    cycle(animationRate, heroArray);
+    setInterval(function(){
+        cycle(animationRate, heroArray);
+    }, animationRate * heroArray.length);
+
+    function cycle(rate, array){
+        jQuery.each(array, function(index){
+            setTimeout(function(){
+                $('.cycle').replaceWith(`<span class="cycle">${array[index]}</span>`);
+            }, rate * index);
+        });
+    }
+
     $('.mobile-menu-items').css('height', $(window).height - $('.nav-bar').height());
     let heroSize = $(window).height();
     let hero = $('.hero');
     let heroBg = $('.hero-bg');
     resize(heroSize, hero, heroBg);
 
-    let calloutSize = heroSize / 2;
+    let calloutSize = heroSize / 2 ;
     let callout = $('.callout');
     let calloutBg = $('.callout-bg');
     resize(calloutSize, callout, calloutBg);
@@ -41,15 +67,29 @@ $(document).ready(function () {
         });
 
     $(window).scroll(function(){
-        if($(window).scrollTop() >heroSize - 70){
-            $('.nav').addClass('nav-scroll');
+        if($(window).scrollTop() > heroSize - 130){
+            $('.nav').css('position', 'fixed').addClass('nav-scroll');
             $('.nav-logo img').attr('src', 'assets/img/johnsonJonesLogoNavy.png')
         }
-        else{
-            $('.nav').removeClass('nav-scroll');
+        else if($(window).scrollTop() < heroSize){
+            $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
             $('.nav-logo img').attr('src', 'assets/img/johnsonJonesLogoWhite.png')
+        }
+
+        if($(window).scrollTop() > 110){
+            $('.hero-chevron img').fadeOut(500);
+        }
+        if($(window).scrollTop() < 90 ){
+            $('.hero-chevron img').fadeIn(500);
         }
     });
 
-
+    $('.hover-box').mouseover(function(){
+        $(this).find('.hover-box-img').addClass('grow');
+        $(this).find('.hover-box-learn-more').css('margin-left', '16px')
     });
+    $('.hover-box').mouseout(function(){
+        $(this).find('.hover-box-img').removeClass('grow');
+        $(this).find('.hover-box-learn-more').css('margin-left', '0')
+    });
+});

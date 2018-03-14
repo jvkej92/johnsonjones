@@ -83,3 +83,20 @@
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+//Shadows
+
+%box-shadow-idle{
+    -webkit-box-shadow: 0px 5px 25px -1px rgba(0, 51, 89, 0.2);
+    -moz-box-shadow: 0px 5px 25px -1px rgba(0, 51, 89, 0.2);
+    box-shadow: 0px 5px 25px -1px rgba(0, 51, 89, 0.2);
+}
+
+//Filters
+%blue-fliter{
+    filter: grayscale(100%) brightness(30%) contrast(130%) sepia(100%) hue-rotate(170deg) saturate(300%);
+}
+
+%blue-fliter-light{
+    filter: grayscale(100%) brightness(20%) contrast(60%) sepia(100%) hue-rotate(170deg) saturate(300%);
+}

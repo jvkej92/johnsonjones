@@ -40,3 +40,34 @@
     font-size: 4rem;
     padding-bottom: 32px;
 }
+
+.hero-chevron{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    margin: auto;
+    width: 30px;
+    animation: blink;
+    animation-iteration-count: infinite;
+    animation-delay: 3.5s;
+    animation-duration: 1.5s;
+}
+
+.hero-chevron img{
+    animation-delay: 0ms;
+    width: 30px;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .8;
+    }
+    100%{
+        opacity: 1;
+    }
+}

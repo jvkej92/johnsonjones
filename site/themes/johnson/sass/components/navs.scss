@@ -1,5 +1,5 @@
 .nav{
-    position: fixed;
+    position: absolute;
     background: none;
     top: 0;
     width: 100%;
@@ -11,6 +11,7 @@
     justify-content: space-between;
     font-size: 10px;
     z-index: 100;
+    transition-duration: .5s;
 }
 
 div.nav.nav-scroll{

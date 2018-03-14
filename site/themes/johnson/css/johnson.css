@@ -34,6 +34,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -57,7 +58,7 @@ table {
   border-spacing: 0;
 }
 
-.primary {
+.primary, .secondary {
   color: #003359;
 }
 
@@ -93,6 +94,10 @@ div.warning {
   background: #f5616e;
 }
 
+div.secondary {
+  background: #ededed;
+}
+
 strong {
   color: #a6b8c5;
 }
@@ -109,7 +114,7 @@ html {
   font-size: 2vw;
 }
 
-h1, h2, h3, blockquote, .btn, .nav-item, .mobile-menu-items .nav-item {
+h1, h2, h3, blockquote, .btn, .card-learn-more, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more {
   font-family: "oswald", sans-serif;
   font-weight: 500;
   line-height: 1.2;
@@ -174,13 +179,18 @@ blockquote:before {
   vertical-align: -2rem;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 @media (min-width: 968px) {
   .collapse-tablet-down {
     flex-basis: 100%;
   }
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .callout, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .hover-box, .row, .callout, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
+  display: -moz-flex;
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
@@ -188,13 +198,13 @@ blockquote:before {
 }
 
 @media (max-width: 768px) {
-  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .row, .callout, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .hover-box, .row, .callout, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
     flex-direction: column;
     flex-basis: 100%;
   }
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .hover-box {
   margin: 0;
   padding: 0;
 }
@@ -350,6 +360,55 @@ blockquote:before {
   color: #f9f5f2;
 }
 
+.card {
+  background: #f9f5f2;
+  padding: 16px;
+  margin: 32px 16px auto 0;
+  border-radius: 2px;
+  font-size: 18px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 1224px) {
+  .card {
+    padding: 32px 32px 32px 16px;
+  }
+}
+
+.card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.card-learn-more {
+  content: '';
+  font-size: 24px;
+  line-height: 3;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .card-learn-more {
+    font-size: 18px;
+  }
+}
+
+.card-heading {
+  text-transform: capitalize;
+  font-size: .8rem;
+  line-height: 2.5;
+}
+
+@media (max-width: 768px) {
+  .card-heading {
+    font-size: 3rem;
+  }
+}
+
+p.card-content {
+  font-size: 16px;
+}
+
 .callout {
   min-height: 320px;
   padding: 60px auto 50px;
@@ -449,8 +508,39 @@ blockquote:before {
   padding-bottom: 32px;
 }
 
+.hero-chevron {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  margin: auto;
+  width: 30px;
+  animation: blink;
+  animation-iteration-count: infinite;
+  animation-delay: 3.5s;
+  animation-duration: 1.5s;
+}
+
+.hero-chevron img {
+  animation-delay: 0ms;
+  width: 30px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .nav {
-  position: fixed;
+  position: absolute;
   background: none;
   top: 0;
   width: 100%;
@@ -458,6 +548,7 @@ blockquote:before {
   justify-content: space-between;
   font-size: 10px;
   z-index: 100;
+  transition-duration: .5s;
 }
 
 @media (max-width: 968px) {
@@ -597,6 +688,127 @@ div.nav.nav-scroll {
   margin-left: 30px;
 }
 
+.hover-box {
+  background: #f9f5f2;
+  transition-duration: .1s;
+  padding-bottom: 32px;
+}
+
+@media (max-width: 968px) {
+  .hover-box {
+    flex-basis: 100%;
+  }
+}
+
+.hover-box:hover {
+  background: #003359;
+  color: #f9f5f2;
+  cursor: pointer;
+}
+
+.hover-box-body {
+  border-radius: 2px;
+  font-size: 18px;
+}
+
+@media (min-width: 1224px) {
+  .hover-box-body {
+    padding: 16px;
+    margin: 0 8px auto 8px;
+  }
+}
+
+@media (min-width: 1824px) {
+  .hover-box-body {
+    padding: 16px;
+    margin: 16px 8px auto 8px;
+  }
+}
+
+.hover-box-learn-more {
+  color: #003359;
+  font-size: 18px;
+  line-height: 1;
+  margin-top: 54px;
+  padding: 0px 16px 3px;
+  text-decoration: none;
+  background: #f9f5f2;
+  border-radius: 3px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 1224px) {
+  .hover-box-learn-more {
+    font-size: 24px;
+  }
+}
+
+.hover-box-heading {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  line-height: 2.5;
+  padding: 0 16px;
+}
+
+@media (min-width: 968px) {
+  .hover-box-heading {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1224px) {
+  .hover-box-heading {
+    font-size: .8rem;
+  }
+}
+
+p.hover-box-content {
+  font-size: 16px;
+  padding: 0 16px 32px;
+}
+
+.hover-box-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-width: 100%;
+  min-width: 300px;
+  height: 250px;
+}
+
+@media (min-width: 968px) {
+  .hover-box-img-wrapper {
+    height: 150px;
+  }
+}
+
+@media (min-width: 1224px) {
+  .hover-box-img-wrapper {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1824px) {
+  .hover-box-img-wrapper {
+    height: 300px;
+  }
+}
+
+.hover-box-img {
+  position: absolute;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition-duration: .2s;
+}
+
+.grow {
+  transform: scale(1.2);
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -623,7 +835,7 @@ div.nav.nav-scroll {
 }
 
 .hamburger:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .hamburger-box {
@@ -642,7 +854,7 @@ div.nav.nav-scroll {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: #003359;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -1663,6 +1875,15 @@ div.nav.nav-scroll {
 .space-100 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.card:hover, .hover-box {
+  box-shadow: 0px 5px 25px -1px rgba(0, 51, 89, 0.2);
+}
+
+.hover-box-img {
+  -webkit-filter: grayscale(100%) brightness(20%) contrast(60%) sepia(100%) hue-rotate(170deg) saturate(300%);
+  filter: grayscale(100%) brightness(20%) contrast(60%) sepia(100%) hue-rotate(170deg) saturate(300%);
 }
 
 body {

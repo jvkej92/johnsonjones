@@ -39,6 +39,7 @@ $navy-dark: #003359;
 $navy-medium: #406683;
 $navy-light: #a6b8c5;
 $soft-white: #f9f5f2; 
+$light-grey: #ededed;
 $red: #f12c3e;
 $light-red: #f5616e;
 $light-blue: #64cfe9;
@@ -57,11 +58,11 @@ $font-medium: 500;
 
 
 //Text Colors
-.primary{
+.primary, .secondary{
     color: $navy-dark;
 }
 
-.dark{
+.dark {
     color: $navy-medium;
 }
 
@@ -93,6 +94,10 @@ div.bold{
 
 div.warning{
     background: $light-red;
+}
+
+div.secondary{
+    background: $light-grey;
 }
 
 //Strong Colors
