@@ -92,6 +92,10 @@
     box-shadow: 0px 5px 25px -1px rgba(0, 51, 89, 0.2);
 }
 
+.no-shadow{
+    box-shadow: 0 0!important;
+}
+
 //Filters
 %blue-fliter{
     filter: grayscale(100%) brightness(30%) contrast(130%) sepia(100%) hue-rotate(170deg) saturate(300%);
@@ -99,4 +103,40 @@
 
 %blue-fliter-light{
     filter: grayscale(100%) brightness(20%) contrast(60%) sepia(100%) hue-rotate(170deg) saturate(300%);
+}
+
+//Borders
+
+.separater{
+    border-right: none;
+    border-bottom: 2px solid $navy-dark;
+    @include for-tablet-up{
+        border-right: 2px solid $navy-dark;
+        border-bottom: none;
+    }
+}
+
+.heading-divider{
+    flex-basis: 100%;
+    display: block;
+    min-height: 4px;
+    max-height: 4px;
+    min-width: 100px;
+    max-width: 100px;
+    background: $navy-dark;
+    margin: 0 0 32px;
+}
+
+//Svg active
+
+.model-inactive path, .model-inactive polygon{
+    fill: $navy-light;
+}
+.model-active path, .model-active polygon{
+    fill: $navy-dark;
+}
+
+.model-inactive:hover path, .model-inactive:hover polygon{
+    fill: $navy-medium;
+    cursor: pointer;
 }

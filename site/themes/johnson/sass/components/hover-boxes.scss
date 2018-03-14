@@ -15,6 +15,10 @@
     cursor: pointer;
 }
 
+a .hover-box h3{
+    text-decoration: none!important;
+}
+
 .hover-box-body{
     @include for-desktop-up {
         padding: 16px;

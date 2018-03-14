@@ -2,19 +2,21 @@
     @extend %flex;
     min-height: 320px;
     padding: 60px auto 50px;
+    overflow: hidden;
 }
 
 .callout-bg {
     position: absolute;
     width: 100%;
     margin: 0 auto;
-    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
+    background-size:  cover;
     min-height: 320px;
 }
 
 .callout-blue-fliter {
-    filter: grayscale(100%) brightness(30%) contrast(130%) sepia(100%) hue-rotate(170deg) saturate(300%);
+    filter: grayscale(100%) blur(.5px) brightness(30%) contrast(130%) sepia(100%) hue-rotate(170deg) saturate(300%);
 }
 
 .callout-bw-fliter {

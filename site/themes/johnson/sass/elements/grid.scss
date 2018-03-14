@@ -1,6 +1,6 @@
 //Responsive collapse classes
 .collapse-tablet-down {
-    @include for-tablet-up{
+    @include for-desktop-up{
         flex-basis: 100%;
     }
 }
@@ -104,6 +104,10 @@ $col-1-width: 8%;
 .col-12 {
     @include col-width(12);
     @extend %columns;
+}
+
+.col-half {
+    flex-basis: 50%;
 }
 
 .col-stretch {

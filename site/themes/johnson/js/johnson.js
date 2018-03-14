@@ -5,7 +5,6 @@ $(document).ready(function () {
     $('.hero-chevron').hide();
     $('.hero-chevron').delay(2000).fadeIn(1500);
 
-
     //Array for words looped through on load
     let animationRate = 800;
     let heroArray = [
@@ -54,7 +53,7 @@ $(document).ready(function () {
     //Sets the size of elements and sets the child elements max height to that of the parents height
     function resize(target, parent, bg) {
         parent.css('min-height', target);
-        bg.css('max-height', parent.innerHeight());
+        bg.css('min-height', parent.innerHeight());
     }
 
     //Find and replace for the plus icons
@@ -108,4 +107,36 @@ $(document).ready(function () {
         $(this).find('.hover-box-img').removeClass('grow');
         $(this).find('.hover-box-learn-more').css('margin-left', '0')
     });
+
+    //Accordian
+    (function($) {
+        //Hide all panels
+        var allPanels = $('.accordian-list-content').hide();
+        //Show first panel
+        $('.accordian-list:first-of-type > .accordian-list-content').show();
+        //Add active class to first panel 
+        $('.accordian-list:first-of-type > .accordian-list-heading').addClass('accordion-active');
+        //Handle click function
+        jQuery('.accordian-list').on('click', function() {
+            //this clicked panel
+            //the target panel content
+            let target = $(this); 
+            let modelTarget = `#${$(this).data('model-item')}`;
+            //Only toggle non-displayed 
+            if(!target.children('.accordian-list-heading').hasClass('accordion-active')){
+                
+                $('.accordian-list-heading').removeClass('accordion-active');
+                target.children('.accordian-list-heading').addClass('accordion-active');
+                
+                $('.accordian-list-content').slideUp(300);
+                $('.accordion-active').siblings('.accordian-list-content').slideDown(300);
+            }
+            if(!$(modelTarget).hasClass('model-active')){
+                $('.model-active').attr('class', 'model-inactive');
+                $(modelTarget).attr('class', 'model-active');
+            }
+          return false;
+        });
+      
+      })(jQuery);
 });

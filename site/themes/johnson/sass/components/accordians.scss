@@ -1,0 +1,46 @@
+.accordion {
+    margin: 0 0 30px;
+}
+
+.accordian-list{
+    padding-bottom: 20px;
+}
+
+.accordian-list-heading {
+    @extend %oswald;
+    font-size: 20px;
+    color: $navy-dark;
+    margin-left: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.accordian-list-content{
+    cursor: pointer;
+    padding: 8px 25px;
+    margin: 0;
+}
+
+.accordian-list-heading:before {
+    content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    position: absolute;
+    left: -20px;
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    transition-duration: .2s;
+}
+
+.accordion-active:before {
+    content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
+    left: -17px;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+}
+
+.accordion dt.accordion-active:hover {
+    cursor: default;
+}
