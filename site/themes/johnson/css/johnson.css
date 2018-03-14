@@ -114,7 +114,7 @@ html {
   font-size: 2vw;
 }
 
-h1, h2, h3, h4, blockquote, .accordian-list-heading, .btn, .card-learn-more, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more {
+h1, h2, h3, h4, blockquote, .accordian-list-heading, .btn, .card-learn-more, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more, .hover-box-heading {
   font-family: "oswald", sans-serif;
   font-weight: 500;
   line-height: 1.2;
@@ -198,6 +198,10 @@ blockquote:before {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.text-left {
+  text-align: left !important;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .hover-box, .row, .callout, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
@@ -514,6 +518,7 @@ p.card-content {
 }
 
 .callout-content {
+  text-align: center;
   position: relative;
   box-sizing: border-box;
   padding: 32px 16px;
@@ -568,7 +573,25 @@ p.card-content {
   filter: grayscale(100%) brightness(80%) contrast(130%);
 }
 
+.title-divider {
+  flex-basis: 100%;
+  display: block;
+  min-height: 4px;
+  max-height: 4px;
+  min-width: 100px;
+  max-width: 100px;
+  background: #f9f5f2;
+  margin: 0 auto 32px;
+}
+
+.hero-title {
+  color: #f9f5f2;
+  text-align: center;
+  font-size: 20px;
+}
+
 .hero-content {
+  text-align: center;
   position: relative;
   box-sizing: border-box;
   padding: 15px;
@@ -584,8 +607,8 @@ p.card-content {
 }
 
 .hero-content h1 {
-  font-size: 4rem;
-  padding-bottom: 32px;
+  font-size: 2.5rem;
+  padding-bottom: 64px;
 }
 
 .hero-chevron {
