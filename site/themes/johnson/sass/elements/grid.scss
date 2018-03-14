@@ -1,9 +1,4 @@
-//Responsive collapse classes
-.collapse-tablet-down {
-    @include for-desktop-up{
-        flex-basis: 100%;
-    }
-}
+
 
 //Grid variables
 $col-1-width: 8%;
@@ -141,4 +136,20 @@ $col-1-width: 8%;
 
 .justify-center {
     justify-content: center;
+}
+
+//Responsive collapse classes
+.collapse-tablet-down {
+    @include for-tablet-only{
+        flex-basis: 100%;
+    }
+}
+
+.desktop-half-col{
+    @include for-big-desktop-up{
+        @include col-width(8);
+    }
+    @include for-desktop-up{
+        @include col-width(6);
+    }
 }

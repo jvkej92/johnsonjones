@@ -8,7 +8,7 @@
 
 .accordian-list-heading {
     @extend %oswald;
-    font-size: 20px;
+    font-size: 28px;
     color: $navy-dark;
     margin-left: 25px;
     position: relative;
@@ -36,7 +36,7 @@
 
 .accordion-active:before {
     content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
-    left: -17px;
+    left: -20px;
     transform-origin: 50% 50%;
     transform: rotate(45deg);
 }

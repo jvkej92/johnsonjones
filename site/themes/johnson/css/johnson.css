@@ -200,12 +200,6 @@ blockquote:before {
   text-transform: capitalize;
 }
 
-@media (min-width: 1224px) {
-  .collapse-tablet-down {
-    flex-basis: 100%;
-  }
-}
-
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .hover-box, .row, .callout, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
   display: -moz-flex;
   display: flex;
@@ -320,6 +314,24 @@ blockquote:before {
   justify-content: center;
 }
 
+@media (max-width: 968px) {
+  .collapse-tablet-down {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 1824px) {
+  .desktop-half-col {
+    flex-basis: 64%;
+  }
+}
+
+@media (min-width: 1224px) {
+  .desktop-half-col {
+    flex-basis: 48%;
+  }
+}
+
 .accordion {
   margin: 0 0 30px;
 }
@@ -329,7 +341,7 @@ blockquote:before {
 }
 
 .accordian-list-heading {
-  font-size: 20px;
+  font-size: 28px;
   color: #003359;
   margin-left: 25px;
   position: relative;
@@ -356,7 +368,7 @@ blockquote:before {
 
 .accordion-active:before {
   content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
-  left: -17px;
+  left: -20px;
   transform-origin: 50% 50%;
   transform: rotate(45deg);
 }
@@ -1996,6 +2008,41 @@ p.hover-box-content {
 .model-inactive:hover path, .model-inactive:hover polygon {
   fill: #406683;
   cursor: pointer;
+}
+
+@media (max-width: 968px) {
+  #our-model {
+    width: 100%;
+    height: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #our-model {
+    width: 100%;
+    height: 50vw;
+  }
+}
+
+@media (min-width: 968px) {
+  #our-model {
+    width: 100%;
+    height: 30vw;
+  }
+}
+
+@media (min-width: 1224px) {
+  #our-model {
+    width: 100%;
+    height: 25vw;
+  }
+}
+
+@media (min-width: 1824px) {
+  #our-model {
+    width: 100%;
+    height: 25vw;
+  }
 }
 
 body {

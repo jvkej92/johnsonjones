@@ -112,6 +112,7 @@ $(document).ready(function () {
     (function($) {
         //Hide all panels
         var allPanels = $('.accordian-list-content').hide();
+        $('.model-inactive:first-of-type').attr('class', 'model-active');
         //Show first panel
         $('.accordian-list:first-of-type > .accordian-list-content').show();
         //Add active class to first panel 
@@ -137,6 +138,14 @@ $(document).ready(function () {
             }
           return false;
         });
-      
+
+        jQuery('.model-inactive, #connection').on('click', function() {
+            let target = $(this).data('model-item');
+            $('.accordian-list').each(function(){
+                if($(this).data('model-item') == target){
+                    $(this).trigger('click')
+                }
+            });
+        });
       })(jQuery);
 });
