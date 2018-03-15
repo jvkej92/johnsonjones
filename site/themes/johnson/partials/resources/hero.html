@@ -1,8 +1,7 @@
-{{# HERO #}}
-<div class="hero justify-center">
-    <div class="hero-bg hero-blue-fliter" style="background-image: url(assets/img/pexels-photo-434337.jpeg);"></div>
-    <div class="row col-12 justify-center space-50">
-        
+{{# banner #}}
+<div class="banner justify-center">
+    <div class="banner-bg hero-blue-fliter" style="background-image: url({{ photo or asssets/img/hero-background.jpeg}})"></div>
+    <div class="row col-8 justify-center">
         <div class="hero-content light-text">
             <div class="hero-title">
                 <h4>{{ title }}</h4>
@@ -10,7 +9,6 @@
             </div>
             <h1>{{ headline }}</h1>
             <a href="#" class="btn btn-primary">Get Your Free Audit</a>
-
         </div>
         <div class="hero-chevron">
             <img src="/assets/img/JohnsonJones_Icon_Chevron_Down.svg">

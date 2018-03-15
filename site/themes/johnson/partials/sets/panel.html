@@ -1,0 +1,21 @@
+<div class="row space-75 px {{ color }}">
+    {{if little_bugger}}
+        {{ partial src="sets/little_bugger" }}
+    {{ /if}}
+    {{ partial src="sets/jumbotron" }}
+    <div class="col-10 justify-between space-50">
+
+        {{ columns_2 }}
+            {{ partial src="sets/{ type }" }}
+        {{ /columns_2 }}
+
+        {{ columns_3 }}
+            {{ partial src="sets/{ type }" }}
+        {{ /columns_3 }}
+
+        {{ cards }}
+            {{ partial src="sets/{ type }"}}
+        {{ /cards }}
+
+    </div>
+</div>

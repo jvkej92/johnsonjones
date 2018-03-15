@@ -1,0 +1,129 @@
+taxonomies:
+  tags: true
+title: Flexible
+create_title: flexible
+fields:
+  meta_data:
+    type: partial
+    display: Meta Data
+    fieldset: meta_data
+  template:
+    type: template
+  blocks:
+    type: replicator
+    sets:
+      hero:
+        fields:
+          photo:
+            display: Hero Photo
+            type: assets
+            container: main
+            max_files: 1
+          headline:
+            type: text
+      panel:
+        display: Panel
+        fields:
+          color:
+            type: select
+            display: Color
+            options:
+              primary: White
+              secondary: Grey
+          little_bugger:
+            type: text
+            display: Little Bugger
+          jumbotron:
+            type: text
+            display: Jumbotron
+          columns_2:
+            type: replicator
+            display: Columns
+            sets:
+              column_2:
+                display: Column 2
+                fields:
+                  field_1:
+                    type: partial
+                    display: Column Content
+                    fieldset: column_2
+          columns_3:
+            type: replicator
+            display: Column 3
+            sets:
+              column_3:
+                display: Column 3
+                fields:
+                  column_content:
+                    type: partial
+                    display: Column Content
+                    fieldset: column_3
+          cards:
+            type: replicator
+            display: Cards
+            sets:
+              cards:
+                display: cards
+                fields:
+                  color:
+                    type: select
+                    display: Color
+                    options:
+                      primary: White
+                      secondary: Grey
+                  icon:
+                    type: toggle
+                    display: Use Icon?
+                  icon_url:
+                    type: assets
+                    display: Icon
+                    container: main
+                    folder: /
+                  heading:
+                    type: text
+                    display: Heading
+                  content:
+                    type: markdown
+                    display: Content
+                  link:
+                    type: pages
+                    display: Link
+                  button_text:
+                    type: text
+                    display: Button Text
+      funnel:
+        display: Funnel
+        fields:
+          little_bugger:
+            type: text
+            display: Little bugger
+          jumbotron:
+            type: text
+            display: Jumbotron
+          connection_content:
+            type: markdown
+            display: Connection Content
+          communication_content:
+            type: markdown
+            display: Communication Content
+          retention_content:
+            type: markdown
+            display: Retention Content
+          brand_content:
+            type: markdown
+            display: Brand Content
+      resource_carousel:
+        display: Resource Carousel
+      callout:
+        display: Callout
+        fields:
+          callout:
+            type: partial
+            display: Callout
+            fieldset: custom_callout
+      standalone_jumbotron:
+        display: Jumbotron
+        fields:
+          jumbotron:
+            type: text
+            display: Jumbotron

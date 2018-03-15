@@ -1,0 +1,26 @@
+taxonomies: false
+title: Custom Callout
+create_title: Custom Callout
+hide: true
+fields:
+  headline:
+    type: text
+    display: Headline
+    show_when:
+      custom_callout: true
+  content:
+    type: markdown
+    display: Content
+    show_when:
+      custom_callout: true
+  button_text:
+    type: text
+    display: Button text
+    show_when:
+      custom_callout: true
+  link:
+    type: pages
+    display: Link
+    parent: 175f7a8e-c3b5-46cb-82ba-b41809a6bc2c
+    show_when:
+      custom_callout: true

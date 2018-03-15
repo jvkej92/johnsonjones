@@ -52,6 +52,7 @@ div.nav.nav-scroll{
 }
 
 .nav-link, .nav-link-mobile{
+    position: relative;
     @include for-desktop-up {
         margin: 24px 24px 0 24px;
     }
@@ -64,21 +65,38 @@ div.nav.nav-scroll{
 .nav-link-mobile{
     color: $navy-dark;
 }
-.nav-link:hover{
-    @include for-desktop-up{ margin-left: 4px; }
-    margin-left: 0;
-}
 
-.nav-link:hover::before{
-    content: url(../../../../assets/img/JohnsonJones_Icon_White.svg);
+%plus-hover{
     width: 10px;
     height: 10px;
+    position: absolute;
+    top: 3px;
+    left: -17px;
+}
+.nav-link:hover::before{
+    content: url(../../../../assets/img/JohnsonJones_Icon_White.svg);
+    @extend %plus-hover;
 }
 
 .nav-scroll .nav-link:hover::before{
     content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
-    width: 10px;
-    height: 10px;
+}
+
+a.nav-link.link-active::before{
+    content: url(../../../../assets/img/JohnsonJones_Icon_White.svg);
+    @extend %plus-hover;
+}
+
+.nav-scroll a.nav-link.link-active::before{
+    content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
+}
+
+
+
+ .mobile-menu-items a.link-active::before{
+    content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
+    @extend %plus-hover;
+    top: 0px;
 }
 
 .mobile-nav{
@@ -121,17 +139,6 @@ div.nav.nav-scroll{
 .nav-link-mobile{
     padding-left: 20px;
 }
-
-.nav-link-mobile:active::before{
-    content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
-    width: 10px;
-    height: 10px;
-}
-
-.nav-link-mobile:active{
-    padding-left: 0px
-}
-
 
 .mobile-menu-items .btn{
     font-size: 28px;

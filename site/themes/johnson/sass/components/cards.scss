@@ -22,6 +22,7 @@
     content: '';
     @extend %oswald;
     font-size: 24px;
+    color: $navy-dark;
     @include for-phone-only{
         font-size: 18px;
     }
@@ -30,6 +31,7 @@
 }
 
 .card-heading{
+    @extend %oswald;
     text-transform: capitalize;
     @include for-phone-only{
         font-size: 3rem;

@@ -1,0 +1,11 @@
+<div class="callout justify-center">
+    <div class="callout-bg callout-blue-fliter" style="background-image: url(assets/img/callout-background.jpg); filter: blur(25)"></div>
+    <div class="row col-8 justify-center">
+        <div class="callout-content light-text">
+            <h1>{{ Headline or 'Headline to draw interest in the call to action'}}</h1>
+            <p>{{ content | markdown or 'Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​.'}}</p>
+
+            <a href="{{ link | url or "/aduit" }}" class="btn btn-primary">{{ button_text or "Get Your Free Audit" }}</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+taxonomies: false
+title: Icon
+create_title: Icon
+hide: true
+fields:
+  icon:
+    type: toggle
+    display: Use Icon?
+  icon_url:
+    type: assets
+    display: Icon
+    container: main
+    folder: /
+    show_when:
+      icon: true

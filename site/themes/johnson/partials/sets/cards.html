@@ -1,0 +1,10 @@
+<div class="card col-4 my {{ color }}">
+    {{ if icon == true}}
+        <div class="col-12">
+            <img src="{{ icon_url | url }}" width="50px">
+        </div>
+    {{ /if }}
+    <div class="card-heading">{{ heading }}</div>
+    <p class="card-content">{{ content }}</p>
+    <a href="{{ link }}" class="card-learn-more">{{ button_text or 'Learn More'}}></a>
+</div>

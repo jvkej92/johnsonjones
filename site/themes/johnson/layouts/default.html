@@ -8,20 +8,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Another awesome Statamic site">
-    <title>{{ title or site_title }}</title>
+    <meta name="description" content="{{ meta_description or "Minnesota based inbound marketing firm"}}">
+    <title>{{ meta_title or title or site_title }} | Johnson Jones Marketing</title>
     <link rel="stylesheet" href="{{ theme:css }}">
 </head>
 
 
 <body>
-    {{ partial:nav }}
+    {{ partial:nav current="{{ title }}"}}
     <div class="container">
         {{ template_content }}
     </div>
-    {{ partial:callout }}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{ theme:js }}"></script>
+
+    {{ partial:scripts }}
 </body>
 
 </html>

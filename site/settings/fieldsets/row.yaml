@@ -1,0 +1,9 @@
+taxonomies: false
+title: Row
+create_title: Row
+hide: true
+fields:
+  column:
+    type: partial
+    display: Column
+    fieldset: column

@@ -1,0 +1,11 @@
+taxonomies: false
+title: Meta Data
+create_title: ""
+hide: true
+fields:
+  meta_title:
+    type: text
+    display: Meta title
+  meta_description:
+    type: text
+    display: Meta Description

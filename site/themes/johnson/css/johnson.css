@@ -114,7 +114,7 @@ html {
   font-size: 2vw;
 }
 
-h1, h2, h3, h4, blockquote, .accordian-list-heading, .btn, .card-learn-more, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more, .hover-box-heading {
+h1, h2, h3, h4, blockquote, .accordian-list-heading, .btn, .card-learn-more, .card-heading, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more, .hover-box-heading {
   font-family: "oswald", sans-serif;
   font-weight: 500;
   line-height: 1.2;
@@ -204,7 +204,7 @@ blockquote:before {
   text-align: left !important;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .hover-box, .row, .callout, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .hover-box, .row, .callout, .banner, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
   display: -moz-flex;
   display: flex;
   box-sizing: border-box;
@@ -213,7 +213,7 @@ blockquote:before {
 }
 
 @media (max-width: 768px) {
-  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .hover-box, .row, .callout, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .hover-box, .row, .callout, .banner, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item {
     flex-direction: column;
     flex-basis: 100%;
   }
@@ -229,6 +229,7 @@ blockquote:before {
 }
 
 .row {
+  width: 100%;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -465,6 +466,7 @@ blockquote:before {
 .card-learn-more {
   content: '';
   font-size: 24px;
+  color: #003359;
   line-height: 3;
   text-decoration: none;
 }
@@ -491,13 +493,13 @@ p.card-content {
   font-size: 16px;
 }
 
-.callout {
+.callout, .banner {
   min-height: 320px;
   padding: 60px auto 50px;
   overflow: hidden;
 }
 
-.callout-bg {
+.callout-bg, .banner-bg {
   position: absolute;
   width: 100%;
   margin: 0 auto;
@@ -611,6 +613,12 @@ p.card-content {
   padding-bottom: 64px;
 }
 
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+}
+
 .hero-chevron {
   position: absolute;
   bottom: 20px;
@@ -698,6 +706,7 @@ div.nav.nav-scroll {
 }
 
 .nav-link, .nav-link-mobile {
+  position: relative;
   vertical-align: middle;
   margin: 20px 20px 0 20px;
   text-decoration: none;
@@ -714,26 +723,33 @@ div.nav.nav-scroll {
   color: #003359;
 }
 
-.nav-link:hover {
-  margin-left: 0;
-}
-
-@media (min-width: 1224px) {
-  .nav-link:hover {
-    margin-left: 4px;
-  }
+.nav-link:hover::before, a.nav-link.link-active::before, .mobile-menu-items a.link-active::before {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 3px;
+  left: -17px;
 }
 
 .nav-link:hover::before {
   content: url(../../../../assets/img/JohnsonJones_Icon_White.svg);
-  width: 10px;
-  height: 10px;
 }
 
 .nav-scroll .nav-link:hover::before {
   content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
-  width: 10px;
-  height: 10px;
+}
+
+a.nav-link.link-active::before {
+  content: url(../../../../assets/img/JohnsonJones_Icon_White.svg);
+}
+
+.nav-scroll a.nav-link.link-active::before {
+  content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
+}
+
+.mobile-menu-items a.link-active::before {
+  content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
+  top: 0px;
 }
 
 @media (min-width: 968px) {
@@ -771,16 +787,6 @@ div.nav.nav-scroll {
 
 .nav-link-mobile {
   padding-left: 20px;
-}
-
-.nav-link-mobile:active::before {
-  content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
-  width: 10px;
-  height: 10px;
-}
-
-.nav-link-mobile:active {
-  padding-left: 0px;
 }
 
 .mobile-menu-items .btn {
@@ -1908,17 +1914,10 @@ p.hover-box-content {
 
 .pt {
   padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.pt {
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .pb {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-bottom: 16px;
 }
 
 .py {

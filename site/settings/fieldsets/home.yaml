@@ -1,0 +1,29 @@
+fields:
+  template:
+    type: template
+  blocks:
+    type: replicator
+    sets:
+      hero:
+        fields:
+          photo:
+            display: Hero Photo
+            type: assets
+            container: main
+            max_files: 1
+          headline:
+            type: text
+      callout:
+        fields:
+          heading:
+            display: Callout Heading
+            type: text
+          content:
+            display: Callout Content
+            type: markdown
+          button:
+            display: Button Text
+            type: text
+          link:
+            display: Button Link
+            type: text 

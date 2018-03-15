@@ -1,4 +1,4 @@
-collections:
-  blog: '/blog/{title}'
+collections: 
+  resources: /resources/{slug}
 taxonomies: [ ]
 routes: [ ]

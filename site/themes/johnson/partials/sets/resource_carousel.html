@@ -1,0 +1,14 @@
+<div class="row secondary space-75 px">
+    <div class="col-8">
+        <h3>{{ carousel_heading }}</h3>
+        <div class="space-50"></div>
+        <div class="row justify-between" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+            {{ collection:resources taxonomy:tags="pinned" taxonomy:tags="{tags}"} 
+                        {{ partial src="sets/resource_box" :title="title" :excerpt="excerpt" :featured_media="featured_media" url="url"}}
+            {{ /collection:resources}}
+            {{ collection:resources taxonomy:tags="{tags}"}} 
+                {{ partial src="sets/resource_box" :title="title" :excerpt="excerpt" :featured_media="featured_media" url="url"}}   
+            {{ /collection:resources }}
+        </div>
+    </div>
+</div>

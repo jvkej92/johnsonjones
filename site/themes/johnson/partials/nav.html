@@ -3,24 +3,11 @@
             <a href="/"><img src="assets/img/johnsonJonesLogoWhite.png" alt="johnson and jones marketing logo" width="250px"></a>
         </div>
         <div class="nav-links px">
+            {{ nav from="/" }}
             <div class="nav-item">
-                <a class="nav-link" href="/what-we-do">What We Do</a>
+                <a class="nav-link {{ if current == title }}link-active{{ /if }}" href="{{ url }}">{{ title }}</a>
             </div>
-            <div class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </div>
-            <div class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-            </div>
-            <div class="nav-item">
-                <a class="nav-link" href="#">Resources</a>
-            </div>
-            {{# <div class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </div> #}}
-            <div class="nav-item">
-                <a class="nav-link" href="#">Sign In</a>
-            </div>
+            {{ /nav }}
             <div class="nav-item">
                 <a href="#" class="btn btn-primary">Free Aduit</a>
             </div>
@@ -40,24 +27,11 @@
             </div>
         </div>
         <div class="mobile-menu-items hidden">
-            <div class="nav-item">
-                <a class="nav-link-mobile" href="/what-we-do">What We Do</a>
-            </div>
-            <div class="nav-item">
-                <a class="nav-link-mobile" href="#">About</a>
-            </div>
-            <div class="nav-item">
-                <a class="nav-link-mobile" href="#">Services</a>
-            </div>
-            <div class="nav-item">
-                <a class="nav-link-mobile" href="#">Resources</a>
-            </div>
-            <div class="nav-item">
-                <a class="nav-link-mobile" href="#">Contact</a>
-            </div>
-            <div class="nav-item">
-                <a class="nav-link-mobile" href="#">Sign In</a>
-            </div>
+                {{ nav from="/" }}
+                <div class="nav-item">
+                    <a class="nav-link-mobile {{ if current == title }} link-active {{ /if }}" href="{{ url }}">{{ title }}</a>
+                </div>
+                {{ /nav }}
             <div class="nav-item">
                 <a href="#" class="btn btn-primary">Free Aduit</a>
             </div>

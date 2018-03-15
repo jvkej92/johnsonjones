@@ -1,0 +1,63 @@
+taxonomies: 
+  - tags
+title: Resources
+fields:
+  resource_content:
+    type: bard
+    display: Resource Content
+    sets:
+      hero:
+        display: Hero
+        fields:
+          photo:
+            type: assets
+            display: Hero Photo
+            container: main
+            folder: /
+            max_files: 1
+          headline:
+            type: text
+            display: Headline
+      title:
+        display: Title
+        fields:
+          heading:
+            type: text
+            display: Heading
+          subheading:
+            type: text
+            display: subheading
+      content:
+        display: Content
+        fields:
+          article_content:
+            type: text
+            display: Article Content
+          photo:
+            type: assets
+            display: Photo
+            container: main
+            folder: /
+            max_files: 3
+    spellcheck: true
+    allow_source: true
+    autoLink: true
+    paste:
+      forcePlainText: true
+  excerpt:
+    display: Excerpt
+    type: textarea
+    validate: required
+  featured_media:
+    display: Featured Media
+    type: assets
+    container: main
+    fonlder: /
+    max_files: 1
+  pinned:
+    display: Pinned
+    type: toggle
+  tags:
+    display: Tags
+    type: tags
+    validate: required

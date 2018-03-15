@@ -1,11 +1,11 @@
-.callout {
+.callout, .banner {
     @extend %flex;
     min-height: 320px;
     padding: 60px auto 50px;
     overflow: hidden;
 }
 
-.callout-bg {
+.callout-bg, .banner-bg {
     position: absolute;
     width: 100%;
     margin: 0 auto;

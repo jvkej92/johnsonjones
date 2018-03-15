@@ -10,9 +10,9 @@ $(document).ready(function () {
     let heroArray = [
         'marketing',
         'branding',
-        'etc',
-        'etc x2',
-        'buttholes'
+        'web design',
+        'content',
+        'social media'
     ]
 
     //Triggers cycle function
@@ -34,13 +34,19 @@ $(document).ready(function () {
 
     //Sets hero height to that of the window.
     $('.mobile-menu-items').css('height', $(window).height - $('.nav-bar').height());
+
     let heroSize = $(window).height();
     let hero = $('.hero');
     let heroBg = $('.hero-bg');
     resize(heroSize, hero, heroBg);
 
+    let bannerSize = heroSize / 2;
+    let banner = $('.banner');
+    let bannerBG = $('.banner-bg');
+    resize(bannerSize, banner, bannerBG);
+
     //Sets callout size to be 50% of the viewport height
-    let calloutSize = heroSize / 2;
+    let calloutSize = heroSize / 2 -300;
     let callout = $('.callout');
     let calloutBg = $('.callout-bg');
     resize(calloutSize, callout, calloutBg);
@@ -81,10 +87,10 @@ $(document).ready(function () {
     //Triggers the fade in of the navigation on scroll
     //Controlls the fade in and out of the chevron
     $(window).scroll(function () {
-        if ($(window).scrollTop() > heroSize - 130) {
+        if ($(window).scrollTop() > bannerSize - 130) {
             $('.nav').css('position', 'fixed').addClass('nav-scroll');
             $('.nav-logo img').attr('src', 'assets/img/johnsonJonesLogoNavy.png')
-        } else if ($(window).scrollTop() < heroSize) {
+        } else if ($(window).scrollTop() < bannerSize) {
             $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
             $('.nav-logo img').attr('src', 'assets/img/johnsonJonesLogoWhite.png')
         }
