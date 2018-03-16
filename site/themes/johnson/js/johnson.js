@@ -15,6 +15,11 @@ $(document).ready(function () {
         'social media'
     ]
 
+    $(".slider").slick({
+        // normal options...
+        infinite: true
+      });
+
     //Triggers cycle function
     cycle(animationRate, heroArray);
 
