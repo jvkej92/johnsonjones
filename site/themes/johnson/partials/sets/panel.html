@@ -2,7 +2,9 @@
     {{if little_bugger}}
         {{ partial src="sets/little_bugger" }}
     {{ /if}}
-    {{ partial src="sets/jumbotron" }}
+    {{ if jumbotron }}
+        {{ partial src="sets/jumbotron" }}
+    {{ /if }}
     <div class="col-10 justify-between space-50">
 
         {{ columns_2 }}

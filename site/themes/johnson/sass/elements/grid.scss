@@ -15,20 +15,24 @@ $col-1-width: 8%;
     box-sizing: border-box;
     flex-direction: row;
     flex-wrap: wrap;
-    @include for-phone-only {
-        flex-direction: column;
-        flex-basis: 100%;
-    }
 }
 
 %columns {
     @extend %flex;
     margin: 0;
     padding: 0;
+    min-height: 100px;
+}
+
+%mobile-flex{
+    @include for-phone-only {
+        flex-basis: 100%!important;
+    }
 }
 
 .container {
     width: 100%;
+    overflow-x: hidden;
 }
 
 .row {
@@ -43,63 +47,75 @@ $col-1-width: 8%;
 .col-1 {
     @include col-width(1);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-2 {
     @include col-width(2);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 
 .col-3 {
     @include col-width(3);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 
 .col-4 {
     @include col-width(4);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-5 {
     @include col-width(5);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-6 {
     @include col-width(6);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-7 {
     @include col-width(7);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-8 {
     @include col-width(8);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-9 {
     @include col-width(9);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-10 {
     @include col-width(10);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-11 {
     @include col-width(11);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-12 {
     @include col-width(12);
     @extend %columns;
+    @extend %mobile-flex;
 }
 
 .col-half {

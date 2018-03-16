@@ -55,9 +55,6 @@ fields:
     fonlder: /
     max_files: 1
   pinned:
-    display: Pinned
+    display: Pin Post?
     type: toggle
-  tags:
-    display: Tags
-    type: tags
-    validate: required
+

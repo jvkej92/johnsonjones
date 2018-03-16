@@ -1,14 +1,10 @@
-<div class="row secondary space-75 px">
-    <div class="col-8">
-        <h3>{{ carousel_heading }}</h3>
-        <div class="space-50"></div>
-        <div class="row justify-between slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'>
-            {{ collection:resources taxonomy:tags="pinned" taxonomy:tags="{tags}"} 
-                        {{ partial src="sets/resource_box" :title="title" :excerpt="excerpt" :featured_media="featured_media" url="url"}}
-            {{ /collection:resources}}
-            {{ collection:resources taxonomy:tags="{tags}"}} 
-                {{ partial src="sets/resource_box" :title="title" :excerpt="excerpt" :featured_media="featured_media" url="url"}}   
-            {{ /collection:resources }}
-        </div>
+<div class="slider-wrapper space-50 mx px">
+    <h3>{{ carousel_heading }}</h3>
+    <div class="space-50"></div>
+    <div class="slider">
+        {{ collection:resources filter="pinned" match_tags="{page:tags_raw:0}|{page:tags_raw:1}|{page:tags_raw:2}" min_posts="2" }} 
+            {{ partial src="sets/resource_box" :title="{title}" excerpt="{excerpt}" featured_media="{featured_media}" url="{url}"}}
+        {{ /collection:resources}}
     </div>
 </div>
+

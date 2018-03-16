@@ -9,4 +9,3 @@ title: Resource 2
 id: 8664c183-b9ce-4f51-863a-e6fd138bd645
 tags:
   - general
-  - pinned

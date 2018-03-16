@@ -5,7 +5,7 @@ resource_content:
 excerpt: '    Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​.'
 featured_media: /assets/img/hero-background.jpeg
 pinned: true
-title: Resource 3
-id: 494075e9-63be-4a8f-885d-79bc4fc37afa
+title: Resource 5
+id: b340b079-1048-41b1-9dd8-afab2b16049c
 tags:
-  - general
+  - not-general

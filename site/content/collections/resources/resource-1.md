@@ -18,4 +18,4 @@ pinned: true
 title: Resource 1
 id: 530f6ab1-a12b-4e30-a595-308ae79f1de1
 tags:
-  - general
+  - show

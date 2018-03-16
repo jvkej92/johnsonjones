@@ -1,11 +1,7 @@
 .hover-box{
-    @extend %columns;
     @extend %box-shadow-idle;
     background: $soft-white;
     transition-duration: .1s;
-    @include for-tablet-only{
-        flex-basis: 100%;
-    }
     padding-bottom: 32px;
 }
 

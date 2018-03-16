@@ -1,4 +1,30 @@
 $(document).ready(function () {
+    $('.slider').slick({
+        variablewidth: false,
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                slidesToShow: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                slidesToShow: 1
+              }
+            }
+          ]
+    });
 
     //Base Animations On Load
     //Fades the cehvron in on load
@@ -14,11 +40,6 @@ $(document).ready(function () {
         'content',
         'social media'
     ]
-
-    $(".slider").slick({
-        // normal options...
-        infinite: true
-      });
 
     //Triggers cycle function
     cycle(animationRate, heroArray);
@@ -45,13 +66,13 @@ $(document).ready(function () {
     let heroBg = $('.hero-bg');
     resize(heroSize, hero, heroBg);
 
-    let bannerSize = heroSize / 2;
+    let bannerSize = heroSize / 1.8;
     let banner = $('.banner');
     let bannerBG = $('.banner-bg');
     resize(bannerSize, banner, bannerBG);
 
     //Sets callout size to be 50% of the viewport height
-    let calloutSize = heroSize / 2 -300;
+    let calloutSize = heroSize / 1.8;
     let callout = $('.callout');
     let calloutBg = $('.callout-bg');
     resize(calloutSize, callout, calloutBg);
