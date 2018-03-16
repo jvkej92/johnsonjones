@@ -114,6 +114,10 @@ fields:
             display: Brand Content
       resource_carousel:
         display: Resource Carousel
+        fields:
+          carousel_heading:
+            display: Resource Carousel Heading
+            type: text
       callout:
         display: Callout
         fields:
@@ -127,3 +131,21 @@ fields:
           jumbotron:
             type: text
             display: Jumbotron
+      nav-panel:
+        display: Navigation Panel
+        fields:
+          panel_text:
+            type: text
+            display: Panel Text
+          next_page:
+            type: pages
+            display: Next Page
+          next_page_title:
+            type: text
+            display: Next Page Title
+          color:
+            type: select
+            display: Color
+            options:
+              primary: White
+              secondary: Grey

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $('.slider').slick({
         variablewidth: false,
         dots: true,
@@ -109,35 +110,61 @@ $(document).ready(function () {
     });
 
     //Scroll animations
-
+    
     //Triggers the fade in of the navigation on scroll
     //Controlls the fade in and out of the chevron
     $(window).scroll(function () {
-        if ($(window).scrollTop() > bannerSize - 130) {
+        
+        let navPanelHeight = $('.nav-panel')[0].getBoundingClientRect().top;
+        
+        let navPos = $('.nav-panel').offset().top - navPanelHeight;
+        
+        let windowPos = $(window).scrollTop();
+
+        if (windowPos > bannerSize - 130) {
             $('.nav').css('position', 'fixed').addClass('nav-scroll');
             $('.nav-logo img').attr('src', 'assets/img/johnsonJonesLogoNavy.png')
-        } else if ($(window).scrollTop() < bannerSize) {
+        } else if (windowPos < bannerSize) {
             $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
             $('.nav-logo img').attr('src', 'assets/img/johnsonJonesLogoWhite.png')
         }
 
-        if ($(window).scrollTop() > 110) {
+        if (windowPos > 110) {
             $('.hero-chevron img').fadeOut(500);
         }
-        if ($(window).scrollTop() < 90) {
+        if (windowPos < 90) {
             $('.hero-chevron img').fadeIn(500);
         }
+
+        if(navPos < $(window).scrollTop()){
+            $('.nav-panel').addClass('show-nav');
+        }
+        if(navPos > $(window).scrollTop()){
+            $('.nav-panel').removeClass('show-nav');
+        }
     });
+
+
+    //Nav Panel animation triggers
+    $('.nav-panel').mouseover(function () {
+        $('.nav-panel').addClass('nav-panel-hover');
+    });
+
+    $('.nav-panel').mouseout(function () {
+        $('.nav-panel').removeClass('nav-panel-hover');
+    });
+
 
 
     //Hover box animation triggers
-    $('.hover-box').mouseover(function () {
-        $(this).find('.hover-box-img').addClass('grow');
-        $(this).find('.hover-box-learn-more').css('margin-left', '16px')
+    $('.hover-box, .resource-box').mouseover(function () {
+        $(this).find('.hover-box-img, .resource-box-img').addClass('grow');
+        $(this).find('.hover-box-learn-more, .resource-box-learn-more').css('margin-left', '16px')
     });
-    $('.hover-box').mouseout(function () {
-        $(this).find('.hover-box-img').removeClass('grow');
-        $(this).find('.hover-box-learn-more').css('margin-left', '0')
+
+    $('.hover-box, .resource-box').mouseout(function () {
+        $(this).find('.hover-box-img, .resource-box-img').removeClass('grow');
+        $(this).find('.hover-box-learn-more, .resource-box-learn-more').css('margin-left', '0')
     });
 
     //Accordian

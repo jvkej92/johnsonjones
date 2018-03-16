@@ -1,23 +1,21 @@
-.hover-box{
+.resource-box{
     @extend %box-shadow-idle;
-    @extend %flex;
-    @extend %mobile-flex;
     background: $soft-white;
     transition-duration: .1s;
     padding-bottom: 32px;
 }
 
-.hover-box:hover{
+.resource-box:hover{
     background: $navy-dark;
     color: $soft-white;
     cursor: pointer;
 }
 
-a .hover-box h3{
+a .resource-box h3{
     text-decoration: none!important;
 }
 
-.hover-box-body{
+.resource-box-body{
     @include for-desktop-up {
         padding: 16px;
         margin: 0 8px auto 8px;
@@ -30,7 +28,7 @@ a .hover-box h3{
     font-size: 18px;
 }
 
-.hover-box-learn-more{
+.resource-box-learn-more{
     @extend %oswald;
     color: $navy-dark;
     font-size: 18px;
@@ -46,7 +44,7 @@ a .hover-box h3{
     transition-duration: .1s;
 }
 
-.hover-box-heading{
+.resource-box-heading{
     @extend %oswald;
     text-transform: capitalize;
     font-size: 2.5rem;
@@ -60,12 +58,12 @@ a .hover-box h3{
     padding: 0 16px;
 }
 
-p.hover-box-content{
+p.resource-box-content{
     font-size: 16px;
     padding: 0 16px 32px;
 }
 
-.hover-box-img-wrapper{
+.resource-box-img-wrapper{
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -83,7 +81,7 @@ p.hover-box-content{
     }
 }
 
-.hover-box-img{
+.resource-box-img{
     @extend %blue-fliter-light;
     position: absolute;
     top: 0; 

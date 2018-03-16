@@ -8,4 +8,5 @@ pinned: false
 title: Resource 6
 tags:
   - show
+  - other
 id: 55e2a70d-4851-4d7b-8f16-d5de0c252e0c

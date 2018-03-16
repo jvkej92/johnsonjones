@@ -1,10 +1,19 @@
-<div class="slider-wrapper space-50 mx px">
-    <h3>{{ carousel_heading }}</h3>
-    <div class="space-50"></div>
+<div class="row">
+    <div class="col-8 my py">
+            <h3>{{ carousel_heading }}</h3>
+    </div>
+</div>
+<div class="slider-wrapper space-50 px">
     <div class="slider">
-        {{ collection:resources filter="pinned" match_tags="{page:tags_raw:0}|{page:tags_raw:1}|{page:tags_raw:2}" min_posts="2" }} 
+        
+        {{ collection:resources filter="pinned" match_tags="{page:tags_raw:0}|{page:tags_raw:1}|{page:tags_raw:2}" }} 
             {{ partial src="sets/resource_box" :title="{title}" excerpt="{excerpt}" featured_media="{featured_media}" url="{url}"}}
         {{ /collection:resources}}
+
+        {{ collection:resources filter="tags" match_tags="{page:tags_raw:0}|{page:tags_raw:1}|{page:tags_raw:2}" }} 
+            {{ partial src="sets/resource_box" :title="{title}" excerpt="{excerpt}" featured_media="{featured_media}" url="{url}"}}
+        {{ /collection:resources}}
+
     </div>
 </div>
 

@@ -1,0 +1,70 @@
+.nav-panel{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-height: 0px;
+    transition-duration: .3s;
+    position: relative;
+}
+
+.show-nav{
+    max-height: 800px;
+    padding: 160px 16px;
+}
+
+.nav-panel:hover{
+    background: $navy-dark;
+    color: $soft-white;
+
+}
+
+.nav-panel-hover{
+    background: $navy-dark;
+    color: $soft-white;
+}
+
+.nav-panel-content{
+    position: absolute;
+    top: 86px;
+    right: 64px;
+}
+
+.nav-panel-content p{
+    @extend %oswald;
+    font-size: 18px;
+}
+
+.nav-panel-divider{
+    margin: 32px 0;
+    align-self: flex-end;
+    background: $navy-dark;
+    max-width: 100px;
+    min-width: 100px;
+    min-height: 4px;
+    max-height: 4px;
+}
+
+.nav-panel-hover .nav-panel-divider{
+    background: $soft-white;
+}
+
+.nav-btn{
+    align-self: flex-end;
+    text-align: right;
+    @extend %oswald;
+    font-size: 32px;
+    text-decoration: none;
+    color: $navy-dark;
+    background: $soft-white;
+    padding: 0px 16px 3px;
+    text-decoration: none;
+    background: $soft-white;
+    border-radius: 3px;
+    transition-duration: .1s;
+    width: 5.5%;
+    margin-left: -16px;
+}
+
+.nav-panel-hover .nav-btn{
+    margin-left: 0;
+}

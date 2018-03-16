@@ -1,11 +1,10 @@
 <?php
 
-namespace Statamic\Addons\Pinned;
+namespace Statamic\Addons\Tags;
 
 use Statamic\Extend\Filter;
-use Illuminate\Support\Facades\Log;
 
-class PinnedFilter extends Filter
+class TagsFilter extends Filter
 {
     /**
      * Perform filtering on a collection
@@ -19,7 +18,7 @@ class PinnedFilter extends Filter
             //Get the match_tags and create an array of values
             $match_tags = explode( '|', $this->get('match_tags', '' ));
             //Checks first to find all pinned resources
-            if($entry->get('pinned') == true){
+            if($entry->get('pinned') == false){
                 //creates an array containing all tags of current post
                 $post_tags = $entry->get('tags');
                 //loops through the page tags

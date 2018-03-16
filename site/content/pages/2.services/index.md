@@ -92,7 +92,13 @@ blocks:
           corpora quaeritis. Summus brains sit​​.
     color: primary
   - 
+    type: nav-panel
+    next_page:
+      - 19cd231d-5d6d-4c28-b461-4a08e832e9b8
+    next_page_title: About
+  - 
     type: resource_carousel
+    carousel_heading: Headline about our content to make you wanna click
   - 
     type: callout
 title: Services

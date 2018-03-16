@@ -116,7 +116,14 @@ blocks:
           survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus
           resi dentevil vultus comedat cerebella viventium. Qui animated corpse.
   - 
+    type: nav-panel
+    panel_text: "You've seen the what, now go to how"
+    next_page:
+      - dfb46d7d-b04d-4dfd-8f87-19aab0a2fdca
+    next_page_title: Services
+  - 
     type: resource_carousel
+    carousel_heading: Check out some of our content
   - 
     type: callout
     headline: Somethin
@@ -129,3 +136,6 @@ fieldset: flexible
 id: bf20d22f-a29f-4687-899e-5f05e0f59ac6
 tags:
   - show
+  - other
+  - general
+  - not-general
