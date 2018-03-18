@@ -1,3 +1,7 @@
+.wow{
+    min-height: 50px;
+}
+
 .nav-panel{
     width: 100%;
     overflow: hidden;
@@ -5,6 +9,7 @@
     max-height: 0px;
     transition-duration: .3s;
     position: relative;
+    background: $light-blue-3;
 }
 
 .show-nav{
@@ -58,7 +63,7 @@
     background: $soft-white;
     padding: 0px 16px 3px;
     text-decoration: none;
-    background: $soft-white;
+    background: $light-blue-3;
     border-radius: 3px;
     transition-duration: .1s;
     width: 5.5%;
@@ -67,4 +72,5 @@
 
 .nav-panel-hover .nav-btn{
     margin-left: 0;
+    background: $soft-white;
 }

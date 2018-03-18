@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    var os = new OnScreen({
+        tolerance: 100,
+        debounce: 0,
+        container: window
+    });
+
+    os.on('enter', '.nav-panel', (element, event) => {
+        $('.nav-panel').addClass('show-nav');
+    });
+    os.on('leave', '.nav-panel', (element, event) => {
+        $('.nav-panel').removeClass('show-nav');
+    });
 
     $('.slider').slick({
         variablewidth: false,
@@ -114,11 +126,7 @@ $(document).ready(function () {
     //Triggers the fade in of the navigation on scroll
     //Controlls the fade in and out of the chevron
     $(window).scroll(function () {
-        
-        let navPanelHeight = $('.nav-panel')[0].getBoundingClientRect().top;
-        
-        let navPos = $('.nav-panel').offset().top - navPanelHeight;
-        
+          
         let windowPos = $(window).scrollTop();
 
         if (windowPos > bannerSize - 130) {
@@ -136,12 +144,7 @@ $(document).ready(function () {
             $('.hero-chevron img').fadeIn(500);
         }
 
-        if(navPos < $(window).scrollTop()){
-            $('.nav-panel').addClass('show-nav');
-        }
-        if(navPos > $(window).scrollTop()){
-            $('.nav-panel').removeClass('show-nav');
-        }
+
     });
 
 
