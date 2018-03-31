@@ -155,4 +155,4 @@ fields:
             display: Color
             options:
               primary: White
-              secondary: Grey
+              navy-light: Grey
