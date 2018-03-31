@@ -20,9 +20,9 @@ elixir(function(mix) {
         .browserSync({proxy: 'johnsonjonesgroup.test'});
     mix.version('css/' + theme + '.css');
     mix.scripts([
-        'on-screen.umd.js',
         'wow.js',
         'slick.js',
-        theme + '.js'
+        'animations.js',
+        'links.js'
     ],  'js/' + theme + '.js');
 });
