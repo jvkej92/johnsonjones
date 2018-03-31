@@ -131,6 +131,8 @@ blocks:
     button_text: asdfadfasd
     link:
       - bf20d22f-a29f-4687-899e-5f05e0f59ac6
+  - 
+    type: panel
 title: What We Do
 fieldset: flexible
 id: bf20d22f-a29f-4687-899e-5f05e0f59ac6

@@ -114,7 +114,7 @@ html {
   font-size: 2vw;
 }
 
-h1, h2, h3, h4, blockquote, .accordian-list-heading, .btn, .card-learn-more, .card-heading, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more, .hover-box-heading, .resource-box-learn-more, .resource-box-heading, .nav-panel-content p, .nav-btn {
+h1, h2, h3, h4, blockquote, .col-1 a:not(.btn), .col-2 a:not(.btn), .col-3 a:not(.btn), .col-4 a:not(.btn), .col-5 a:not(.btn), .col-6 a:not(.btn), .col-7 a:not(.btn), .col-8 a:not(.btn), .col-9 a:not(.btn), .col-10 a:not(.btn), .col-11 a:not(.btn), .col-12 a:not(.btn), .card a:not(.btn), .accordian-list-heading, .btn, .card-learn-more, .card-heading, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more, .hover-box-heading, .resource-box-learn-more, .resource-box-heading, .nav-panel-content p, .nav-btn {
   font-family: "oswald", sans-serif;
   font-weight: 500;
   line-height: 1.2;
@@ -220,6 +220,14 @@ blockquote:before {
   margin: 0;
   padding: 0;
   min-height: 100px;
+}
+
+.col-1 a:not(.btn), .col-2 a:not(.btn), .col-3 a:not(.btn), .col-4 a:not(.btn), .col-5 a:not(.btn), .col-6 a:not(.btn), .col-7 a:not(.btn), .col-8 a:not(.btn), .col-9 a:not(.btn), .col-10 a:not(.btn), .col-11 a:not(.btn), .col-12 a:not(.btn), .card a:not(.btn) {
+  color: #003359;
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
+  font-size: 22px;
+  line-height: 2.5;
 }
 
 @media (max-width: 768px) {
