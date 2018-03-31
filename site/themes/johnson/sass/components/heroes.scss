@@ -3,6 +3,12 @@
     position: relative;
 }
 
+.banner{
+    @extend %flex;
+    position: relative;
+    margin-bottom: 64px;
+}
+
 .hero-bg, .banner-bg {
     position: absolute;
     width: 100%;
