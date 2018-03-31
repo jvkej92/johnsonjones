@@ -19,4 +19,10 @@ elixir(function(mix) {
     mix.sass(theme + '.scss', 'css/' + theme + '.css')
         .browserSync({proxy: 'johnsonjonesgroup.test'});
     mix.version('css/' + theme + '.css');
+    mix.scripts([
+        'on-screen.umd.js',
+        'wow.js',
+        'slick.js',
+        theme + '.js'
+    ],  'js/' + theme + '.js');
 });
