@@ -21,6 +21,13 @@ fields:
             max_files: 1
           headline:
             type: text
+          buttonText:
+            display: Button Text
+            type: text
+          link:
+            display: Button Link
+            type: pages
+
       panel:
         display: Panel
         fields:

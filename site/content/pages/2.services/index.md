@@ -5,6 +5,7 @@ blocks:
     type: hero
     photo: /assets/img/hero-background.jpeg
     headline: “Some people want it all” -Alicia Keys
+    buttonText: Get Your Free Audit
   - 
     type: standalone_jumbotron
     jumbotron: Our marketing systems work together to bring you more leads. More leads means more sales.
