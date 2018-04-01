@@ -14,3 +14,9 @@ assets:
     title: redwood sign
   img/desert.jpg:
     focus: 77-70
+  img/johnsonJonesLogoNavy.png:
+    title: Johnson Jones Logo
+    alt: Logo for Johnson Jones Marketing Group in navy
+  img/johnsonJonesLogoWhite.png:
+    title: Johnson Jones Logo
+    alt: Logo for Johnson Jones Marketing Group in white
