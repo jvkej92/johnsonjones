@@ -98,10 +98,6 @@ div.secondary {
   background: #ededed;
 }
 
-div.navy-light {
-  background: #a6b8c5;
-}
-
 strong {
   color: #a6b8c5;
 }
@@ -124,7 +120,7 @@ h1, h2, h3, h4, blockquote, .col-1 a:not(.btn), .col-2 a:not(.btn), .col-3 a:not
   line-height: 1.2;
 }
 
-body, p, .footer-nav .footer-nav-item > a.nav-link {
+body, p {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -212,7 +208,7 @@ blockquote:before {
   text-align: right !important;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .row, .callout, .banner, .footer, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item, .hover-box {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card, .row, .callout, .banner, .hero, .nav, .nav-links, .nav-item, .nav-bar, .mobile-menu-items .nav-item, .hover-box {
   display: -moz-flex;
   display: flex;
   box-sizing: border-box;
@@ -223,7 +219,7 @@ blockquote:before {
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .card {
   margin: 0;
   padding: 0;
-  min-height: 50px;
+  min-height: 100px;
 }
 
 .col-1 a:not(.btn), .col-2 a:not(.btn), .col-3 a:not(.btn), .col-4 a:not(.btn), .col-5 a:not(.btn), .col-6 a:not(.btn), .col-7 a:not(.btn), .col-8 a:not(.btn), .col-9 a:not(.btn), .col-10 a:not(.btn), .col-11 a:not(.btn), .col-12 a:not(.btn), .card a:not(.btn) {
@@ -237,7 +233,6 @@ blockquote:before {
 @media (max-width: 768px) {
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .hover-box {
     flex-basis: 100% !important;
-    margin-bottom: 32px;
   }
 }
 
@@ -476,14 +471,6 @@ blockquote:before {
   }
 }
 
-@media (max-width: 768px) {
-  .mobile-border {
-    border-bottom: 1px solid #ccd9e2;
-    padding-bottom: 26px;
-    margin-bottom: 16px;
-  }
-}
-
 .card:hover {
   transform: scale(1.03);
   cursor: pointer;
@@ -585,59 +572,8 @@ p.card-content {
   padding-bottom: 32px;
 }
 
-.footer {
-  width: 80%;
-  justify-content: space-between;
-  margin: auto;
-  padding: 0;
-  margin-bottom: 42px;
-}
-
-@media (max-width: 968px) {
-  .footer > div {
-    flex-basis: 100%;
-  }
-}
-
-.footer .col-4 a {
-  line-height: 4.5;
-}
-
-.footer .col-4 h4 {
-  margin-top: -32px;
-}
-
-.footer > .col-4 img {
-  width: 100%;
-}
-
-.footer-nav {
-  width: 100%;
-}
-
-.footer-nav .footer-nav-item > a.nav-link {
-  text-align: left;
-  margin-left: 0;
-}
-
-.footer-bottom > div > a.plain-link {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.7;
-}
-
-a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
-  text-decoration: underline;
-}
-
 .hero {
   position: relative;
-}
-
-.banner {
-  position: relative;
-  margin-bottom: 64px;
 }
 
 .hero-bg, .banner-bg {
@@ -734,10 +670,6 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   100% {
     opacity: 1;
   }
-}
-
-.jumbotron {
-  margin-bottom: 64px;
 }
 
 .nav {
@@ -1125,15 +1057,23 @@ p.resource-box-content {
   transform: scale(1.2);
 }
 
+.wow {
+  min-height: 50px;
+}
+
 .nav-panel {
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
+  max-height: 0px;
   transition-duration: .3s;
   position: relative;
-  background: #a6b8c5;
-  min-height: 300px;
-  cursor: pointer;
+  background: #c9eef7;
+}
+
+.show-nav {
+  max-height: 800px;
+  padding: 160px 16px;
 }
 
 .nav-panel:hover {
@@ -1152,22 +1092,8 @@ p.resource-box-content {
   right: 64px;
 }
 
-@media (max-width: 768px) {
-  .nav-panel-content {
-    left: 20px;
-    margin-right: auto;
-  }
-}
-
 .nav-panel-content p {
   font-size: 18px;
-  text-align: right;
-}
-
-@media (max-width: 768px) {
-  .nav-panel-content p {
-    text-align: left;
-  }
 }
 
 .nav-panel-divider {
@@ -1187,13 +1113,13 @@ p.resource-box-content {
 .nav-btn {
   align-self: flex-end;
   text-align: right;
-  font-size: 36px;
+  font-size: 32px;
   text-decoration: none;
   color: #003359;
   background: #f9f5f2;
   padding: 0px 16px 3px;
   text-decoration: none;
-  background: #a6b8c5;
+  background: #c9eef7;
   border-radius: 3px;
   transition-duration: .1s;
   width: 5.5%;
