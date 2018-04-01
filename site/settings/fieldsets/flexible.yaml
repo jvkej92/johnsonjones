@@ -27,7 +27,7 @@ fields:
           link:
             display: Button Link
             type: pages
-      button:
+        button:
           display: Stand Alone Button
           fields:
             align:
@@ -58,15 +58,15 @@ fields:
             button_text:
               display: Button Text
               type: text      
-      panel:
-        display: Panel
-        fields:
-          color:
-            type: select
-            display: Color
-            options:
-              primary: White
-              secondary: Grey
+        panel:
+          display: Panel
+          fields:
+            color:
+              type: select
+              display: Color
+              options:
+                primary: White
+                secondary: Grey
           little_bugger:
             type: text
             display: Little Bugger
