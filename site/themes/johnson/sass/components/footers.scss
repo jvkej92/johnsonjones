@@ -1,0 +1,41 @@
+.footer{
+    @extend %flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 42px;
+}
+
+.footer > div{
+    align-self: flex-start;
+}
+
+.footer .col-4 a{
+    line-height: 4.5;
+}
+
+.footer .col-4 h4{
+    margin-top: -32px;
+}
+
+.footer-nav{
+    width: 100%;
+}
+
+.footer-nav .footer-nav-item > a.nav-link{
+    @extend %open-sans;
+    text-align: left;
+    margin-left: 0;
+}
+
+.footer-bottom > div > a.plain-link{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+a.plain-link:hover{
+    text-decoration: underline;
+}
