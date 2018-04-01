@@ -641,6 +641,11 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   position: relative;
 }
 
+.banner {
+  position: relative;
+  margin-bottom: 64px;
+}
+
 .hero-bg, .banner-bg {
   position: absolute;
   width: 100%;
@@ -735,6 +740,10 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   100% {
     opacity: 1;
   }
+}
+
+.jumbotron {
+  margin-bottom: 64px;
 }
 
 .nav {
@@ -1128,18 +1137,9 @@ p.resource-box-content {
   box-sizing: border-box;
   transition-duration: .3s;
   position: relative;
-<<<<<<< HEAD
-  background: #c9eef7;
-}
-
-.show-nav {
-  max-height: 800px;
-  padding: 160px 16px;
-=======
   background: #a6b8c5;
   min-height: 300px;
   cursor: pointer;
->>>>>>> 580bbadbc528cd0a148077a94a6c6984e7ec398d
 }
 
 .nav-panel:hover {
