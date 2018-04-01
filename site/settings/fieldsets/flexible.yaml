@@ -84,50 +84,50 @@ fields:
                     type: partial
                     display: Column Content
                     fieldset: column_2
-            columns_3:
-              type: replicator
-              display: Column 3
-              sets:
-                column_3:
-                  display: Column 3
-                  fields:
-                    column_content:
-                      type: partial
-                      display: Column Content
-                      fieldset: column_3
-            cards:
-              type: replicator
-              display: Cards
-              sets:
-                cards:
-                  display: cards
-                  fields:
-                    color:
-                      type: select
-                      display: Color
-                      options:
-                        primary: White
-                        secondary: Grey
-                    icon:
-                      type: toggle
-                      display: Use Icon?
-                    icon_url:
-                      type: assets
-                      display: Icon
-                      container: main
-                      folder: /
-                    heading:
-                      type: text
-                      display: Heading
-                    content:
-                      type: markdown
-                      display: Content
-                    link:
-                      type: pages
-                      display: Link
-                    button_text:
-                      type: text
-                      display: Button Text
+          columns_3:
+            type: replicator
+            display: Column 3
+            sets:
+              column_3:
+                display: Column 3
+                fields:
+                  column_content:
+                    type: partial
+                    display: Column Content
+                    fieldset: column_3
+          cards:
+            type: replicator
+            display: Cards
+            sets:
+              cards:
+                display: cards
+                fields:
+                  color:
+                    type: select
+                    display: Color
+                    options:
+                      primary: White
+                      secondary: Grey
+                  icon:
+                    type: toggle
+                    display: Use Icon?
+                  icon_url:
+                    type: assets
+                    display: Icon
+                    container: main
+                    folder: /
+                  heading:
+                    type: text
+                    display: Heading
+                  content:
+                    type: markdown
+                    display: Content
+                  link:
+                    type: pages
+                    display: Link
+                  button_text:
+                    type: text
+                    display: Button Text
       funnel:
         display: Funnel
         fields:
