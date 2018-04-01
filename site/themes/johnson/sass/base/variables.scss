@@ -3,7 +3,7 @@
 
 //Media Queries
 @mixin for-phone-only {
-    @media (max-width: 768px) {
+    @media (max-width: 78px) {
         @content;
     }
 }
