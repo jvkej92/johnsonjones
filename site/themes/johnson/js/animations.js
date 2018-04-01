@@ -62,33 +62,6 @@ $(document).ready(function () {
     //Sets hero height to that of the window.
     $('.mobile-menu-items').css('height', $(window).height - $('.nav-bar').height());
 
-    let heroSize = $(window).height();
-    let hero = $('.hero');
-    let heroBg = $('.hero-bg');
-    resize(heroSize, hero, heroBg);
-
-    let bannerSize = heroSize / 1.8;
-    let banner = $('.banner');
-    let bannerBG = $('.banner-bg');
-    resize(bannerSize, banner, bannerBG);
-
-    //Sets callout size to be 50% of the viewport height
-    let calloutSize = heroSize / 1.8;
-    let callout = $('.callout');
-    let calloutBg = $('.callout-bg');
-    resize(calloutSize, callout, calloutBg);
-
-    $(window).resize(function () {
-        resize(heroSize, hero, heroBg);
-        resize(calloutSize, callout, calloutBg);
-    });
-
-    //Sets the size of elements and sets the child elements max height to that of the parents height
-    function resize(target, parent, bg) {
-        parent.css('min-height', target);
-        bg.css('min-height', parent.innerHeight());
-    }
-
     //Find and replace for the plus icons
     let plusSignSm = '<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 24" xml:space="preserve" height="24px" width="24px"><polygon fill="#003359" points="19.2,9.6 14.4,9.6 14.4,4.8 14.4,0 9.6,0 9.6,4.8 9.6,9.6 4.8,9.6 0,9.6 0,14.4 4.8,14.4 9.6,14.4 9.6,19.2 9.6,24 14.4,24 14.4,19.2 14.4,14.4 19.2,14.4 24,14.4 24,9.6 "/></svg>';
     let plusSignMed = '<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 24" xml:space="preserve" height="48px" width="48px"><polygon fill="#003359" points="19.2,9.6 14.4,9.6 14.4,4.8 14.4,0 9.6,0 9.6,4.8 9.6,9.6 4.8,9.6 0,9.6 0,14.4 4.8,14.4 9.6,14.4 9.6,19.2 9.6,24 14.4,24 14.4,19.2 14.4,14.4 19.2,14.4 24,14.4 24,9.6 "/></svg>';
@@ -108,33 +81,6 @@ $(document).ready(function () {
             $('.mobile-menu-items').slideDown(100);
         }
     });
-
-    //Scroll animations
-    
-    //Triggers the fade in of the navigation on scroll
-    //Controlls the fade in and out of the chevron
-    $(window).scroll(function () {
-          
-        let windowPos = $(window).scrollTop();
-
-        if (windowPos > bannerSize - 130) {
-            $('.nav').css('position', 'fixed').addClass('nav-scroll');
-            $('.nav-logo img').attr('src', '../assets/img/johnsonJonesLogoNavy.png')
-        } else if (windowPos < bannerSize) {
-            $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
-            $('.nav-logo img').attr('src', '../assets/img/johnsonJonesLogoWhite.png')
-        }
-
-        if (windowPos > 110) {
-            $('.hero-chevron img').fadeOut(500);
-        }
-        if (windowPos < 90) {
-            $('.hero-chevron img').fadeIn(500);
-        }
-
-
-    });
-
 
     //Nav Panel animation triggers
     $('.nav-panel').mouseover(function () {

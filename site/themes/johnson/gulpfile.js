@@ -23,6 +23,8 @@ elixir(function(mix) {
         'wow.js',
         'slick.js',
         'animations.js',
+        'heroHeight.js',
+        'fixedHeader.js',
         'links.js'
     ],  'js/' + theme + '.js');
 });
