@@ -1,0 +1,33 @@
+<div class="footer">
+    {{ partial:scripts }}
+    <div class="col-2">
+        <h4>Site Map</h4>
+        <ul class="footer-nav">
+                {{ nav from="/" }}
+                <li class="footer-nav-item">
+                    <a class="nav-link" href="{{ url }}">{{ title }}</a>
+                </li>
+                {{ /nav }}
+                <li class="footer-nav-item">
+                    <a class="nav-link" href="/audit">Free Audit</a>
+                </li>
+        </ul>
+    </div>
+    <div class="col-2" class="justify-start" style="margin-right: auto;">
+       <h4>Our Expertise</h4>
+       <ul class="footer-nav">
+            {{ nav from="/services" }}
+            <li class="footer-nav-item">
+                <a class="nav-link" href="{{ url }}">{{ title }}</a>
+            </li>
+            {{ /nav }}
+    </ul>
+    </div>
+    <div class="col-4" style="justify-self: end">
+        <a href="/"><img src="{{assets:value}}/img/johnsonJonesLogoNavy.png" alt="johnson and jones marketing logo" width="250px"></a>
+        <h4>hello@johnsonjonesgroup.com</h4>
+    </div>
+</div>
+<div class="row footer-bottom">
+    <div class="col-10">© Johnson Jones Group 2018 | <a href="privacy-policy" class="plain-link">Privacy Policy</a></div>
+</div>

@@ -9,7 +9,14 @@
     border-radius: 2px;
     font-size: 18px;
     transition-duration: .1s;
-    
+}
+
+.mobile-border{
+    @include for-phone-only {
+        border-bottom: 1px solid #ccd9e2;
+        padding-bottom: 26px;
+        margin-bottom: 16px;
+    }
 }
 
 .card:hover{

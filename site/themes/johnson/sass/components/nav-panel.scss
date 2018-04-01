@@ -1,20 +1,21 @@
-.wow{
-    min-height: 50px;
-}
-
 .nav-panel{
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
-    max-height: 0px;
     transition-duration: .3s;
     position: relative;
+<<<<<<< HEAD
     background: $light-blue-3;
 }
 
 .show-nav{
     max-height: 800px;
     padding: 160px 16px;
+=======
+    background: $navy-light;
+    min-height: 300px;
+    cursor: pointer;
+>>>>>>> 580bbadbc528cd0a148077a94a6c6984e7ec398d
 }
 
 .nav-panel:hover{
@@ -32,11 +33,19 @@
     position: absolute;
     top: 86px;
     right: 64px;
+    @include for-phone-only{
+        left: 20px;
+        margin-right: auto;
+    }
 }
 
 .nav-panel-content p{
     @extend %oswald;
     font-size: 18px;
+    text-align: right;
+    @include for-phone-only{
+        text-align: left;
+    }
 }
 
 .nav-panel-divider{
@@ -57,13 +66,13 @@
     align-self: flex-end;
     text-align: right;
     @extend %oswald;
-    font-size: 32px;
+    font-size: 36px;
     text-decoration: none;
     color: $navy-dark;
     background: $soft-white;
     padding: 0px 16px 3px;
     text-decoration: none;
-    background: $light-blue-3;
+    background: $navy-light;
     border-radius: 3px;
     transition-duration: .1s;
     width: 5.5%;

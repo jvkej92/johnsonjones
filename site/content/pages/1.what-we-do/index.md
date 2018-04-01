@@ -118,8 +118,6 @@ blocks:
   - 
     type: nav-panel
     panel_text: "You've seen the what, now go to how"
-    next_page:
-      - dfb46d7d-b04d-4dfd-8f87-19aab0a2fdca
     next_page_title: Services
   - 
     type: resource_carousel
@@ -133,6 +131,13 @@ blocks:
       - bf20d22f-a29f-4687-899e-5f05e0f59ac6
   - 
     type: panel
+  - 
+    type: button
+    align: justify-center
+    width: col-2
+    link:
+      - 19cd231d-5d6d-4c28-b461-4a08e832e9b8
+    button_text: 'See our creative services >'
 title: What We Do
 fieldset: flexible
 id: bf20d22f-a29f-4687-899e-5f05e0f59ac6
