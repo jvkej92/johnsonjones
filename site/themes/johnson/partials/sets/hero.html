@@ -8,7 +8,7 @@
                 <div class="col-12"><span class="title-divider"></span></div>
             </div>
             <h1>{{ headline }}</h1>
-            <a href="{{ link | /audit}}" class="btn btn-primary">{{buttonText | Get Your Free Audit}}</a>
+            <a href="{{ link | url or "/audit"}}" class="btn btn-primary">{{buttonText or "Get Your Free Audit"}}</a>
         </div>
         <div class="hero-chevron">
             <img src="/assets/img/JohnsonJones_Icon_Chevron_Down.svg">
