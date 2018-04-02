@@ -1,14 +1,14 @@
 {{# banner #}}
 <div class="banner justify-center">
     <div class="banner-bg hero-blue-fliter" style="background-image: url({{ photo or asssets/img/hero-background.jpeg}})"></div>
-    <div class="row col-10 justify-center">
-        <div class="hero-content light-text">
+    <div class="row col-10 justify-center banner-content-wrapper">
+        <div class="banner-content light-text">
             <div class="hero-title">
                 <h4>{{ title }}</h4>
                 <div class="col-12"><span class="title-divider"></span></div>
             </div>
-            <h1>{{ headline }}</h1>
-            <a href="{{ link | url or "/audit"}}" class="btn btn-primary">{{buttonText or "Get Your Free Audit"}}</a>
+            <h1 class="mb pb">{{ headline }}</h1>
+            <a href="{{ link | url or "/audit"}}" class="btn btn-primary my">{{buttonText or "Get Your Free Audit"}}</a>
         </div>
         <div class="hero-chevron">
             <img src="/assets/img/JohnsonJones_Icon_Chevron_Down.svg">

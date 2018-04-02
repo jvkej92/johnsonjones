@@ -28,36 +28,36 @@ fields:
             display: Button Link
             type: pages
       button:
-          display: Stand Alone Button
-          fields:
-            align:
-              type: select
-              options:
-                justify-start: Left
-                justify-end: Right
-                justify-center: Center
-            width:
-              type: select
-              display: Button Width
-              options:
-                col-1: 1/12
-                col-2: 2/12
-                col-3: 3/12
-                col-4: 4/12
-                col-5: 5/12
-                col-6: 6/12
-                col-7: 7/12
-                col-8: 8/12
-                col-9: 9/12
-                col-10: 10/12
-                col-11: 11/12
-                col-12: 12/12
-            link:
-              display: Button Link
-              type: pages
-            button_text:
-              display: Button Text
-              type: text      
+        display: Stand Alone Button
+        fields:
+          align:
+            type: select
+            options:
+              justify-start: Left
+              justify-end: Right
+              justify-center: Center
+          width:
+            type: select
+            display: Button Width
+            options:
+              col-1: 1/12
+              col-2: 2/12
+              col-3: 3/12
+              col-4: 4/12
+              col-5: 5/12
+              col-6: 6/12
+              col-7: 7/12
+              col-8: 8/12
+              col-9: 9/12
+              col-10: 10/12
+              col-11: 11/12
+              col-12: 12/12
+          link:
+            display: Button Link
+            type: pages
+          button_text:
+            display: Button Text
+            type: text      
       panel:
         display: Panel
         fields:

@@ -26,16 +26,36 @@
     filter: grayscale(100%) brightness(80%) contrast(130%);
 }
 
+.callout-content-wrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 .callout-content {
     text-align: center;
-    position: relative;
+    position: absolute;
     box-sizing: border-box;
     @include for-tablet-up{
-        padding: 10%;
+        padding: 5%;
     }
     padding: 32px 16px;
     font-size: 2vh;
     align-self: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
 }
 
 .callout-content h1 {
