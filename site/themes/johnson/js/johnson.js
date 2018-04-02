@@ -3672,19 +3672,23 @@ $(document).ready(function () {
       })(jQuery);
 });
 let viewHeight = window.innerHeight;
-let heroContent = $(".hero-content-wrapper, hero-content");
-let hero = $(".hero, .banner");
+let heroContent = $(".hero-content-wrapper");
+let hero = $(".hero, .hero-bg");
+let bannerContent = $(".banner-content-wrapper");
+let banner = $(".banner, .banner-bg");
 let calloutContent = $(".callout-content-wrapper");
 let callout = $(".callout, .callout-bg");
 
 
 
-setHeroSize(heroContent, hero, .5);
+setHeroSize(heroContent, hero, 1);
+setHeroSize(bannerContent, banner, .55);
 setHeroSize(calloutContent, callout, .45);
 
 $(window).resize(function () {
-    setHeroSize(heroContent, hero, .5);
-    setHeroSize(calloutContent, callout, .5);
+    setHeroSize(heroContent, hero, 1);
+    setHeroSize(bannerContent, banner, .55);
+    setHeroSize(calloutContent, callout, .45);
 });
 
 function setHeroSize(content, parent, ratio){

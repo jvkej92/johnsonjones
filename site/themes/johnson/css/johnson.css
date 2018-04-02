@@ -706,7 +706,7 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   font-size: 20px;
 }
 
-.hero-content-wrapper {
+.hero-content-wrapper, .banner-content-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -715,7 +715,7 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   margin: auto;
 }
 
-.hero-content {
+.hero-content, .banner-content {
   text-align: center;
   position: absolute;
   box-sizing: border-box;
@@ -736,7 +736,7 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 }
 
 @media (min-width: 968px) {
-  .hero-content {
+  .hero-content, .banner-content {
     padding: 5%;
   }
 }
