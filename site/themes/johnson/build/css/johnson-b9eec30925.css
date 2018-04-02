@@ -732,12 +732,18 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   align-content: center;
   align-items: center;
   justify-content: center;
-  width: 70%;
+}
+
+@media (max-width: 968px) {
+  .hero-content, .banner-content {
+    width: 90%;
+  }
 }
 
 @media (min-width: 968px) {
   .hero-content, .banner-content {
     padding: 5%;
+    width: 70%;
   }
 }
 
