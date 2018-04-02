@@ -8,7 +8,7 @@ let callout = $(".callout, .callout-bg");
 
 
 
-setHeroSize(heroContent, hero, 1);
+setHeroSize(heroContent, hero, .9);
 setHeroSize(bannerContent, banner, .55);
 setHeroSize(calloutContent, callout, .45);
 
