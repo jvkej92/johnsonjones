@@ -3,7 +3,7 @@ blocks:
   - 
     type: hero
     photo: /assets/img/hero-background.jpeg
-    headline: 'We’re the digital marketing team  that doesn’t take up your office space.'
+    headline: 'A digital marketing team  that doesn’t take up your office space.'
   - 
     type: panel
     jumbotron: 'We provide companies with leads, by adding  digital marketing systems and radically improving communications.'
@@ -109,7 +109,7 @@ blocks:
           pricing for each of our services.
   - 
     type: nav-panel
-    panel_text: How can we help you?
+    panel_text: Find out what we can do to help you.
     next_page:
       - dfb46d7d-b04d-4dfd-8f87-19aab0a2fdca
     next_page_title: Services
@@ -122,8 +122,6 @@ blocks:
     button_text: Get Your Free Audiot
     link:
       - bf20d22f-a29f-4687-899e-5f05e0f59ac6
-  - 
-    type: panel
 title: What We Do
 fieldset: flexible
 id: bf20d22f-a29f-4687-899e-5f05e0f59ac6
