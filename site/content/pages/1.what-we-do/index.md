@@ -119,7 +119,7 @@ blocks:
   - 
     type: callout
     headline: Our short online test will give you specific steps to boost your marketing.
-    button_text: Get Your Free Audiot
+    button_text: Get Your Free Audit
     link:
       - bf20d22f-a29f-4687-899e-5f05e0f59ac6
 title: What We Do
