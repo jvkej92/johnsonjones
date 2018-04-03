@@ -19,7 +19,6 @@ $(window).resize(function () {
 });
 
 function setHeroSize(content, parent, ratio){
-    debugger;
     content.css('min-height', viewHeight * ratio);
     parent.css('min-height', (viewHeight * ratio) + 200);
 }

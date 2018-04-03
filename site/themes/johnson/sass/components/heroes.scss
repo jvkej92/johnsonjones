@@ -42,7 +42,7 @@
     min-width: 100px;
     max-width: 100px;
     background: $soft-white;
-    margin: 0 auto 32px;
+    margin: 0 auto;
 }
 
 .hero-title{
@@ -58,6 +58,18 @@
     left: 0;
     right: 0;
     margin: auto;
+    @include for-desktop-up{
+        width: 70%;
+    } 
+    @include for-tablet-up{
+        width: 75%;
+    } 
+    @include for-tablet-only{
+        width: 85%;
+    } 
+    @include for-phone-only{
+        width: 95%;
+    } 
 }
 
 .hero-content, .banner-content {
@@ -65,11 +77,11 @@
     position: absolute;
     box-sizing: border-box;
     @include for-tablet-only{
-        width: 90%;
+        width: 95%;
     }
     @include for-tablet-up{
         padding: 5%;
-        width: 70%;
+        width: 85%;
     }
     padding: 15px;
     font-size: 2vh;
@@ -86,7 +98,7 @@
     justify-content: center;
 }
 
-.hero-content h1 {
+.hero-content > h1.headline, .banner-content > h1.headline {
     @include for-phone-only{
         font-size: 3.5rem;
     }
