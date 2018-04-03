@@ -6,8 +6,6 @@ blocks:
     headline: 'Change the way you think about '
   - 
     type: callout
-    heading: 'Snappy heading to get people to click on the button '
-    button: Click Me
     headline: Our short online test will give you specific steps to boost your marketing.
     button_text: Get Your Free Audit
 title: Home
