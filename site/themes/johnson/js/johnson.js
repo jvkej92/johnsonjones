@@ -3692,7 +3692,6 @@ $(window).resize(function () {
 });
 
 function setHeroSize(content, parent, ratio){
-    debugger;
     content.css('min-height', viewHeight * ratio);
     parent.css('min-height', (viewHeight * ratio) + 200);
 }
@@ -3704,7 +3703,6 @@ function setHeroSize(content, parent, ratio){
     //Triggers the fade in of the navigation on scroll
     //Controlls the fade in and out of the chevron
 $(window).scroll(function () { 
-    debugger;
     let windowPos = $(window).scrollTop();
     let bannerSize = $('.banner').height();
     if (windowPos > bannerSize - 130) {

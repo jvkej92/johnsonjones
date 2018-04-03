@@ -697,7 +697,7 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   min-width: 100px;
   max-width: 100px;
   background: #f9f5f2;
-  margin: 0 auto 32px;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -713,6 +713,30 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+@media (min-width: 1224px) {
+  .hero-content-wrapper, .banner-content-wrapper {
+    width: 70%;
+  }
+}
+
+@media (min-width: 968px) {
+  .hero-content-wrapper, .banner-content-wrapper {
+    width: 75%;
+  }
+}
+
+@media (max-width: 968px) {
+  .hero-content-wrapper, .banner-content-wrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content-wrapper, .banner-content-wrapper {
+    width: 95%;
+  }
 }
 
 .hero-content, .banner-content {
@@ -736,24 +760,24 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 
 @media (max-width: 968px) {
   .hero-content, .banner-content {
-    width: 90%;
+    width: 95%;
   }
 }
 
 @media (min-width: 968px) {
   .hero-content, .banner-content {
     padding: 5%;
-    width: 70%;
+    width: 85%;
   }
 }
 
-.hero-content h1 {
+.hero-content > h1.headline, .banner-content > h1.headline {
   font-size: 2.5rem;
   padding-bottom: 64px;
 }
 
 @media (max-width: 768px) {
-  .hero-content h1 {
+  .hero-content > h1.headline, .banner-content > h1.headline {
     font-size: 3.5rem;
   }
 }

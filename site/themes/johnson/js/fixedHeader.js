@@ -3,7 +3,6 @@
     //Triggers the fade in of the navigation on scroll
     //Controlls the fade in and out of the chevron
 $(window).scroll(function () { 
-    debugger;
     let windowPos = $(window).scrollTop();
     let bannerSize = $('.banner').height();
     if (windowPos > bannerSize - 130) {
