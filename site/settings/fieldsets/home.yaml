@@ -13,17 +13,16 @@ fields:
             max_files: 1
           headline:
             type: text
-      callout:
-        fields:
-          heading:
-            display: Callout Heading
-            type: text
-          content:
-            display: Callout Content
-            type: markdown
-          button:
+          buttonText:
             display: Button Text
             type: text
           link:
             display: Button Link
-            type: text 
+            type: pages
+      callout:
+        display: Callout
+        fields:
+          callout:
+            type: partial
+            display: Callout
+            fieldset: custom_callout
