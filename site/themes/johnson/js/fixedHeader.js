@@ -7,10 +7,10 @@ $(window).scroll(function () {
     let bannerSize = $('.banner').height();
     if (windowPos > bannerSize - 130) {
         $('.nav').css('position', 'fixed').addClass('nav-scroll');
-        $('.nav-logo img').attr('src', '../assets/img/johnsonJonesLogoNavy.png')
+        $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoNavy.png')
     } else if (windowPos < bannerSize) {
         $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
-        $('.nav-logo img').attr('src', '../assets/img/johnsonJonesLogoWhite.png')
+        $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoWhite.png')
     }
 
     if (windowPos > 110) {
