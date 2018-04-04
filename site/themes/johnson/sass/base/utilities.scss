@@ -157,3 +157,25 @@
         height: 25vw;
     }
 }
+
+.col-list{
+    display:list-item;
+    list-style: decimal; 
+    @extend %oswald; 
+    @include for-tablet-up{
+        font-size: 2rem;
+        margin-left: 1.5rem;
+    }
+    @include for-phone-only{
+        font-size: 4rem;
+        margin-left: 3rem;
+    }
+    font-size: 3rem;
+    margin-left: 2.25rem;
+    margin-right: 2.5rem;
+}
+
+.col-heading{
+    margin-left: 0;
+    margin-right: auto;
+}

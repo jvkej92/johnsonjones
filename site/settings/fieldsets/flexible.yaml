@@ -57,7 +57,7 @@ fields:
             type: pages
           button_text:
             display: Button Text
-            type: text      
+            type: text
       panel:
         display: Panel
         fields:
@@ -73,6 +73,17 @@ fields:
           jumbotron:
             type: text
             display: Jumbotron
+          columns_1:
+            type: replicator
+            display: Columns
+            sets:
+              column_1:
+                display: Column 1
+                fields:
+                  field_1:
+                    type: partial
+                    display: Column Content
+                    fieldset: column_1
           columns_2:
             type: replicator
             display: Columns
@@ -186,4 +197,3 @@ fields:
             options:
               primary: White
               navy-light: Grey
-        

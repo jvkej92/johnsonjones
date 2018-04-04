@@ -1,0 +1,6 @@
+.little-bugger{
+    min-height: 0px;
+    @include for-phone-only{
+        margin-bottom: -30px;
+    }
+}
