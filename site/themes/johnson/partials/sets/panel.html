@@ -7,6 +7,10 @@
     {{ /if }}
     <div class="col-10 justify-between pb">
 
+        {{ columns_1 }}
+            {{ partial src="sets/{ type }" }}
+        {{ /columns_1 }}
+
         {{ columns_2 }}
             {{ partial src="sets/{ type }" }}
         {{ /columns_2 }}

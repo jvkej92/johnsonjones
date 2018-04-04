@@ -1,0 +1,11 @@
+taxonomies: false
+title: Column 1
+create_title: Column 1
+hide: true
+fields:
+  heading:
+    type: text
+    display: Heading
+  content:
+    type: markdown
+    display: Content
