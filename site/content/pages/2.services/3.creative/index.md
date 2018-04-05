@@ -21,6 +21,8 @@ blocks:
           Successful marketing starts and ends with your brand identity, and it goes much further than a logo.
           Your consumer needs to relate to the way your company presents itself
         button_text: 'Learn More '
+        link:
+          - 5ecfea46-aa66-4101-91d4-5b3ac92f2e6b
       - 
         type: cards
         heading: Video Production
@@ -30,6 +32,8 @@ blocks:
           videos that cut through the
           noise and engage your consumer in
           their preferred form of media.
+        link:
+          - f38659b8-6983-49cc-bd59-69758420e36a
       - 
         type: cards
         heading: Social Media Management
@@ -40,6 +44,8 @@ blocks:
           media strategy engages your current
           customer and puts you in front
           of new ones.
+        link:
+          - e6273913-68d1-40a0-8edc-8f9c0b68e9e5
       - 
         type: cards
         heading: Blogging
@@ -49,6 +55,8 @@ blocks:
           a blog is posted, it lives online and
           attract leads forever, unlike
           short-lived content.
+        link:
+          - d2dfe091-8b6a-49cb-b755-c081efa44cdd
   - 
     type: button
     align: justify-center
