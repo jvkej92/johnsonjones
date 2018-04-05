@@ -15,3 +15,4 @@ email:
   - 
     to: hello@johnsonjonesgroup.com
     subject: New Form Submission
+    reply_to: "{{ email }}"

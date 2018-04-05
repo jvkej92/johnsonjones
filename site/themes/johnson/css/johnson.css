@@ -1332,6 +1332,23 @@ p.resource-box-content {
   }
 }
 
+.contact-banenr-wrapper {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-banner-heading {
+  line-height: 1.3;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .contact-banner-heading {
+    font-size: 3rem;
+  }
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
