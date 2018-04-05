@@ -118,7 +118,7 @@ html {
   font-size: 2vw;
 }
 
-h1, h2, h3, h4, blockquote, .col-1 a:not(.btn), .col-2 a:not(.btn), .col-3 a:not(.btn), .col-4 a:not(.btn), .col-5 a:not(.btn), .col-6 a:not(.btn), .col-7 a:not(.btn), .col-8 a:not(.btn), .col-9 a:not(.btn), .col-10 a:not(.btn), .col-11 a:not(.btn), .col-12 a:not(.btn), .card a:not(.btn), .accordian-list-heading, .btn, .card-learn-more, .card-heading, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more, .hover-box-heading, .resource-box-learn-more, .resource-box-heading, .nav-panel-content p, .nav-btn, .col-list {
+h1, h2, h3, h4, blockquote, .col-1 a:not(.btn), .col-2 a:not(.btn), .col-3 a:not(.btn), .col-4 a:not(.btn), .col-5 a:not(.btn), .col-6 a:not(.btn), .col-7 a:not(.btn), .col-8 a:not(.btn), .col-9 a:not(.btn), .col-10 a:not(.btn), .col-11 a:not(.btn), .col-12 a:not(.btn), .card a:not(.btn), .accordian-list-heading, .btn, .card-learn-more, .card-heading, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more, .hover-box-heading, .resource-box-learn-more, .resource-box-heading, .nav-panel-content p, .nav-btn, .form-field-wrapper label, .col-list {
   font-family: "oswald", sans-serif;
   font-weight: 500;
   line-height: 1.2;
@@ -1347,6 +1347,56 @@ p.resource-box-content {
   .contact-banner-heading {
     font-size: 3rem;
   }
+}
+
+.form-wrapper {
+  background: #ededed;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: -500px;
+}
+
+.form-wrapper .btn {
+  font-size: 32px;
+  padding: 8px 32px 8px;
+  max-height: 500px;
+  cursor: pointer;
+}
+
+.form-wrapper h4 {
+  line-height: 1.3;
+  font-size: 1.5rem;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 768px) {
+  .form-wrapper h4 {
+    font-size: 3rem;
+  }
+}
+
+.form-field-wrapper {
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.form-field-wrapper label {
+  display: block;
+  font-size: 20px;
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+.form-field-wrapper input[type="text"] {
+  line-height: 1.7;
+  font-size: 26px;
+  border-radius: 2px;
+  border: 1px solid #003359;
+  padding-left: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /*!

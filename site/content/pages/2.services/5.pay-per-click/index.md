@@ -21,7 +21,7 @@ blocks:
         type: column_3
         heading: Permission Based
         content: >
-          By targeting specific keywords we are able to save money on advertisin by only showing ads to
+          By targeting specific keywords we are able to save money on advertising by only showing ads to
           consumers searching for terms relevant to your company.
       - 
         type: column_3
@@ -77,25 +77,26 @@ blocks:
         type: column_1
         heading: Define goals and KPI’s
         content: |
-          Our campigns are custom to you. Success is measured differently and defined by predetermined key
-          perfomance indicators. We start every partnership with a meeting to discuss needs and expectations.
+          Our campaigns are custom to you. Success is measured differently and defined by predetermined key
+          performance indicators. We start every partnership with a meeting to discuss needs and expectations.
       - 
         type: column_1
         heading: ' Keyword Planning and Research'
         content: |
-          Proper keyword planning allows to accuratley predict the immpressions, clicks, and conversions you’ll recieve for each ad group. We do this to maximize your ROI based on clost per click, competition, and monthly ad spend.
+          Proper keyword planning allows to accurately predict the impressions, clicks, and conversions you’ll 
+          receive for each ad group. We do this to maximize your ROI based on cost per click, competition, and monthly ad spend.
       - 
         type: column_1
         heading: Create Campaigns
         content: >
-          We structure your campaigns into ad groups that allow us to anazlyze data over time, and optimize
-          your campagins. We define the buyers journey and develop a nuturing process for after your vistor
+          We structure your campaigns into ad groups that allow us to analyze data over time, and optimize
+          your campaigns. We define the buyers journey and develop a nurture process for after your visitor.
           converts to a lead.
       - 
         type: column_1
         heading: Optimize and Report
         content: >
-          Optimization is a combination of split testing ads, improving landing pages, and experiementing with
+          Optimization is a combination of split testing ads, improving landing pages, and experimenting with
           different call to actions. Regular optimization ensures your results see constant improvement over
           time.
   - 

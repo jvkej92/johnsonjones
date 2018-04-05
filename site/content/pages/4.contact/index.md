@@ -5,7 +5,7 @@ contact_blocks:
     photo: /assets/img/hero-background.jpeg
     headline: "Get started: Test to see if your marketing efforts are working."
     content: "A completely free audit that tells you how you can improve in each of the four areas of our digital marketing model."
-      
+  
 
 title: Contact
 fieldset: contact
