@@ -31,10 +31,14 @@
 }
 
 .nav-panel-content p{
+    font-size: 1.7rem;
     @extend %oswald;
-    font-size: 18px;
-    text-align: right;
+    line-height: 1;
+    @include for-tablet-up{
+        font-size: .8rem;
+    }
     @include for-phone-only{
+        font-size: 2.5rem;
         text-align: left;
     }
 }

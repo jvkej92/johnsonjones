@@ -1,7 +1,8 @@
 taxonomies:
   tags: true
-title: Contact
-create_title: contact
+title: Audit
+create_title: audit
+
 fields:
   meta_data:
     type: partial
@@ -9,10 +10,10 @@ fields:
     fieldset: meta_data
   template:
     type: template
-  contact_blocks:
-    display: Contact Blocks
+  audit_blocks:
+    display: Audit Blocks
     type: replicator
-    contact:
+    audit:
       hero: 
         display: Hero
         fields:

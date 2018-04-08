@@ -179,6 +179,12 @@ fields:
           jumbotron:
             type: text
             display: Jumbotron
+          align:
+            type: select
+            options:
+              text-left: Left
+              text-right: Right
+              text-center: Center
       nav-panel:
         display: Navigation Panel
         fields:

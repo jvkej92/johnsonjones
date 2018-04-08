@@ -1,9 +1,9 @@
 {{# HERO #}}
-{{ contact_blocks }}
-    {{ partial src="contact/{type}" }}
-{{ /contact_blocks }}
+{{ audit_blocks }}
+    {{ partial src="audit/{type}" }}
+{{ /audit_blocks }}
 
-<div class="row p justify-around contact-content-wrapper">
+<div class="row p justify-around audit-content-wrapper mb">
     <div class="col-4">
         <div class="col-10 little-bugger">
             <h4>Digital Marketing Audit</h4>
@@ -24,7 +24,7 @@
                 included that will create quick wins and get you started with the
                 best practices. </p>
         </div>
-        <a href="{{ link | url }}" class="card-learn-more child-link">{{ button_text or 'To get started, fill out the form '}}></a>
+        <a href="#" class="card-learn-more child-link">{{ button_text or 'To get started, fill out the form '}}></a>
     </div>
     <div class="col-4 form-wrapper">
         {{ form:create in="marketing-audit-download" }}
@@ -32,7 +32,7 @@
             {{ fields }}
                 <div class="form-field-wrapper">
                     <label>{{ display }}</label>
-                    <input type="text" name="{{ field }}" value="{{ old }}" />
+                    <input type="text" name="{{ field }}" value="{{ old }}" {{if field == "name" }} autofocus {{ /if }}/>
                 </div>
             {{ /fields }}
             <input type="submit" name="submit" value="Get Started" class="btn btn-primary"> 
