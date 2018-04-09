@@ -1,0 +1,18 @@
+title: Marketing Audit Download
+honeypot: Birthday
+fields:
+  name:
+    display: Name
+    validate: required | string
+  email_address:
+    display: Email Address
+    validate: required | email
+metrics:
+  - 
+    type: total
+    label: Total Downloads
+email:
+  - 
+    to: hello@johnsonjonesgroup.com
+    subject: New Form Submission
+    reply_to: "{{ email }}"

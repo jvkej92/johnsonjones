@@ -1,0 +1,32 @@
+<div class="nav">
+    <div class="nav-logo">
+        <a href="/"><img src="{{assets:value}}/img/johnsonJonesLogoWhite.png" alt="johnson and jones marketing logo" width="250px"></a>
+    </div>
+    <div class="nav-links px light-text">
+        <h4>Share This:</h4>
+    </div>
+</div>
+<div class="mobile-nav">
+    <div class="nav-bar">
+        <div class="nav-logo-mobile">
+            <a href="/"><img src="{{assets:value}}/img/johnsonJonesLogoNavy.png" alt="johnson and jones marketing logo" width="200px"></a>
+        </div>
+        <div class="mobile-menu-icon">
+            <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="mobile-menu-items hidden">
+            {{ nav from="/" }}
+            <div class="nav-item">
+                <a class="nav-link-mobile {{ if current == title }} link-active {{ /if }}" href="{{ url }}">{{ title }}</a>
+            </div>
+            {{ /nav }}
+        <div class="nav-item">
+            <a href="#" class="btn btn-primary">Free Aduit</a>
+        </div>
+    </div>
+</div>

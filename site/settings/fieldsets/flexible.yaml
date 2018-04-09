@@ -120,13 +120,23 @@ fields:
                       primary: White
                       secondary: Grey
                   icon:
-                    type: toggle
                     display: Use Icon?
+                    type: toggle
                   icon_url:
                     type: assets
                     display: Icon
                     container: main
                     folder: /
+                  icon_size:
+                    type: text
+                    instructions: "Enter width in a pixel value. Default 100px"
+                  icon_align:
+                    display: Align Icon
+                    type: select
+                    options:
+                      justify-start: Left
+                      justify-end: Right
+                      justify-center: Center
                   heading:
                     type: text
                     display: Heading
@@ -179,6 +189,12 @@ fields:
           jumbotron:
             type: text
             display: Jumbotron
+          align:
+            type: select
+            options:
+              text-left: Left
+              text-right: Right
+              text-center: Center
       nav-panel:
         display: Navigation Panel
         fields:

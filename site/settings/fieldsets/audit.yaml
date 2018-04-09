@@ -1,0 +1,31 @@
+taxonomies:
+  tags: true
+title: Audit
+create_title: audit
+
+fields:
+  meta_data:
+    type: partial
+    display: Meta Data
+    fieldset: meta_data
+  template:
+    type: template
+  audit_blocks:
+    display: Audit Blocks
+    type: replicator
+    audit:
+      hero: 
+        display: Hero
+        fields:
+          photo:
+            display: Hero Photo
+            type: assets
+            container: main
+            max_files: 1
+          headline:
+            display: Hero Headline
+            type: text
+          content:
+            display: Hero Content
+            type: text
+      

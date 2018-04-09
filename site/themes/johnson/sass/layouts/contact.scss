@@ -1,0 +1,59 @@
+.audit-banner-wrapper{
+    flex-direction: column;
+    justify-content: center;
+}
+.audit-banner-heading{
+    line-height: 1.3;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    @include for-phone-only{
+        font-size: 3rem;
+    }
+}
+
+.form-wrapper{
+    background: $light-grey;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: -500px; 
+    .btn{
+        font-size: 32px;
+        padding: 8px 32px 8px;
+        max-height: 500px;
+        cursor: pointer;
+    }
+
+    h4{
+        line-height: 1.3;
+        font-size: 1.5rem;
+        margin-bottom: 48px;
+        @include for-phone-only{
+            font-size: 3rem;
+        }
+    }
+}
+
+.form-field-wrapper{
+    width: 100%;
+    margin-bottom: 48px;
+
+    label{
+        display: block;
+        @extend %oswald;
+        font-size: 20px;
+        line-height: 2;
+        margin-bottom: 16px;
+    }
+
+    input[type="text"]{
+        line-height: 1.7;
+        font-size: 26px;
+        border-radius: 2px;
+        border: 1px solid $navy-dark;
+        padding-left: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

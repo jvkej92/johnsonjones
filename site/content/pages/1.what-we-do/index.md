@@ -4,6 +4,8 @@ blocks:
     type: hero
     photo: /assets/img/hero-background.jpeg
     headline: 'A digital marketing team  that doesn’t take up your office space.'
+    link:
+      - 4fe901e5-e85d-4956-b1c2-5dda967d1357
   - 
     type: panel
     jumbotron: 'We provide companies with leads, by adding  digital marketing systems and radically improving communications.'

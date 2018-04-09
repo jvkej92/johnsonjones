@@ -1,7 +1,7 @@
 <div class="card col-4 my {{ color }} mobile-border">
     {{ if icon == true}}
-        <div class="col-12">
-            <img src="{{ icon_url | url }}" width="50px">
+        <div class="col-12 {{ icon_align }}">
+            <img src="{{ icon_url | url }}" width="{{ icon_size or "100px"}}" class="svg-icon">
         </div>
     {{ /if }}
     <div class="card-heading">{{ heading }}</div>

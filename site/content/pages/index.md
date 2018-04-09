@@ -4,6 +4,8 @@ blocks:
     type: hero
     photo: /assets/img/hero-background.jpeg
     headline: 'Change the way you think about '
+    link:
+      - 4fe901e5-e85d-4956-b1c2-5dda967d1357
   - 
     type: callout
     headline: Our short online test will give you specific steps to boost your marketing.

@@ -1,0 +1,41 @@
+{{# HERO #}}
+{{ audit_blocks }}
+    {{ partial src="audit/{type}" }}
+{{ /audit_blocks }}
+
+<div class="row p justify-around audit-content-wrapper mb">
+    <div class="col-4">
+        <div class="col-10 little-bugger">
+            <h4>Digital Marketing Audit</h4>
+            <div class="col-12"><span class="heading-divider"></span></div>
+        </div>
+        <div class="content">
+            <h4>Discover</h4>
+            <p>Our marketing audit will show what areas of your marketing efforts
+                are working, and what can be improved. We also score your brand
+                identity as it relates to you digital marketing, and how well your
+                website is set up for conversions. You will receive feedback in all
+                four areas of our digital marketing model.</p>
+        </div>
+        <div class="content">
+            <h4>Plan</h4>
+            <p>With the scores tallied, we put together an overview of ways to get
+                better results from your digital marketing. There will be first steps
+                included that will create quick wins and get you started with the
+                best practices. </p>
+        </div>
+        <a href="#" class="card-learn-more child-link">{{ button_text or 'To get started, fill out the form '}}></a>
+    </div>
+    <div class="col-4 form-wrapper">
+        {{ form:create in="marketing-audit-download" }}
+        <h4>Download Now</h4>
+            {{ fields }}
+                <div class="form-field-wrapper">
+                    <label>{{ display }}</label>
+                    <input type="text" name="{{ field }}" value="{{ old }}" {{if field == "name" }} autofocus {{ /if }}/>
+                </div>
+            {{ /fields }}
+            <input type="submit" name="submit" value="Get Started" class="btn btn-primary"> 
+        {{ /form:create }}
+    </div>
+</div>
