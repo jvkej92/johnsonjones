@@ -1,0 +1,135 @@
+taxonomies:
+  tags: true
+title: Contact
+create_title: contact
+fields:
+  meta_data:
+    type: partial
+    display: Meta Data
+    fieldset: meta_data
+  template:
+    type: template
+  blocks:
+    type: replicator
+    sets:
+      hero:
+        fields:
+          photo:
+            display: Hero Photo
+            type: assets
+            container: main
+            max_files: 1
+          headline:
+            type: text
+          buttonText:
+            display: Button Text
+            type: text
+          link:
+            display: Button Link
+            type: pages
+      button:
+        display: Stand Alone Button
+        fields:
+          align:
+            type: select
+            options:
+              justify-start: Left
+              justify-end: Right
+              justify-center: Center
+          width:
+            display: Button Width
+            type: select
+            options:
+              col-1: 1/12
+              col-2: 2/12
+              col-3: 3/12
+              col-4: 4/12
+              col-5: 5/12
+              col-6: 6/12
+              col-7: 7/12
+              col-8: 8/12
+              col-9: 9/12
+              col-10: 10/12
+              col-11: 11/12
+              col-12: 12/12
+          link:
+            display: Button Link
+            type: pages
+          button_text:
+            display: Button Text
+            type: text
+      contact_panel:
+        display: Contact Panel
+        fields:
+          column:
+            display: Column
+            type: replicator
+            sets: 
+                contact_column:
+                  display: Column
+                  fields:
+                    width:
+                      display: Column Width
+                      type: select
+                      options:
+                        col-1: 1/12
+                        col-2: 2/12
+                        col-3: 3/12
+                        col-4: 4/12
+                        col-5: 5/12
+                        col-6: 6/12
+                        col-7: 7/12
+                        col-8: 8/12
+                        col-9: 9/12
+                        col-10: 10/12
+                        col-11: 11/12
+                        col-12: 12/12
+                    little_bugger:
+                      type: text
+                      display: Little Bugger
+                    content:
+                      display: Panel Content
+                      type: markdown
+      resource_carousel:
+        display: Resource Carousel
+        fields:
+          carousel_heading:
+            display: Resource Carousel Heading
+            type: text
+      callout:
+        display: Callout
+        fields:
+          callout:
+            type: partial
+            display: Callout
+            fieldset: custom_callout
+      standalone_jumbotron:
+        display: Jumbotron
+        fields:
+          jumbotron:
+            type: text
+            display: Jumbotron
+          align:
+            type: select
+            options:
+              text-left: Left
+              text-right: Right
+              text-center: Center
+      nav-panel:
+        display: Navigation Panel
+        fields:
+          panel_text:
+            type: text
+            display: Panel Text
+          next_page:
+            type: pages
+            display: Next Page
+          next_page_title:
+            type: text
+            display: Next Page Title
+          color:
+            type: select
+            display: Color
+            options:
+              primary: White
+              navy-light: Grey
