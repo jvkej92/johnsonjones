@@ -3,8 +3,8 @@ template: flexible
 blocks:
   - 
    type: hero
-    photo: /assets/img/hero-background.jpeg
-    headline: '“Some people want it all” <br/> -Alicia Keys'
+   photo: /assets/img/hero-background.jpeg
+   headline: '“Some people want it all” <br/> -Alicia Keys'
   - 
     type: standalone_jumbotron
     jumbotron: Our marketing systems work together to bring you more leads. More leads means more sales.
