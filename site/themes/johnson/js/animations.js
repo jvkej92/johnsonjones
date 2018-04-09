@@ -30,7 +30,7 @@ $(document).ready(function () {
     //Base Animations On Load
     //Fades the cehvron in on load
     $('.hero-chevron').hide();
-    $('.hero-chevron').delay(2000).fadeIn(1500);
+    $('.hero-chevron').delay(1000).fadeIn(500);
 
     //Array for words looped through on load
     let animationRate = 800;

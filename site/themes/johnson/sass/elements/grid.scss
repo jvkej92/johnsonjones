@@ -30,6 +30,10 @@ $col-1-width: 8%;
         font-size: 22px;
         line-height: 2.5;
     }
+    @include for-phone-only{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 }
 
 %mobile-flex{
