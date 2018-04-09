@@ -2,7 +2,6 @@ meta_title: Services
 template: flexible
 blocks:
   - 
-    0: “Some people want it all” -Alicia Keys
     type: hero
     photo: /assets/img/hero-background.jpeg
     headline: '“Some people want it all” <br/> -Alicia Keys'
