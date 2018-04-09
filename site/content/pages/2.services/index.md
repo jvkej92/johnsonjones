@@ -2,7 +2,7 @@ meta_title: Services
 template: flexible
 blocks:
   - 
-    type: hero
+   type: hero
     photo: /assets/img/hero-background.jpeg
     headline: '“Some people want it all” <br/> -Alicia Keys'
   - 
@@ -33,6 +33,8 @@ blocks:
           A good website not only looks great but is designed for conversions. Our websites give the consumer
           an intuitive experience while moving through your marketing and sales funnel.
         button_text: 'Learn More '
+        link:
+          - 9cb659b0-fdb4-4a8e-bee3-5349f4eb788b
         icon_url:
           - /assets/img/JJ-Icons-Marketing Services-v1-02.svg
         icon: true
