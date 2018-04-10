@@ -78,7 +78,7 @@ blocks:
     button_text: Back to marketing services
   - 
     type: nav-panel
-    panel_text: We can’t shake hands over the internet, but let’s get introduced.
+    panel_text: 'We can’t shake hands over the internet, <br/> but let’s get introduced.'
     next_page:
       - 19cd231d-5d6d-4c28-b461-4a08e832e9b8
     next_page_title: About

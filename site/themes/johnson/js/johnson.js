@@ -3165,6 +3165,7 @@ let banner = $(".banner, .banner-bg");
 let calloutContent = $(".callout-content-wrapper");
 let callout = $(".callout, .callout-bg");
 
+setHeroSize(heroContent, hero, .8);
 setHeroSize(bannerContent, banner, .55);
 setHeroSize(calloutContent, callout, .45);
 
