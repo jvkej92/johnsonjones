@@ -23,16 +23,15 @@ $col-1-width: 8%;
     padding: 0;
     min-height: 50px;
     height: 100%;
+    @include for-phone-only{
+        height: auto;
+    }
     a:not(.btn){
         @extend %oswald;
         color: $navy-dark;
         text-decoration-line: none;
         font-size: 22px;
         line-height: 2.5;
-    }
-    @include for-phone-only{
-        padding-right: 10px;
-        padding-left: 10px;
     }
 }
 
