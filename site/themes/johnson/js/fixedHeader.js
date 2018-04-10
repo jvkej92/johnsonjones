@@ -1,16 +1,17 @@
 //Scroll animations
     
     //Triggers the fade in of the navigation on scroll
-    //Controlls the fade in and out of the chevron
+    //Controls the fade in and out of the chevron
 $(window).scroll(function () { 
     let windowPos = $(window).scrollTop();
-    let bannerSize = $('.banner').height();
+    let bannerSize = $('.banner, .hero').height();
+    
     if (windowPos > bannerSize - 130) {
         $('.nav').css('position', 'fixed').addClass('nav-scroll');
-        $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoNavy.png')
+        changeIconColor('.nav-logo img, .share-icon', 'white', 'navy');
     } else if (windowPos < bannerSize) {
         $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
-        $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoWhite.png')
+        changeIconColor('.nav-logo img, .share-icon', 'navy', 'white');
     }
 
     if (windowPos > 110) {
@@ -20,3 +21,10 @@ $(window).scroll(function () {
         $('.hero-chevron img').fadeIn(500);
     }
 });
+
+function changeIconColor(target, oldColor, newColor){
+    $(target).each(function(){
+        let old = $(this).attr('src');
+        $(this).attr('src', old.replace(oldColor, newColor));
+    });
+}

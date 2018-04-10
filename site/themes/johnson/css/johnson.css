@@ -893,7 +893,7 @@ div.nav.nav-scroll {
   background: #f9f5f2 !important;
 }
 
-.nav-scroll .nav-link {
+.nav-scroll .nav-link, .nav-scroll h4 {
   color: #003359;
 }
 
@@ -965,6 +965,15 @@ a.nav-link.link-active::before {
 
 .nav-scroll a.nav-link.link-active::before {
   content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
+}
+
+div.nav-share {
+  align-items: center;
+}
+
+div.nav-share > * {
+  display: inline;
+  margin-right: 16px;
 }
 
 .mobile-menu-items a.link-active::before {

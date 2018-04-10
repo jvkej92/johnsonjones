@@ -1,15 +1,37 @@
+<script>
+window.fbAsyncInit = function() {
+    FB.init({
+        appId            : '153832710128',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v2.12'
+    });
+    };
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <div class="nav">
     <div class="nav-logo">
-        <a href="/"><img src="{{assets:value}}/img/johnsonJonesLogoWhite.png" alt="johnson and jones marketing logo" width="250px"></a>
+        <a href="/"><img src="{{assets:value}}/img/johnsonjones_logo_white.png" alt="johnson and jones marketing logo" width="250px"></a>
     </div>
-    <div class="nav-links px light-text">
+    <div class="nav-links nav-share px light-text">
         <h4>Share This:</h4>
+        <img src="{{assets:value}}/img/JJ-SiteIcons-share-v1-facebook_white.png" id="facebook-share" height="32px" class="share-icon icon-fb">
+        <img src="{{assets:value}}/img/JJ-SiteIcons-share-v1-twitter_white.png" height="32px" class="share-icon icon-tw">
+        <img src="{{assets:value}}/img/JJ-SiteIcons-share-v1-linkedin_white.png" height="32px" class="share-icon icon-li">
+        <img src="{{assets:value}}/img/JJ-SiteIcons-share-v1-google_white.png" height="32px" class="share-icon icon-gl">
     </div>
 </div>
 <div class="mobile-nav">
     <div class="nav-bar">
         <div class="nav-logo-mobile">
-            <a href="/"><img src="{{assets:value}}/img/johnsonJonesLogoNavy.png" alt="johnson and jones marketing logo" width="200px"></a>
+            <a href="/"><img src="{{assets:value}}/img/johnsonjones_logo_navy.png" alt="johnson and jones marketing logo" width="200px"></a>
         </div>
         <div class="mobile-menu-icon">
             <button class="hamburger hamburger--slider" type="button">
@@ -31,3 +53,13 @@
         {{ /nav }}
     </div>
 </div>
+
+<script>
+document.getElementById('facebook-share').onclick = function(){
+    FB.ui({
+        method: 'share',
+        display: 'popup',
+        href: '{{ permalink }}',
+        }, function(response){});
+    }
+</script>

@@ -18,7 +18,7 @@ div.nav.nav-scroll{
     background: $soft-white!important;
 }
 
-.nav-scroll .nav-link{
+.nav-scroll .nav-link, .nav-scroll h4{
     color: $navy-dark;
 }
 
@@ -88,6 +88,15 @@ a.nav-link.link-active::before{
 
 .nav-scroll a.nav-link.link-active::before{
     content: url(../../../../assets/img/JohnsonJones_Icon_Navy.svg);
+}
+
+div.nav-share{
+    align-items: center;
+}
+
+div.nav-share > *{
+    display: inline;
+    margin-right: 16px;
 }
 
 
