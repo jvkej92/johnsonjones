@@ -23,6 +23,9 @@ blocks:
         button_text: 'Learn More '
         link:
           - 5ecfea46-aa66-4101-91d4-5b3ac92f2e6b
+        icon_url:
+          - /assets/img/JJ-SiteIcons-CreateiveSeervices-v2-02.svg
+        icon: true
       - 
         type: cards
         heading: Video Production
@@ -34,6 +37,9 @@ blocks:
           their preferred form of media.
         link:
           - f38659b8-6983-49cc-bd59-69758420e36a
+        icon_url:
+          - /assets/img/JJ-Icons-Marketing Services-v1-04.svg
+        icon: true
       - 
         type: cards
         heading: Social Media Management
@@ -46,6 +52,9 @@ blocks:
           of new ones.
         link:
           - e6273913-68d1-40a0-8edc-8f9c0b68e9e5
+        icon_url:
+          - /assets/img/JJ-SiteIcons-CreateiveSeervices-v2-03.svg
+        icon: true
       - 
         type: cards
         heading: Blogging
@@ -57,6 +66,9 @@ blocks:
           short-lived content.
         link:
           - d2dfe091-8b6a-49cb-b755-c081efa44cdd
+        icon_url:
+          - /assets/img/JJ-SiteIcons-CreateiveSeervices-v2-01.svg
+        icon: true
   - 
     type: button
     align: justify-center

@@ -15,7 +15,7 @@
         </div>
 
         <div v-if="showSidebar" class="asset-browser-sidebar">
-            <h4>Containers</h4>
+            <h4>{{ translate('cp.containers') }}</h4>
             <div v-for="c in containers" class="sidebar-item" :class="{ 'active': container.id == c.id }">
                 <a @click="selectContainer(c.id)">
                     {{ c.title }}
@@ -139,13 +139,13 @@
                     @selected="paginationPageSelected">
                 </pagination>
 
-                <breadcrumbs
-                    v-if="!restrictNavigation && !isSearching"
-                    :path="path"
-                    @navigated="folderSelected">
-                </breadcrumbs>
-
             </div>
+
+            <breadcrumbs
+                v-if="!restrictNavigation && !isSearching"
+                :path="path"
+                @navigated="folderSelected">
+            </breadcrumbs>
 
             <asset-editor
                 v-if="showAssetEditor"

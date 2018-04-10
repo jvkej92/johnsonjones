@@ -41,7 +41,10 @@ return [
     'collection_title_instructions' => 'The proper name of your collection.',
     'collection_handle_instructions' => "The collection's variable name used in settings and templates.",
     'collection_order_instructions' => "Set the default sorting method for entries in this collection.",
+    'collection_fieldset_instructions' => "The default fieldset, unless otherwise specified.",
+    'collection_template_instructions' => "The default template, unless otherwise specified.",
     'collection_route_instructions' => "The route controls the URL pattern all entries in the collection will follow.",
+    'collection_does_not_exist' => 'Collection :collection does not exist.',
 
     // Entries
     'entry' => 'Entry',
@@ -120,6 +123,7 @@ return [
     'filesize' => 'File size',
     'date_modified' => 'Date modified',
     'parent_folder' => 'Parent folder',
+    'containers' => 'Containers',
     'asset_folder_empty_heading' => 'Empty folder.',
     'asset_folder_empty' => 'You may upload new assets into this folder by dragging and dropping files into the outlined area above.',
     'focal_point' => 'Focal point',
@@ -186,11 +190,17 @@ return [
     'user_updated' => 'User updated',
     'reset_password' => 'Reset your password',
     'send_email' => 'Send email',
+    'email_sent' => 'Email sent',
     'send_activation_email' => 'Send activation email',
     'send_password_reset_email' => 'Send password reset email',
+    'password_reset_email_not_sent' => 'Email not sent. Please check your logs.',
     'copy_activation_link' => 'Copy activation link',
     'copy_password_reset_link' => 'Copy password reset link',
+    'copy_password_reset_link_failed' => 'There was a problem generating the link. Please check your logs.',
     'password_reset_sent' => 'Password reset email sent',
+    'account_activated' => 'Your account has been activated',
+    'password_reset_success' => 'You password has been reset',
+    'activate_account' => 'Activate Account',
     'account' => 'Account',
     'password' => 'Password',
     'my_account' => 'My Account',
@@ -201,6 +211,9 @@ return [
     'user_bio_instructions' => 'A little bit about you, if you like.',
     'user_account_created' => 'A user account has been created.',
     'forgot_password' => 'Forgot password?',
+    'invalid_user' => 'Invalid user',
+    'invalid_code' => 'Invalid code',
+    'invalid_creds' => 'Invalid credentials',
     'go_back' => 'Go Back',
 
     // Password Reset
@@ -232,6 +245,7 @@ return [
     'page_not_found' => 'Page not found',
     'page_not_found_instructions' => 'The page you requested does not exist.',
     'session_expired' => 'Your session has expired.',
+    'stache_building' => 'The cache is being updated. Please wait and try again.',
 
 
     // User Groups
@@ -264,6 +278,16 @@ return [
     'settings_locales_index_php_warning' => "You will need to change the <code>\$locale</code> to <code>:locale</code> in your <code>index.php</code> file.",
     'settings_debug_mode_instructions' => "Enabling Debug Mode will display all errors on screen. It's a great tool while a site is development, but remember to disable it in production.",
 
+    'shorthand' => 'Shorthand',
+    'shorthand_instructions' => 'The 2 character language code.<br> Example: `en`, `de`.',
+    'add_locale' => 'Add Locale',
+    'full_locale' => 'Full Locale',
+    'full_locale_instructions' => 'Used for PHP date localization.<br>Example: `en_US`, `de_DE`.',
+    'locale_name_instructions' => 'Used for display.<br> Example: `English`, `German`.',
+    'locale_url_instructions' => 'Example: `http://example.com/de/`',
+
+
+
     // Addons
     'addons' => 'Addon|Addons',
     'manage_addons' => 'Manage Addons',
@@ -280,13 +304,14 @@ return [
     'fieldset_created' => 'Fieldset created',
     'editing_fieldset' => 'Editing Fieldset',
     'fieldset_updated' => 'Fieldset updated',
-    'fieldsets_empty' => 'Fieldsets let you create and manage reusable groups of fieldtypes that in turn mange your content. This is where content modeling happens.',
+    'fieldsets_empty' => 'Fieldsets let you create and manage reusable groups of fieldtypes that in turn manage your content. This is where content modeling happens.',
     'fieldset_title_instructions' => 'The proper name of the fieldset. Usually a singular noun.',
     'fieldset_handle_instructions' => "The fieldset's variable name used in settings and templates.",
     'fieldset_create_title_instructions' => "Optional, customizable title shown when creating new content with this fieldset.",
     'fieldset_hide_instructions' => "Hide this fieldset from selection dialogs?",
     'fieldset_fields_instructions' => 'Assign and customize the fields and fieldtypes in this fieldset.',
     'fieldset_taxonomies_instructions' => 'Show, hide, and configure the taxonomies that should be displayed in this fieldset.',
+    'fieldset_date_and_time_instructions' => 'You may customize the date field behavior. This only applies when the fieldset is used on a date based entry.',
     'create_title' => 'Create Title',
     'display_name' => "Display Name",
     'display_name_instructions' => "The field's label shown in the Control Panel.",
@@ -323,7 +348,7 @@ return [
     'form' => 'Form',
     'forms' => 'Form|Forms',
     'nav_forms' => 'Forms',
-    'forms_empty' => 'Forms collect, display, and report user submitted reponses.',
+    'forms_empty' => 'Forms collect, display, and report user submitted responses.',
     'create_form' => 'Create Form',
     'form_updated' => 'Form updated',
     'form_created' => 'Form created',
@@ -439,6 +464,8 @@ return [
     'thing_configure' => 'Configure :thing',
     'thing_saved' => ':thing saved.',
     'thing_editing' => 'Editing :thing',
+
+    'saved_success' => 'Saved',
 
     // Statuses
     'statuses' => 'Status|Statuses',
@@ -614,6 +641,7 @@ return [
     'attribute_field_name' => ':attribute field',
     'read_only_mode' => "Read Only Mode",
     'next_step' => "Next Step",
+    'invalid_creds' => 'These credentials are incorrect',
 
     'nav_content' => 'Content',
     'nav_tools' => 'Tools',
@@ -636,6 +664,7 @@ return [
     // Duplicate ID Manager
     'duplicate_id_title' => 'Duplicate IDs',
     'no_duplicate_ids' => 'No duplicate IDs detected.',
+    'generate_new_id' => 'Generate new ID.',
 
     // Path
     'path_resolves_to'    => 'Path resolves to: :path',

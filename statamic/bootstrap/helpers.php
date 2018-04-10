@@ -15,6 +15,7 @@ use Statamic\Data\DataCollection;
 use Illuminate\Support\Debug\Dumper;
 use Stringy\StaticStringy as Stringy;
 use Statamic\View\Blade\Modifier as BladeModifier;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 if (! function_exists('array_get')) {
     /**
@@ -111,7 +112,7 @@ function cp_route($route, $params = [])
         return null;
     }
 
-    return route($route, $params);
+    return route($route, $params, false);
 }
 
 function cp_resource_url($url)
@@ -376,10 +377,9 @@ function active_for($url)
  */
 function nav_is($url)
 {
-    $url = preg_replace('/^index\.php\//', '', $url);
-    $current = request()->url();
+    $current = URL::getCurrent();
 
-    return $url === $current || Str::startsWith($current, $url.'/');
+    return $url === $current || Str::startsWith($current, $url . '/');
 }
 
 /**
@@ -579,6 +579,10 @@ function sanitize($value, $antlers = true)
 {
     if (is_array($value)) {
         return sanitize_array($value, $antlers);
+    }
+
+    if ($value instanceof UploadedFile) {
+        return $value;
     }
 
     $value = htmlentities($value);
