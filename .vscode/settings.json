@@ -26,5 +26,6 @@
         "typescriptreact",
         "yaml",
         "yml"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }

@@ -1,0 +1,25 @@
+title: spacing
+sections:
+  main:
+    display: Main
+    fields:
+      margins:
+        keys:
+          margin-top: Top
+          margin-right: Right
+          margin-bottom: Botom
+          margin-left: Left
+        type: array
+        instructions: '		'
+        width: 50
+        display: Margins
+      padding:
+        keys:
+          padding-top: Top
+          padding-right: Right
+          padding-bottom: Bottom
+          padding-left: Left
+        type: array
+        width: 50
+        display: Padding
+taxonomies: true
