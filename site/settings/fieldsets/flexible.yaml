@@ -2,214 +2,242 @@ taxonomies:
   tags: true
 title: Flexible
 create_title: flexible
-fields:
-  meta_data:
-    type: partial
-    display: Meta Data
-    fieldset: meta_data
-  template:
-    type: template
-  blocks:
-    type: replicator
-    sets:
-      hero:
-        fields:
-          photo:
-            display: Hero Photo
-            type: assets
-            container: main
-            max_files: 1
-          headline:
-            type: text
-          buttonText:
-            display: Button Text
-            type: text
-          link:
-            display: Button Link
-            type: pages
-      button:
-        display: Stand Alone Button
-        fields:
-          align:
-            type: select
-            options:
-              justify-start: Left
-              justify-end: Right
-              justify-center: Center
-          width:
-            type: select
-            display: Button Width
-            options:
-              col-1: 1/12
-              col-2: 2/12
-              col-3: 3/12
-              col-4: 4/12
-              col-5: 5/12
-              col-6: 6/12
-              col-7: 7/12
-              col-8: 8/12
-              col-9: 9/12
-              col-10: 10/12
-              col-11: 11/12
-              col-12: 12/12
-          link:
-            display: Button Link
-            type: pages
-          button_text:
-            display: Button Text
-            type: text
-      panel:
-        display: Panel
-        fields:
-          color:
-            type: select
-            display: Color
-            options:
-              primary: White
-              secondary: Grey
-          little_bugger:
-            type: text
-            display: Little Bugger
-          jumbotron:
-            type: text
-            display: Jumbotron
-          columns_1:
-            type: replicator
-            display: Columns
-            sets:
-              column_1:
-                display: Column 1
-                fields:
-                  field_1:
-                    type: partial
-                    display: Column Content
-                    fieldset: column_1
-          columns_2:
-            type: replicator
-            display: Columns
-            sets:
-              column_2:
-                display: Column 2
-                fields:
-                  field_1:
-                    type: partial
-                    display: Column Content
-                    fieldset: column_2
-          columns_3:
-            type: replicator
-            display: Column 3
-            sets:
-              column_3:
+sections:
+  main:
+    display: Main
+    fields:
+      meta_data:
+        type: partial
+        display: Meta Data
+        fieldset: meta_data
+      template:
+        type: template
+      blocks:
+        type: replicator
+        sets:
+          hero:
+            fields:
+              photo:
+                display: Hero Photo
+                type: assets
+                container: main
+                max_files: 1
+              headline:
+                type: text
+              buttonText:
+                display: Button Text
+                type: text
+              link:
+                display: Button Link
+                type: pages
+          button:
+            display: Stand Alone Button
+            fields:
+              align:
+                type: select
+                options:
+                  justify-start: Left
+                  justify-end: Right
+                  justify-center: Center
+              width:
+                type: select
+                display: Button Width
+                options:
+                  col-1: 1/12
+                  col-2: 2/12
+                  col-3: 3/12
+                  col-4: 4/12
+                  col-5: 5/12
+                  col-6: 6/12
+                  col-7: 7/12
+                  col-8: 8/12
+                  col-9: 9/12
+                  col-10: 10/12
+                  col-11: 11/12
+                  col-12: 12/12
+              link:
+                display: Button Link
+                type: pages
+              button_text:
+                display: Button Text
+                type: text
+          panel:
+            display: Panel
+            fields:
+              color:
+                type: select
+                display: Color
+                options:
+                  primary: White
+                  secondary: Grey
+              little_bugger:
+                type: text
+                display: Little Bugger
+              jumbotron:
+                type: text
+                display: Jumbotron
+              columns_1:
+                type: replicator
+                display: Columns
+                sets:
+                  column_1:
+                    display: Column 1
+                    fields:
+                      field_1:
+                        type: partial
+                        display: Column Content
+                        fieldset: column_1
+              columns_2:
+                type: replicator
+                display: Columns
+                sets:
+                  column_2:
+                    display: Column 2
+                    fields:
+                      field_1:
+                        type: partial
+                        display: Column Content
+                        fieldset: column_2
+              columns_3:
+                type: replicator
                 display: Column 3
-                fields:
-                  column_content:
-                    type: partial
-                    display: Column Content
-                    fieldset: column_3
-          cards:
-            type: replicator
-            display: Cards
-            sets:
+                sets:
+                  column_3:
+                    display: Column 3
+                    fields:
+                      column_content:
+                        type: partial
+                        display: Column Content
+                        fieldset: column_3
               cards:
-                display: cards
-                fields:
-                  color:
-                    type: select
-                    display: Color
-                    options:
-                      primary: White
-                      secondary: Grey
-                  icon:
-                    display: Use Icon?
-                    type: toggle
-                  icon_url:
-                    type: assets
-                    display: Icon
-                    container: main
-                    folder: /
-                  icon_size:
-                    type: text
-                    instructions: "Enter width in a pixel value. Default 100px"
-                  icon_align:
-                    display: Align Icon
-                    type: select
-                    options:
-                      justify-start: Left
-                      justify-end: Right
-                      justify-center: Center
-                  heading:
-                    type: text
-                    display: Heading
-                  content:
-                    type: markdown
-                    display: Content
-                  link:
-                    type: pages
-                    display: Link
-                  button_text:
-                    type: text
-                    display: Button Text
-      funnel:
-        display: Funnel
-        fields:
-          little_bugger:
-            type: text
-            display: Little bugger
-          jumbotron:
-            type: text
-            display: Jumbotron
-          connection_content:
-            type: markdown
-            display: Connection Content
-          communication_content:
-            type: markdown
-            display: Communication Content
-          retention_content:
-            type: markdown
-            display: Retention Content
-          brand_content:
-            type: markdown
-            display: Brand Content
-      resource_carousel:
-        display: Resource Carousel
-        fields:
-          carousel_heading:
-            display: Resource Carousel Heading
-            type: text
-      callout:
-        display: Callout
-        fields:
+                type: replicator
+                display: Cards
+                sets:
+                  cards:
+                    display: cards
+                    fields:
+                      color:
+                        type: select
+                        display: Color
+                        options:
+                          primary: White
+                          secondary: Grey
+                      icon:
+                        display: Use Icon?
+                        type: toggle
+                      icon_url:
+                        type: assets
+                        display: Icon
+                        container: main
+                        folder: /
+                      icon_size:
+                        type: text
+                        instructions: Enter width in a pixel value. Default 100px
+                      icon_align:
+                        display: Align Icon
+                        type: select
+                        options:
+                          justify-start: Left
+                          justify-end: Right
+                          justify-center: Center
+                      heading:
+                        type: text
+                        display: Heading
+                      content:
+                        type: markdown
+                        display: Content
+                      link:
+                        type: pages
+                        display: Link
+                      button_text:
+                        type: text
+                        display: Button Text
+              margin:
+                keys:
+                  margin-top: Top
+                  margin-right: Right
+                  margin-bottom: Bottom
+                  margin-left: Left
+                type: array
+                width: 50
+                display: Margin
+                conditions:
+                  style: standard
+                  conditions: [ ]
+                default: 0px
+              padding:
+                keys:
+                  padding-top: Top
+                  padding-right: Right
+                  padding-bottom: Bottom
+                  padding-left: Left
+                type: array
+                width: 50
+                display: Padding
+                conditions:
+                  style: standard
+                  conditions: [ ]
+          funnel:
+            display: Funnel
+            fields:
+              little_bugger:
+                type: text
+                display: Little bugger
+              jumbotron:
+                type: text
+                display: Jumbotron
+              connection_content:
+                type: markdown
+                display: Connection Content
+              communication_content:
+                type: markdown
+                display: Communication Content
+              retention_content:
+                type: markdown
+                display: Retention Content
+              brand_content:
+                type: markdown
+                display: Brand Content
+          resource_carousel:
+            display: Resource Carousel
+            fields:
+              carousel_heading:
+                display: Resource Carousel Heading
+                type: text
           callout:
-            type: partial
             display: Callout
-            fieldset: custom_callout
-      standalone_jumbotron:
-        display: Jumbotron
-        fields:
-          jumbotron:
-            type: text
+            fields:
+              callout:
+                type: partial
+                display: Callout
+                fieldset: custom_callout
+          standalone_jumbotron:
             display: Jumbotron
-          align:
-            type: select
-            options:
-              text-left: Left
-              text-right: Right
-              text-center: Center
-      nav-panel:
-        display: Navigation Panel
-        fields:
-          panel_text:
-            type: text
-            display: Panel Text
-          next_page:
-            type: pages
-            display: Next Page
-          next_page_title:
-            type: text
-            display: Next Page Title
-          color:
-            type: select
-            display: Color
-            options:
-              primary: White
-              navy-light: Grey
+            fields:
+              jumbotron:
+                type: text
+                display: Jumbotron
+              align:
+                type: select
+                options:
+                  text-left: Left
+                  text-right: Right
+                  text-center: Center
+          nav-panel:
+            display: Navigation Panel
+            fields:
+              panel_text:
+                type: text
+                display: Panel Text
+              next_page:
+                type: pages
+                display: Next Page
+              next_page_title:
+                type: text
+                display: Next Page Title
+              color:
+                type: select
+                display: Color
+                options:
+                  primary: White
+                  navy-light: Grey

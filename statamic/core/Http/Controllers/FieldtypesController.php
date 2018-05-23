@@ -48,6 +48,8 @@ class FieldtypesController extends CpController
                 'canBeLocalized' => $fieldtype->canBeLocalized(),
                 'canHaveDefault' => $fieldtype->canHaveDefault(),
                 'config' => $config,
+                'categories' => $fieldtype->category,
+                'icon' => $fieldtype->getIcon(),
             ];
         }
 

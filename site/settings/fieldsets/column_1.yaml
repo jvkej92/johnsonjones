@@ -2,10 +2,38 @@ taxonomies: false
 title: Column 1
 create_title: Column 1
 hide: true
-fields:
-  heading:
-    type: text
-    display: Heading
-  content:
-    type: markdown
-    display: Content
+sections:
+  main:
+    display: Main
+    fields:
+      heading:
+        type: text
+        display: Heading
+      content:
+        type: markdown
+        display: Content
+      margin:
+        type: array
+        display: Margin
+        width: 50
+        conditions:
+        keys:
+          margin-top: Top
+          margin-right: Right
+          margin-bottom: Bottom
+          margin-left: Left
+          style: standard
+          conditions: [ ]
+        default: 0px
+      padding:
+        display: Padding
+        type: array
+        width: 50
+        keys:
+          padding-top: Top
+          padding-right: Right
+          padding-bottom: Bottom
+          padding-left: Left
+        conditions:
+          style: standard
+          conditions: [ ]

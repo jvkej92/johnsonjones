@@ -92,18 +92,11 @@ export default {
             field.focus();
         },
 
-        /**
-         * Bootstrap Column Width class
-         * Takes a percentage based integer and converts it to a bootstrap column number
-         * eg. 100 => 12, 50 => 6, etc.
-         */
-        colClass: function (width) {
-            if (this.$root.isPreviewing) {
-                return 'col-md-12';
-            }
-
-            width = width || 100;
-            return 'col-md-' + Math.round(width / 8.333);
+        fieldClasses: function (field) {
+            return [
+                `form-group p-2 m-0 ${field.type}-fieldtype`,
+                tailwind_width_class(field.width)
+            ];
         },
 
     }

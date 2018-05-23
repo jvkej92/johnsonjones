@@ -3,6 +3,7 @@
 namespace Statamic\View;
 
 use Statamic\API\Arr;
+use Statamic\API\URL;
 use Statamic\API\Data;
 use Statamic\API\File;
 use Statamic\API\Path;
@@ -13,6 +14,7 @@ use Statamic\API\Config;
 use Statamic\API\Helper;
 use Statamic\API\Str;
 use Statamic\API\Content;
+use Statamic\API\Widont;
 use Statamic\Extend\Modifier;
 use Statamic\API\Localization;
 use Stringy\StaticStringy as Stringy;
@@ -101,7 +103,7 @@ class BaseModifiers extends Modifier
     public function backgroundPosition($value)
     {
         if (! Str::contains($value, '-')) {
-            return $value;
+            return '50% 50%';
         }
 
         return vsprintf('%d%% %d%%', explode('-', $value));
@@ -564,10 +566,8 @@ class BaseModifiers extends Modifier
      */
     public function fullUrls($value, $params)
     {
-        $domain = Config::getSiteURL();
-
-        return preg_replace_callback('/="(\/[^"]+)"/ism', function($item) use ($domain) {
-            return '="' . Path::tidy($domain . $item[1]) . '"';
+        return preg_replace_callback('/="(\/[^"]+)"/ism', function($item) {
+            return '="' . URL::makeAbsolute($item[1]) . '"';
         }, $value);
     }
 
@@ -2019,11 +2019,12 @@ class BaseModifiers extends Modifier
      * <nobr> tags between the last two words of each paragraph.
      *
      * @param $value
+     * @param $params
      * @return string
      */
-    public function widont($value)
+    public function widont($value, $params)
     {
-        return Helper::widont($value);
+        return Widont::preventWidows($value, array_get($params, 0, false));
     }
 
     /**

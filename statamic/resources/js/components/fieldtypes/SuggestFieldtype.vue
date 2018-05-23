@@ -6,7 +6,7 @@
 
         <select v-if="!loading"
                 :name="name"
-                :placeholder="translate('please_select')"
+                :placeholder="translate('cp.please_select')"
                 :multiple="true">
         </select>
     </div>
@@ -15,7 +15,7 @@
 <script>
 import GetsSuggestKey from './GetsSuggestKey';
 
-module.exports = {
+export default {
 
     mixins: [Fieldtype, GetsSuggestKey],
 

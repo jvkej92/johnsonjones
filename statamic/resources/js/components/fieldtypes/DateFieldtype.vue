@@ -29,8 +29,10 @@
 </template>
 
 <script>
+import moment from 'moment';
+import Calendar from 'baremetrics-calendar';
 
-module.exports = {
+export default {
 
     mixins: [Fieldtype],
 
@@ -67,7 +69,7 @@ module.exports = {
 
         allowTime: function() {
             if (this.config.allow_time == undefined) {
-                return false;
+                return true;
             }
 
             return this.config.allow_time != false;

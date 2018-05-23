@@ -168,6 +168,25 @@ class Fieldset implements FieldsetContract
         $this->contents = $contents;
     }
 
+    public function sections()
+    {
+        $contents = $this->contents();
+
+        // Grab the sections. If there are none defined, we're going to put
+        // everything into one main section so we'll define that here.
+        $sections = array_get($contents, 'sections', [
+            'main' => ['fields' => array_get($contents, 'fields', [])]
+        ]);
+
+        // Put the fields at the end. It just makes things easier to read.
+        $sections = collect($sections)->map(function ($section) {
+            $section['fields'] = array_pull($section, 'fields', []);
+            return $section;
+        })->all();
+
+        return $sections;
+    }
+
     /**
      * Get or set the fields
      *
@@ -177,17 +196,22 @@ class Fieldset implements FieldsetContract
      */
     public function fields($fields = null, $inline_partials = true)
     {
-        if (is_null($fields)) {
-            $fields = array_get($this->contents, 'fields', []);
-
-            if ($inline_partials) {
-                $fields = $this->inlinePartials($fields);
-            }
-
-            return $fields;
+        if (! is_null($fields)) {
+            // @todo
+            throw new \Exception('Cannot set fields.');
+            $this->contents['fields'] = $fields;
         }
 
-        $this->contents['fields'] = $fields;
+        $fields = collect($this->sections())
+            ->flatMap(function ($section) {
+                return $section['fields'];
+            })->all();
+
+        if ($inline_partials) {
+            $fields = $this->inlinePartials($fields);
+        }
+
+        return $fields;
     }
 
     /**
@@ -208,11 +232,10 @@ class Fieldset implements FieldsetContract
      */
     private function inlinePartials($fields)
     {
-        $fields = collect($fields);
-        $inlined = $fields->mapWithKeys(function ($item, $key) {
+        return collect($fields)->mapWithKeys(function ($item, $key) {
 
             if (array_get($item, 'type', 'text') === 'partial') {
-                return FieldsetAPI::get($item['fieldset'])->fields();
+                return $this->fieldsToArray(FieldsetAPI::get($item['fieldset'])->fields(), true);
 
             } elseif ($sets = array_get($item, 'sets')) {
 
@@ -227,9 +250,7 @@ class Fieldset implements FieldsetContract
             }
 
             return [$key => $item];
-        });
-
-        return $inlined->all();
+        })->all();
     }
 
     /**
@@ -246,8 +267,8 @@ class Fieldset implements FieldsetContract
         $fieldtypes = [];
 
         $configs = array_merge(
-            $this->fields(),
-            $this->getTaxonomyFieldConfigs()
+            $this->getTaxonomyFieldConfigs(),
+            $this->fields()
         );
 
         foreach ($configs as $name => $config) {
@@ -276,39 +297,17 @@ class Fieldset implements FieldsetContract
             return [];
         }
 
-        $configs = $this->taxonomies();
-
         // If the configuration has been specifically set to false, there should be none.
-        if ($configs === false) {
+        if (! $this->taxonomies()) {
             return [];
         }
 
-        // If there's no configs, we want to create empty arrays for all the taxonomies in the system.
-        if (! $configs || $configs === []) {
-            $configs = Taxonomy::all()->keyBy(function ($taxonomy) {
-                return $taxonomy->path();
-            })->map(function () { return []; })->all();
-        }
-
-        // Add type and name the configs so the fieldtypes will know they are taxonomy fields.
-        foreach ($configs as $handle => &$config) {
-            // Allow a primitive list of taxonomy handles.
-            if (is_string($config)) {
-                $handle = $config;
-                $config = [];
-            }
-
-            // Allow passing "true" to allow a field without any configuration.
-            if ($config === true) {
-                $config = [];
-            }
-
-            $config['type'] = 'taxonomy';
-            $config['name'] = $handle;
-        }
-
-        // Key them by the name. This ensures that if a primitive list was used, the indexes get changed.
-        return collect($configs)->keyBy('name')->all();
+        return collect(Taxonomy::handles())->map(function ($handle) {
+            return [
+                'type' => 'taxonomy',
+                'name' => $handle,
+            ];
+        })->keyBy('name')->all();
     }
 
     /**
@@ -317,33 +316,6 @@ class Fieldset implements FieldsetContract
     public function save()
     {
         $contents = $this->contents;
-        $fields = array_get($contents, 'fields', []);
-
-        // Do some cleaning up
-        foreach ($fields as $name => $field) {
-            // When a JS submission is involved, the fields array contains
-            // some extra data that is used for display purposes.
-            // We don't need them in the actual fieldset, so we'll get rid of those.
-            foreach (['name'] as $unneeded) {
-                unset($field[$unneeded]);
-            }
-
-            // Fields are 100% by default. Don't need to save it.
-            if (in_array(array_get($field, 'width'), [100, '100'])) {
-                unset($field['width']);
-            }
-
-            // Remove required field
-            // We add it to the toArray so it can be used elsewhere,
-            // but we don't want it added to the file itself.
-            unset($field['required']);
-
-            // Blank keys can be discarded.
-            $field = $this->discardBlankKeys($field);
-
-            // Replace it, making sure to use the name as the key.
-            $fields[$name] = $field;
-        }
 
         // Remove falsey keys where the defaults are falsey
         foreach (['hide', 'author', 'template'] as $falsey) {
@@ -352,14 +324,58 @@ class Fieldset implements FieldsetContract
             }
         }
 
-        // Remove and then re-set the fields key, so it's last. It'll be the longest array so it's
-        // just a little bit nicer to have everything else before it.
-        unset($contents['fields']);
-        $contents['fields'] = $fields;
+        if (empty($contents['date'])) {
+            unset($contents['date']);
+        }
+
+        $sections = $this->sections();
+
+        // If there's only one section, and it's the one that is automatically generated,
+        // we'll just save the fields array and prevent saving a sections array at all.
+        if ($this->shouldOnlySaveFields()) {
+            unset($contents['sections']);
+            $contents['fields'] = $sections['main']['fields'];
+        } else {
+            unset($contents['fields']);
+            $contents['sections'] = $sections;
+        }
 
         $yaml = YAML::dump($contents);
 
         File::put($this->path(), $yaml);
+    }
+
+    private function shouldOnlySaveFields()
+    {
+        $sections = $this->sections();
+
+        return !isset($this->contents['sections'])
+            && count($sections) === 1
+            && isset($sections['main'])
+            && !isset($sections['main']['display']);
+    }
+
+    public static function cleanFieldForSaving($field)
+    {
+        // When a JS submission is involved, the fields array contains
+        // some extra data that is used for display purposes.
+        // We don't need them in the actual fieldset, so we'll get rid of those.
+        $field = array_except($field, ['id', 'name', 'isNew', 'isMeta']);
+
+        // Fields are 100% by default. Don't need to save it.
+        if (in_array(array_get($field, 'width'), [100, '100'])) {
+            unset($field['width']);
+        }
+
+        // Remove required field
+        // We add it to the toArray so it can be used elsewhere,
+        // but we don't want it added to the file itself.
+        unset($field['required']);
+
+        // Blank keys can be discarded.
+        $field = self::discardBlankKeys($field);
+
+        return $field;
     }
 
     /**
@@ -368,7 +384,7 @@ class Fieldset implements FieldsetContract
      * @param  array $array
      * @return array
      */
-    private function discardBlankKeys($array)
+    private static function discardBlankKeys($array)
     {
         foreach ($array as $key => $value) {
             // We want to keep falsey values in these keys.
@@ -376,10 +392,19 @@ class Fieldset implements FieldsetContract
                 continue;
             }
 
+            // Get rid of literal false values in these keys
+            if (in_array($key, ['localizable'])) {
+                if ($value === false) {
+                    unset($array[$key]);
+                }
+            }
+
             if (is_array($value)) {
-                $array[$key] = array_filter_recursive($value);
+                // Recursion!
+                $array[$key] = self::discardBlankKeys($value);
             } else {
-                if (empty($value)) {
+                // Strip out nulls and empty strings. We want to keep literal false values.
+                if (in_array($value, [null, ''], true)) {
                     unset($array[$key]);
                 }
             }
@@ -396,28 +421,37 @@ class Fieldset implements FieldsetContract
     /**
      * Get the instance as an array.
      *
-     * @param boolean $inline_partials
+     * @param boolean $inlinePartials
      * @return array
      */
-    public function toArray($inline_partials = true)
+    public function toArray($inlinePartials = true)
     {
-        $localized = $this->locale() !== default_locale();
-
         $contents = $this->contents();
-        $contents['fields'] = [];
 
-        $fields = ($inline_partials) ? $this->fields() : $this->fieldsWithPartials();
+        $contents['sections'] = $this->sectionsToArray($inlinePartials);
+        $contents['taxonomies'] = $this->taxonomies();
 
-        foreach ($fields as $name => $config) {
+        return array_except($contents, ['fields']);
+    }
+
+    private function sectionsToArray($inlinePartials)
+    {
+        return collect($this->sections())->map(function ($section, $handle) use ($inlinePartials) {
+            return [
+                'display' => array_get($section, 'display', ucfirst($handle)),
+                'handle' => $handle,
+                'fields' => array_values($this->fieldsToArray($section['fields'], $inlinePartials)),
+            ];
+        })->values()->all();
+    }
+
+    private function fieldsToArray($fields, $inlinePartials)
+    {
+        $fields = collect($fields)->map(function ($config, $name) {
             // When merging fields without configs, they'd just be
             // empty strings so we'll set them to empty arrays.
             if (! is_array($config)) {
                 $config = [];
-            }
-
-            // Skip any non-localizable fields if this isn't the default locale.
-            if ($localized && !array_get($config, 'localizable')) {
-                continue;
             }
 
             // Useful to have the field name as part of the array itself
@@ -430,10 +464,14 @@ class Fieldset implements FieldsetContract
             $config['required'] = Str::contains(array_get($config, 'validate'), 'required');
             $config['localizable'] = $name === 'title' ? true : array_get($config, 'localizable', false);
 
-            $contents['fields'][] = $this->preProcess($config);
+            return $this->preProcess($config);
+        });
+
+        if ($inlinePartials) {
+            $fields = $this->inlinePartials($fields);
         }
 
-        return $contents;
+        return collect($fields)->all();
     }
 
     /**
@@ -542,15 +580,15 @@ class Fieldset implements FieldsetContract
     }
 
     /**
-     * Get or set the taxonomies
+     * Get or set whether to append taxonomies
      *
-     * @param array|null $taxonomies
-     * @return mixed
+     * @param bool|null $taxonomies
+     * @return bool
      */
     public function taxonomies($taxonomies = null)
     {
         if (is_null($taxonomies)) {
-            return array_get($this->contents, 'taxonomies');
+            return array_get($this->contents, 'taxonomies', true);
         }
 
         $this->contents['taxonomies'] = $taxonomies;

@@ -107,7 +107,7 @@ require('codemirror/mode/clike/clike');
 require('codemirror/mode/php/php');
 require('codemirror/mode/yaml/yaml');
 
-module.exports = {
+export default {
 
     mixins: [Fieldtype],
 

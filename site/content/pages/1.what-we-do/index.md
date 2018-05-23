@@ -3,45 +3,12 @@ blocks:
   - 
     type: hero
     photo: /assets/img/hero-background.jpeg
-    headline: 'A digital marketing team  that doesn’t take up your office space.'
+    headline: A digital marketing team that doesn’t take up your office space.
     link:
       - 4fe901e5-e85d-4956-b1c2-5dda967d1357
   - 
     type: panel
     jumbotron: 'We provide companies with leads, by adding  digital marketing systems and radically improving communications.'
-    columns:
-      - 
-        type: column-content
-        heading: Some kinda heading
-        content: >
-          Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata
-          corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead
-          survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus
-          resi dentevil vultus comedat cerebella viventium. Qui animated corpse.
-      - 
-        type: column-content
-        heading: Some kinda heading
-        content: >
-          Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata
-          corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead
-          survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus
-          resi dentevil vultus comedat cerebella viventium. Qui animated corpse.
-      - 
-        type: column-content
-        heading: Some kinda heading
-        content: >
-          Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata
-          corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead
-          survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus
-          resi dentevil vultus comedat cerebella viventium. Qui animated corpse.
-      - 
-        type: column-content
-        heading: Some kinda heading
-        content: >
-          Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata
-          corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead
-          survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus
-          resi dentevil vultus comedat cerebella viventium. Qui animated corpse.
     columns_2:
       - 
         type: column_2
@@ -57,6 +24,16 @@ blocks:
           In-house marketers wear a lot of hats, but no single person can do everything effectively. Let us
           make you look good by sharing the responsibilities, and bridging the gap between marketing and
           sales.
+    margin:
+      margin-top: 32px
+      margin-right: 0px
+      margin-bottom: 64px
+      margin-left: 0px
+    padding:
+      padding-top: ""
+      padding-right: ""
+      padding-bottom: ""
+      padding-left: ""
   - 
     type: funnel
     connection_content: |
@@ -81,23 +58,6 @@ blocks:
     type: panel
     little_bugger: Our Pricing
     jumbotron: Marketing solutions tailored to you. Whether you need us for a day or a year.
-    columns:
-      - 
-        type: column-content
-        heading: Some kinda heading
-        content: >
-          Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata
-          corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead
-          survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus
-          resi dentevil vultus comedat cerebella viventium. Qui animated corpse.
-      - 
-        type: column-content
-        heading: Some kinda heading
-        content: >
-          Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata
-          corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead
-          survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus
-          resi dentevil vultus comedat cerebella viventium. Qui animated corpse.
     columns_2:
       - 
         type: column_2
@@ -109,6 +69,11 @@ blocks:
         content: >
           For clients that run their own marketing or only need help in specific areas, we offer flat rate
           pricing for each of our services.
+    margin:
+      margin-top: 32px
+      margin-bottom: 64px
+      margin-right: 0px
+      margin-left: 0px
   - 
     type: nav-panel
     panel_text: Find out what we can do to help you.

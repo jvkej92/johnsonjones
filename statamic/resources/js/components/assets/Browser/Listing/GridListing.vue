@@ -6,7 +6,7 @@
              @click.prevent="selectFolder(folder.parent_path)"
              v-if="hasParent && !restrictNavigation">
             <div class="asset-thumb-container">
-                <file-icon type="div" extension="folder"></file-icon>
+                <file-icon extension="folder"></file-icon>
             </div>
             <div class="asset-meta">
                 <div class="asset-filename">..</div>
