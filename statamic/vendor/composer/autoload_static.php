@@ -4,14 +4,14 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
+class ComposerStaticInit0f5d646920142083adb20507caaab1eb
 {
     public static $files = array (
         '95a22d2145ae40de20dc7ea7be07a610' => __DIR__ . '/../..' . '/bootstrap/helpers.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
         '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
@@ -45,6 +45,7 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
             'Symfony\\Polyfill\\Util\\' => 22,
             'Symfony\\Polyfill\\Php56\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Routing\\' => 26,
@@ -150,6 +151,10 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Yaml\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
         'Symfony\\Component\\VarDumper\\' => 
         array (
@@ -2504,6 +2509,7 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Statamic\\API\\User' => __DIR__ . '/../..' . '/core/API/User.php',
         'Statamic\\API\\UserGroup' => __DIR__ . '/../..' . '/core/API/UserGroup.php',
         'Statamic\\API\\UserGroups' => __DIR__ . '/../..' . '/core/API/UserGroups.php',
+        'Statamic\\API\\Widont' => __DIR__ . '/../..' . '/core/API/Widont.php',
         'Statamic\\API\\YAML' => __DIR__ . '/../..' . '/core/API/YAML.php',
         'Statamic\\API\\Zip' => __DIR__ . '/../..' . '/core/API/Zip.php',
         'Statamic\\Addons\\Arr\\ArrFieldtype' => __DIR__ . '/../..' . '/bundles/Arr/ArrFieldtype.php',
@@ -2615,7 +2621,6 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Statamic\\Addons\\Theme\\ThemeFieldtype' => __DIR__ . '/../..' . '/bundles/Theme/ThemeFieldtype.php',
         'Statamic\\Addons\\Theme\\ThemeTags' => __DIR__ . '/../..' . '/bundles/Theme/ThemeTags.php',
         'Statamic\\Addons\\Time\\TimeFieldtype' => __DIR__ . '/../..' . '/bundles/Time/TimeFieldtype.php',
-        'Statamic\\Addons\\Title\\TitleFieldtype' => __DIR__ . '/../..' . '/bundles/Title/TitleFieldtype.php',
         'Statamic\\Addons\\Toggle\\ToggleFieldtype' => __DIR__ . '/../..' . '/bundles/Toggle/ToggleFieldtype.php',
         'Statamic\\Addons\\TransChoice\\TransChoiceTags' => __DIR__ . '/../..' . '/bundles/TransChoice/TransChoiceTags.php',
         'Statamic\\Addons\\Trans\\TransTags' => __DIR__ . '/../..' . '/bundles/Trans/TransTags.php',
@@ -2643,6 +2648,7 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Statamic\\Assets\\AssetFolder' => __DIR__ . '/../..' . '/core/Assets/AssetFolder.php',
         'Statamic\\Assets\\DimensionBuilder' => __DIR__ . '/../..' . '/core/Assets/DimensionBuilder.php',
         'Statamic\\Bootstrap\\UpdateConfiguration' => __DIR__ . '/../..' . '/core/Bootstrap/UpdateConfiguration.php',
+        'Statamic\\CP\\ColumnSupplementor' => __DIR__ . '/../..' . '/core/CP/ColumnSupplementor.php',
         'Statamic\\CP\\Fieldset' => __DIR__ . '/../..' . '/core/CP/Fieldset.php',
         'Statamic\\CP\\FieldtypeFactory' => __DIR__ . '/../..' . '/core/CP/FieldtypeFactory.php',
         'Statamic\\CP\\Navigation\\Nav' => __DIR__ . '/../..' . '/core/CP/Navigation/Nav.php',
@@ -2939,9 +2945,9 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Statamic\\Http\\Controllers\\EntriesController' => __DIR__ . '/../..' . '/core/Http/Controllers/EntriesController.php',
         'Statamic\\Http\\Controllers\\EntriesSearchController' => __DIR__ . '/../..' . '/core/Http/Controllers/EntriesSearchController.php',
         'Statamic\\Http\\Controllers\\FieldsetController' => __DIR__ . '/../..' . '/core/Http/Controllers/FieldsetController.php',
+        'Statamic\\Http\\Controllers\\FieldsetJsonController' => __DIR__ . '/../..' . '/core/Http/Controllers/FieldsetJsonController.php',
         'Statamic\\Http\\Controllers\\FieldtypesController' => __DIR__ . '/../..' . '/core/Http/Controllers/FieldtypesController.php',
         'Statamic\\Http\\Controllers\\FormsController' => __DIR__ . '/../..' . '/core/Http/Controllers/FormsController.php',
-        'Statamic\\Http\\Controllers\\GetsTaxonomiesFromFieldsets' => __DIR__ . '/../..' . '/core/Http/Controllers/GetsTaxonomiesFromFieldsets.php',
         'Statamic\\Http\\Controllers\\GlideController' => __DIR__ . '/../..' . '/core/Http/Controllers/GlideController.php',
         'Statamic\\Http\\Controllers\\GlobalsController' => __DIR__ . '/../..' . '/core/Http/Controllers/GlobalsController.php',
         'Statamic\\Http\\Controllers\\ImportController' => __DIR__ . '/../..' . '/core/Http/Controllers/ImportController.php',
@@ -2976,7 +2982,6 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Statamic\\Http\\Middleware\\Outpost' => __DIR__ . '/../..' . '/core/Http/Middleware/Outpost.php',
         'Statamic\\Http\\Middleware\\PersistStache' => __DIR__ . '/../..' . '/core/Http/Middleware/PersistStache.php',
         'Statamic\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/core/Http/Middleware/VerifyCsrfToken.php',
-        'Statamic\\Http\\Requests\\PublishRequest' => __DIR__ . '/../..' . '/core/Http/Requests/PublishRequest.php',
         'Statamic\\Http\\Requests\\Request' => __DIR__ . '/../..' . '/core/Http/Requests/Request.php',
         'Statamic\\Http\\Requests\\StoreAssetContainerRequest' => __DIR__ . '/../..' . '/core/Http/Requests/StoreAssetContainerRequest.php',
         'Statamic\\Http\\Requests\\StoreAssetFolder' => __DIR__ . '/../..' . '/core/Http/Requests/StoreAssetFolder.php',
@@ -3106,8 +3111,10 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Statamic\\Updater\\Updater' => __DIR__ . '/../..' . '/core/Updater/Updater.php',
         'Statamic\\Updater\\Updates\\AddViewPermissions' => __DIR__ . '/../..' . '/core/Updater/Updates/AddViewPermissions.php',
         'Statamic\\Updater\\Updates\\MigrateAssets' => __DIR__ . '/../..' . '/core/Updater/Updates/MigrateAssets.php',
+        'Statamic\\Updater\\Updates\\MigrateMetaFields' => __DIR__ . '/../..' . '/core/Updater/Updates/MigrateMetaFields.php',
         'Statamic\\Updater\\Updates\\MigrateTaxonomies' => __DIR__ . '/../..' . '/core/Updater/Updates/MigrateTaxonomies.php',
         'Statamic\\Updater\\Updates\\MigrateTaxonomyFields' => __DIR__ . '/../..' . '/core/Updater/Updates/MigrateTaxonomyFields.php',
+        'Statamic\\Updater\\Updates\\MoveTopLevelTaxonomiesIntoFields' => __DIR__ . '/../..' . '/core/Updater/Updates/MoveTopLevelTaxonomiesIntoFields.php',
         'Statamic\\Updater\\Updates\\Update' => __DIR__ . '/../..' . '/core/Updater/Updates/Update.php',
         'Statamic\\Updater\\ZipDownloadedException' => __DIR__ . '/../..' . '/core/Updater/ZipDownloadedException.php',
         'Statamic\\View\\Antlers\\Engine' => __DIR__ . '/../..' . '/core/View/Antlers/Engine.php',
@@ -3644,6 +3651,18 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Symfony\\Component\\VarDumper\\Test\\VarDumperTestCase' => __DIR__ . '/..' . '/symfony/var-dumper/Test/VarDumperTestCase.php',
         'Symfony\\Component\\VarDumper\\Test\\VarDumperTestTrait' => __DIR__ . '/..' . '/symfony/var-dumper/Test/VarDumperTestTrait.php',
         'Symfony\\Component\\VarDumper\\VarDumper' => __DIR__ . '/..' . '/symfony/var-dumper/VarDumper.php',
+        'Symfony\\Component\\Yaml\\Command\\LintCommand' => __DIR__ . '/..' . '/symfony/yaml/Command/LintCommand.php',
+        'Symfony\\Component\\Yaml\\Dumper' => __DIR__ . '/..' . '/symfony/yaml/Dumper.php',
+        'Symfony\\Component\\Yaml\\Escaper' => __DIR__ . '/..' . '/symfony/yaml/Escaper.php',
+        'Symfony\\Component\\Yaml\\Exception\\DumpException' => __DIR__ . '/..' . '/symfony/yaml/Exception/DumpException.php',
+        'Symfony\\Component\\Yaml\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/yaml/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\Yaml\\Exception\\ParseException' => __DIR__ . '/..' . '/symfony/yaml/Exception/ParseException.php',
+        'Symfony\\Component\\Yaml\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/yaml/Exception/RuntimeException.php',
+        'Symfony\\Component\\Yaml\\Inline' => __DIR__ . '/..' . '/symfony/yaml/Inline.php',
+        'Symfony\\Component\\Yaml\\Parser' => __DIR__ . '/..' . '/symfony/yaml/Parser.php',
+        'Symfony\\Component\\Yaml\\Tag\\TaggedValue' => __DIR__ . '/..' . '/symfony/yaml/Tag/TaggedValue.php',
+        'Symfony\\Component\\Yaml\\Unescaper' => __DIR__ . '/..' . '/symfony/yaml/Unescaper.php',
+        'Symfony\\Component\\Yaml\\Yaml' => __DIR__ . '/..' . '/symfony/yaml/Yaml.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'Symfony\\Polyfill\\Php56\\Php56' => __DIR__ . '/..' . '/symfony/polyfill-php56/Php56.php',
         'Symfony\\Polyfill\\Util\\Binary' => __DIR__ . '/..' . '/symfony/polyfill-util/Binary.php',
@@ -3663,10 +3682,10 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit97b4036662f0cfd112c962b52e919d34::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit97b4036662f0cfd112c962b52e919d34::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit97b4036662f0cfd112c962b52e919d34::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit97b4036662f0cfd112c962b52e919d34::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0f5d646920142083adb20507caaab1eb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0f5d646920142083adb20507caaab1eb::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0f5d646920142083adb20507caaab1eb::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit0f5d646920142083adb20507caaab1eb::$classMap;
 
         }, null, ClassLoader::class);
     }

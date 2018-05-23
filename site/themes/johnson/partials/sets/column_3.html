@@ -1,4 +1,4 @@
-<div class="col-4 pr pb">
+<div class="col-4 pr pb" style="margin:{{ foreach:margins }} {{ value }}{{ /foreach:margins }}; padding:{{ foreach:padding }} {{ value }}{{ /foreach:padding }};">
     <h4>{{ heading }}</h4>
     {{ content | markdown }}
 </div>

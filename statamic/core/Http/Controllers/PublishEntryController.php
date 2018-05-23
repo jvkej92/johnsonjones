@@ -36,6 +36,7 @@ class PublishEntryController extends PublishController
         $fieldset = $collection->fieldset();
 
         $data = $this->addBlankFields($fieldset);
+        $data['slug'] = null; // For Vue. Slug might not've been in the fieldset.
 
         $extra = [
             'collection' => $collection->path(),
@@ -58,7 +59,6 @@ class PublishEntryController extends PublishController
             'locale'            => $this->locale(request()),
             'is_default_locale' => true,
             'locales'           => $this->getLocales(),
-            'taxonomies'        => $this->getTaxonomies($fieldset),
             'suggestions'        => $this->getSuggestions($fieldset),
         ]);
     }
@@ -93,16 +93,17 @@ class PublishEntryController extends PublishController
             'order_type'    => $entry->orderType()
         ];
 
+        $data = $this->addBlankFields($entry->fieldset(), $entry->processedData());
+        $data['slug'] = $slug;
+
         if ($entry->orderType() === 'date') {
             // Get the datetime without milliseconds
             $datetime = substr($entry->date()->toDateTimeString(), 0, 16);
             // Then strip off the time, if it's not supposed to be there.
             $datetime = ($entry->hasTime()) ? $datetime : substr($datetime, 0, 10);
 
-            $extra['datetime'] = $datetime;
+            $data['date'] = $datetime;
         }
-
-        $data = $this->addBlankFields($entry->fieldset(), $entry->processedData());
 
         return view('publish', [
             'extra'              => $extra,
@@ -111,7 +112,6 @@ class PublishEntryController extends PublishController
             'content_type'       => 'entry',
             'fieldset'           => $entry->fieldset()->name(),
             'title'              => array_get($data, 'title', $slug),
-            'title_display_name' => array_get($entry->fieldset()->fields(), 'title.display', t('title')),
             'uuid'               => $id,
             'uri'                => $entry->uri(),
             'url'                => $entry->url(),
@@ -120,21 +120,8 @@ class PublishEntryController extends PublishController
             'locale'             => $locale,
             'is_default_locale'  => $entry->isDefaultLocale(),
             'locales'            => $this->getLocales($id),
-            'taxonomies'         => $this->getTaxonomies($entry->fieldset()),
             'suggestions'        => $this->getSuggestions($entry->fieldset()),
         ]);
-    }
-
-    /**
-     * Override the method and display the collection name.
-     *
-     * @param  Request  $request
-     * @param  Content  $content
-     * @return string
-     */
-    protected function buildSuccessMessage($request, $content)
-    {
-        return $content->collection()->title();
     }
 
     /**

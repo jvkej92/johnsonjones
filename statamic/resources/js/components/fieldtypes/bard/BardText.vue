@@ -54,7 +54,9 @@
 
 <script>
 
+    import autosize from 'autosize';
     import AutoList from './AutoList';
+    import AutoHR from 'medium-editor-autohr';
     import InsertsAssets from '../InsertsAssets';
 
     export default {
@@ -222,11 +224,12 @@
             },
 
             initMedium() {
-                let buttons = this.localizeButtons(this.$parent.config.buttons || ['bold', 'italic', 'anchor', 'h2', 'h3', 'quote']);
+                let buttons = this.localizeButtons(this.$parent.config.buttons || ['bold', 'italic', 'anchor', 'unorderedlist', 'orderedlist', 'h2', 'h3', 'quote']);
 
                 let extensions = Object.assign({
                     imageDragging: {},
-                    autolist: new AutoList
+                    autolist: new AutoList,
+                    autohr: new AutoHR
                 }, _.map(Statamic.MediumEditorExtensions, ext => new ext));
 
                 if (this.$parent.config.container) {
@@ -238,7 +241,7 @@
                     toolbar:        { buttons },
                     autoLink:       this.$parent.config.autolink || false,
                     placeholder:    false,
-                    paste:          this.$parent.config.paste || { forcePlainText: false, cleanPastedHTML: true },
+                    paste:          { forcePlainText: this.$parent.config.force_plain_text, cleanPastedHTML: this.$parent.config.clean_pasted_html },
                     spellcheck:     this.$parent.config.spellcheck || true,
                     targetBlank:    this.$parent.config.target_blank || false,
                     linkValidation: this.$parent.config.link_validation || false,
@@ -282,19 +285,8 @@
                 });
 
                 this.editor.subscribe('editableKeydownDelete', e => {
-                    const pos = this.editor.exportSelection();
-
-                    const isInFirstElement = !this.editor.getSelectedParentElement().previousSibling;
-                    const isInLastElement = !this.editor.getSelectedParentElement().nextSibling;
-                    const backspacedAtStart = e.key === 'Backspace' && pos.start === 0 && pos.end === 0 && isInFirstElement;
-                    const deletedAtEnd = e.key === 'Delete' && pos.start === this.plainText().length && pos.end === this.plainText().length && isInLastElement
-
-                    if (backspacedAtStart || deletedAtEnd) e.preventDefault();
-
-                    if (backspacedAtStart) {
-                        this.$emit('backspaced-at-start', this.index);
-                    } else if (deletedAtEnd) {
-                        this.$emit('deleted-at-end', this.index);
+                    if (this.isBlank) {
+                        this.$emit('deleted', this.index);
                     }
                 });
 

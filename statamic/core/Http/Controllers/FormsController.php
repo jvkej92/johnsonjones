@@ -56,10 +56,10 @@ class FormsController extends CpController
         $form = Form::get($form);
 
         $columns = collect($form->columns())->map(function ($val, $column) {
-            return ['label' => $column, 'field' => $column, 'translation' => $val];
+            return ['value' => $column, 'header' => $val];
         })->values()->reverse()->push([
-            'label' => 'datestring',
-            'field' => 'datestamp'
+            'value' => 'datestring',
+            'header' => 'datestamp'
         ])->reverse();
 
         $submissions = collect($form->submissions()->each(function ($submission) {
@@ -85,7 +85,7 @@ class FormsController extends CpController
         }
 
         // Perform the sort!
-        if ($customSort !== 'datestamp' || $sortOrder !== 'desc') {
+        if ($customSort !== 'datestring' || $sortOrder !== 'desc') {
             $submissions = $submissions->sortBy($sort, null, $sortOrder === 'desc');
         }
 
@@ -392,8 +392,10 @@ class FormsController extends CpController
             return $this->pageNotFound();
         }
 
+        $title = translate_choice('cp.submissions', 1);
+
         $this->sanitizeSubmission($submission);
 
-        return view('forms.submission', compact('form', 'submission'));
+        return view('forms.submission', compact('form', 'submission', 'title'));
     }
 }

@@ -25,6 +25,7 @@ class PublishTaxonomyController extends PublishController
         }
 
         $data = $this->addBlankFields($fieldset = $group->fieldset());
+        $data['slug'] = null;
 
         $fieldset = $fieldset->name();
 
@@ -97,7 +98,6 @@ class PublishTaxonomyController extends PublishController
             'content_type'      => 'taxonomy',
             'fieldset'          => $term->fieldset()->name(),
             'title'             => array_get($data, 'title', $slug),
-            'title_display_name' => array_get($term->fieldset()->fields(), 'title.display', t('title')),
             'uuid'              => $id,
             'uri'               => $term->uri(),
             'url'               => $term->url(),

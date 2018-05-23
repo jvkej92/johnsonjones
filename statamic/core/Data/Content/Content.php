@@ -111,15 +111,15 @@ abstract class Content extends Data implements ContentContract
      */
     public function supplement()
     {
-        $this->supplements['id']        = $this->id();
-        $this->supplements['slug']      = $this->slug();
-        $this->supplements['url']       = $this->url();
-        $this->supplements['uri']       = $this->uri();
-        $this->supplements['url_path']  = $this->uri(); // deprecated
-        $this->supplements['permalink'] = $this->absoluteUrl();
-        $this->supplements['edit_url']  = $this->editUrl();
-        $this->supplements['published'] = $this->published();
-        $this->supplements['order']     = $this->order();
+        $this->setSupplement('id', $this->id());
+        $this->setSupplement('slug', $this->slug());
+        $this->setSupplement('url', $this->url());
+        $this->setSupplement('uri', $this->uri());
+        $this->setSupplement('url_path', $this->uri()); // deprecated
+        $this->setSupplement('permalink', $this->absoluteUrl());
+        $this->setSupplement('edit_url', $this->editUrl());
+        $this->setSupplement('published', $this->published());
+        $this->setSupplement('order', $this->order());
 
         if ($this->supplement_taxonomies) {
             $this->addTaxonomySupplements();

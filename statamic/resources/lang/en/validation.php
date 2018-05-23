@@ -59,6 +59,7 @@ return [
     "regex"                => "The :attribute format is invalid.",
     "required"             => "The :attribute is required.",
     "required_if"          => "The :attribute is required when :other is :value.",
+    "required_unless"      => "The :attribute field is required unless :other is in :values.",
     "required_with"        => "The :attribute is required when :values is present.",
     "required_with_all"    => "The :attribute is required when :values is present.",
     "required_without"     => "The :attribute is required when :values is not present.",
@@ -76,6 +77,9 @@ return [
     "entry_slug_exists"    => "Slug already exists.",
     "page_uri_exists"      => "Slug already exists.",
     "unique_asset_filename" => "An asset with this filename exists.",
+
+    // Extended validation rules
+    "ext" => "The :attribute must be a file of type: :extensions",
 
     /*
     |--------------------------------------------------------------------------

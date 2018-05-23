@@ -67,6 +67,7 @@ fields:
             options:
               primary: White
               secondary: Grey
+
           little_bugger:
             type: text
             display: Little Bugger
@@ -129,7 +130,7 @@ fields:
                     folder: /
                   icon_size:
                     type: text
-                    instructions: "Enter width in a pixel value. Default 100px"
+                    instructions: Enter width in a pixel value. Default 100px
                   icon_align:
                     display: Align Icon
                     type: select
@@ -149,6 +150,10 @@ fields:
                   button_text:
                     type: text
                     display: Button Text
+          spacing:
+            type: partial
+            display: Spacing
+            fieldset: spacing
       funnel:
         display: Funnel
         fields:

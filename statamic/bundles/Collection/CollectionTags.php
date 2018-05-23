@@ -176,7 +176,7 @@ class CollectionTags extends Tags
             array_get($this->context, 'page.default_slug'),
             array_get($this->context, 'page.taxonomy')
         );
-        
+
         return ($data) ? $data->collection() : $data;
     }
 
@@ -481,6 +481,9 @@ class CollectionTags extends Tags
 
     private function paginate()
     {
+        // No limit, no pagination.
+        if ( ! $this->limit) return;
+
         $this->paginated = true;
 
         // Keep track of how many items were in the collection before pagination chunks it up.
@@ -508,7 +511,7 @@ class CollectionTags extends Tags
 
         $paginator = new LengthAwarePaginator($items, $count, $this->limit, $page);
 
-        $paginator->setPath(request()->url());
+        $paginator->setPath(URL::makeAbsolute(URL::getCurrent()));
         $paginator->appends(Request::all());
 
         $this->pagination_data = [
