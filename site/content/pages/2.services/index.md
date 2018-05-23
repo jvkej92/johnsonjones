@@ -2,9 +2,11 @@ meta_title: Services
 template: flexible
 blocks:
   - 
-   type: hero
+    type: hero
     photo: /assets/img/hero-background.jpeg
     headline: '“Some people want it all” <br/> -Alicia Keys'
+    link:
+      - 4fe901e5-e85d-4956-b1c2-5dda967d1357
   - 
     type: standalone_jumbotron
     jumbotron: Our marketing systems work together to bring you more leads. More leads means more sales.
