@@ -82,6 +82,16 @@ blocks:
         icon_url:
           - /assets/img/JJ-Icons-Marketing Services-v1-06.svg
         icon: true
+    margin:
+      margin-top: 32px
+      margin-right: 0px
+      margin-bottom: 64px
+      margin-left: 0px
+    padding:
+      padding-top: ""
+      padding-right: ""
+      padding-bottom: ""
+      padding-left: ""
   - 
     type: standalone_jumbotron
     jumbotron: Did you know we have a creative team for all of your “artsy” needs? See what they can do.
