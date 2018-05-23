@@ -7,11 +7,11 @@
 
         <div class="form-submission-listing">
 
-            <div class="flexy mb-24">
+            <div class="flexy mb-3">
                 <h1 class="fill">{{ $form->title() }}</h1>
 
                 @can('super')
-                <a href="{{ route('form.edit', ['form' => $form->name()]) }}" class="btn mr-8">{{ t('configure') }}</a>
+                <a href="{{ route('form.edit', ['form' => $form->name()]) }}" class="btn mr-1">{{ t('configure') }}</a>
                 @endcan
 
                 <div class="btn-group">
@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="card flush" v-else>
+            <div class="card flush dossier-for-mobile" v-else>
                 <div class="loading" v-if="loading">
                     <span class="icon icon-circular-graph animation-spin"></span> {{ translate('cp.loading') }}
                 </div>

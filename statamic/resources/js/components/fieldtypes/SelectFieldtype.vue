@@ -8,7 +8,7 @@
 
 <script>
 
-module.exports = {
+export default {
 
     mixins: [Fieldtype],
 

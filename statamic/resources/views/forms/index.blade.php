@@ -2,7 +2,7 @@
 
 @section('content')
 
-        <div class="flexy mb-24">
+        <div class="flexy mb-3">
             <h1 class="fill">{{ translate('cp.nav_forms') }}</h1>
             @can('super')
                 <a href="{{ route('form.create') }}" class="btn btn-primary">{{ t('create_form') }}</a>

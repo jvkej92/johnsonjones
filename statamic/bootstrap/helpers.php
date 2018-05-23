@@ -15,6 +15,7 @@ use Statamic\Data\DataCollection;
 use Illuminate\Support\Debug\Dumper;
 use Stringy\StaticStringy as Stringy;
 use Statamic\View\Blade\Modifier as BladeModifier;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 if (! function_exists('array_get')) {
     /**
@@ -330,14 +331,12 @@ function col_class($width)
 /**
  * SVG helper
  *
- * Outputs a tag to reference a symbol in the sprite.
- *
  * @param string $name Name of svg
  * @return string
  */
 function svg($name)
 {
-    return '<svg><use xlink:href="#'.$name.'" /></svg>';
+    return inline_svg($name);
 }
 
 /**
@@ -376,10 +375,9 @@ function active_for($url)
  */
 function nav_is($url)
 {
-    $url = preg_replace('/^index\.php\//', '', $url);
-    $current = request()->url();
+    $current = URL::makeAbsolute(URL::getCurrent());
 
-    return $url === $current || Str::startsWith($current, $url.'/');
+    return $url === $current || Str::startsWith($current, $url . '/');
 }
 
 /**
@@ -579,6 +577,10 @@ function sanitize($value, $antlers = true)
 {
     if (is_array($value)) {
         return sanitize_array($value, $antlers);
+    }
+
+    if ($value instanceof UploadedFile) {
+        return $value;
     }
 
     $value = htmlentities($value);

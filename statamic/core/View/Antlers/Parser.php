@@ -90,7 +90,8 @@ class Parser
 
         // The parseConditionals method executes any PHP in the text, so clean it up.
         if (! $allowPhp) {
-            $text = str_replace(['<?', '?>'], ['&lt;?', '?&gt;'], $text);
+            $text = str_replace(['<?', '?>', '<%', '%>'], ['&lt;?', '?&gt;', '&lt;%', '%&gt;'], $text);
+            $text = preg_replace('/<script(?:.*)language="php"(?:.*)>.*<\/script>/', '', $text);
         }
 
         // <statamic>
@@ -1002,7 +1003,7 @@ class Parser
 
         // <statamic>
         // expand allowed characters in variable regex
-        $this->variableRegex = "\b(?!if|unless\s)[a-zA-Z0-9_][|a-zA-Z\-\+\*%\#\^\@\/,0-9_\.'".$glue.']*';
+        $this->variableRegex = "\b(?!if\s|unless\s)[a-zA-Z0-9_][|a-zA-Z\-\+\*%\#\^\@\/,0-9_\.'".$glue.']*';
         // Allow spaces after the variable name so you can do modifiers like | this | and_that
         $this->looseVariableRegex = "\b(?!if|unless\s)[a-zA-Z0-9_][|a-zA-Z\-\+\*%\#\^\@\/,0-9_\.(\s.*)?'".$glue.']*';
         // </statamic>
@@ -1026,7 +1027,7 @@ class Parser
 
         $this->ignoreRegex = '/@{{(?:(?!}}).)*}}/';
 
-        $this->conditionalRegex = '/\{\{\s*(if|unless|elseif|elseunless)\s*((?:\()?(.*?)(?:\))?)\s*\}\}/ms';
+        $this->conditionalRegex = '/\{\{\s*(if|unless|elseif|elseunless)\s+((?:\()?(.*?)(?:\))?)\s*\}\}/ms';
         $this->conditionalElseRegex = '/\{\{\s*else\s*\}\}/ms';
         $this->conditionalEndRegex = '/\{\{\s*(?:endif|\/if|\/unless)\s*\}\}/ms';
         $this->conditionalExistsRegex = '/(\s+|^)exists\s+('.$this->variableRegex.')(\s+|$)/ms';

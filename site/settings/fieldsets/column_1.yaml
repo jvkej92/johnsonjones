@@ -9,3 +9,7 @@ fields:
   content:
     type: markdown
     display: Content
+  spacing:
+    type: partial
+    display: Spacing
+    fieldset: spacing

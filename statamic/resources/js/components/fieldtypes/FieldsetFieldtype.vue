@@ -41,7 +41,7 @@
 
 <script>
 
-module.exports = {
+export default {
 
     mixins: [Fieldtype],
 
@@ -108,7 +108,7 @@ module.exports = {
         },
 
         getFieldsets() {
-            var url = cp_url('fieldsets/get');
+            var url = cp_url('fieldsets-json');
             var params = {};
 
             if (this.url) {

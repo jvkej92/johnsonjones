@@ -1,4 +1,4 @@
-<div class="row p {{ color }}">
+<div class="row p {{ color }} style="margin:{{ foreach:margins }} {{ value }}{{ /foreach:margins }}; padding:{{ foreach:padding }} {{ value }}{{ /foreach:padding }};"">
     {{if little_bugger}}
         {{ partial src="sets/little_bugger" }}
     {{ /if}}

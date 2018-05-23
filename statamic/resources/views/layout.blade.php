@@ -4,19 +4,17 @@
       @include('partials.head')
 </head>
 
-<body id="statamic" :class="{ 'nav-visible': navVisible }">
+<body id="statamic" :class="{ 'nav-visible': navVisible, 'overflow-hidden': modalOpen }">
 
       @if ($is_trial || $is_unlicensed)
             <div class="site-status-stripe flexy">
                   <div class="fill">
                         @if ($is_trial) {{ t('trial_mode_badge') }} @elseif ($is_unlicensed){{ t('unlicensed') }} @endif
                   </div>
-                  <a href="{{ route('licensing') }}" class="btn btn-small mr-16">{{ t('add_license_key')  }}</a>
+                  <a href="{{ route('licensing') }}" class="btn btn-small mr-2">{{ t('add_license_key')  }}</a>
                   <a href="https://statamic.com/buy" class="btn btn-primary btn-small" target="_blank">{{ t('buy_now')  }}</a>
             </div>
       @endif
-
-      {!! inline_svg('sprite') !!}
 
       <nav class="nav-mobile">
           <a href="{{ route('cp') }}" class="logo">

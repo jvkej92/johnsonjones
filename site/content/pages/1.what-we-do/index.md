@@ -57,6 +57,11 @@ blocks:
           In-house marketers wear a lot of hats, but no single person can do everything effectively. Let us
           make you look good by sharing the responsibilities, and bridging the gap between marketing and
           sales.
+    padding:
+      padding-top: 0px
+      padding-right: 0px
+      padding-bottom: 64px
+      padding-left: 0px
   - 
     type: funnel
     connection_content: |
@@ -109,6 +114,11 @@ blocks:
         content: >
           For clients that run their own marketing or only need help in specific areas, we offer flat rate
           pricing for each of our services.
+    padding:
+      padding-top: 0px
+      padding-right: 0px
+      padding-bottom: 64px
+      padding-left: 0px
   - 
     type: nav-panel
     panel_text: Find out what we can do to help you.

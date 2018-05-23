@@ -18,7 +18,6 @@ use Statamic\Exceptions\PublishException;
 abstract class PublishController extends CpController
 {
     use ProcessesFields;
-    use GetsTaxonomiesFromFieldsets;
 
     /**
      * Abstract publisher.
@@ -112,9 +111,7 @@ abstract class PublishController extends CpController
             ];
         }
 
-        $successMessage = translate('cp.thing_saved', [
-            'thing' => $this->buildSuccessMessage($request, $content),
-        ]);
+        $successMessage = t('saved_success');
 
         if (! $request->continue || $request->new) {
             $this->success($successMessage);
@@ -125,18 +122,6 @@ abstract class PublishController extends CpController
             'redirect' => $this->buildRedirect($request, $content),
             'message' => $successMessage
         ];
-    }
-
-    /**
-     * Build a success message that can be overriden for better localization.
-     *
-     * @param  Request  $request
-     * @param  Content  $content
-     * @return string
-     */
-    protected function buildSuccessMessage($request, $content)
-    {
-        return t($request->type);
     }
 
     /**
