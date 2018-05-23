@@ -69,11 +69,19 @@ blocks:
         content: >
           For clients that run their own marketing or only need help in specific areas, we offer flat rate
           pricing for each of our services.
+<<<<<<< HEAD
     margin:
       margin-top: 32px
       margin-bottom: 64px
       margin-right: 0px
       margin-left: 0px
+=======
+    padding:
+      padding-top: 0px
+      padding-right: 0px
+      padding-bottom: 64px
+      padding-left: 0px
+>>>>>>> 61bd72569797a88bf37936db3c06dc5003af3f5f
   - 
     type: nav-panel
     panel_text: Find out what we can do to help you.

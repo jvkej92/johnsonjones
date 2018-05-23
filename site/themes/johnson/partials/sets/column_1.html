@@ -1,4 +1,4 @@
-<div class="col-10 justify-start col-list mb"  style="margin: {{ margin }} {{ margin-top }} {{ margin-right }} {{ margin-bottom }} {{ margin-left }}{{ /margin }}; padding: {{ foreach:padding }}{{ value }} {{ /foreach:padding }};">
+<div class="col-10 justify-start col-list mb"  style="margin: {{ foreach:margin }} {{ value }} {{ /foreach:margin }}; padding: {{ foreach:padding }}{{ value }} {{ /foreach:padding }};">
     <h3 class="mb col-heading">{{ heading }}</h3>
     <div class="col-content">{{ content | markdown }}</div>
 </div>

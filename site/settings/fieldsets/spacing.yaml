@@ -1,0 +1,24 @@
+taxonomies: false
+title: Spacing
+create_title: Spacing
+fields:
+  margins:
+    type: array
+    display: Margins
+    keys:
+      margin-top: Top
+      margin-right: Right
+      margin-bottom: Bottom
+      margin-left: Left
+    default: 0px
+    width: 50
+  padding:
+    type: array
+    display: Padding
+    keys:
+      padding-top: Top
+      padding-right: Right
+      padding-bottom: Bottom
+      padding-left: Left
+    default: 0px
+    width: 50

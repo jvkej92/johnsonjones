@@ -110,6 +110,7 @@ sections:
                         display: Column Content
                         fieldset: column_3
               cards:
+<<<<<<< HEAD
                 type: replicator
                 display: Cards
                 sets:
@@ -204,6 +205,80 @@ sections:
               carousel_heading:
                 display: Resource Carousel Heading
                 type: text
+=======
+                display: cards
+                fields:
+                  color:
+                    type: select
+                    display: Color
+                    options:
+                      primary: White
+                      secondary: Grey
+                  icon:
+                    display: Use Icon?
+                    type: toggle
+                  icon_url:
+                    type: assets
+                    display: Icon
+                    container: main
+                    folder: /
+                  icon_size:
+                    type: text
+                    instructions: Enter width in a pixel value. Default 100px
+                  icon_align:
+                    display: Align Icon
+                    type: select
+                    options:
+                      justify-start: Left
+                      justify-end: Right
+                      justify-center: Center
+                  heading:
+                    type: text
+                    display: Heading
+                  content:
+                    type: markdown
+                    display: Content
+                  link:
+                    type: pages
+                    display: Link
+                  button_text:
+                    type: text
+                    display: Button Text
+          spacing:
+            type: partial
+            display: Spacing
+            fieldset: spacing
+      funnel:
+        display: Funnel
+        fields:
+          little_bugger:
+            type: text
+            display: Little bugger
+          jumbotron:
+            type: text
+            display: Jumbotron
+          connection_content:
+            type: markdown
+            display: Connection Content
+          communication_content:
+            type: markdown
+            display: Communication Content
+          retention_content:
+            type: markdown
+            display: Retention Content
+          brand_content:
+            type: markdown
+            display: Brand Content
+      resource_carousel:
+        display: Resource Carousel
+        fields:
+          carousel_heading:
+            display: Resource Carousel Heading
+            type: text
+      callout:
+        display: Callout
+        fields:
+>>>>>>> 61bd72569797a88bf37936db3c06dc5003af3f5f
           callout:
             display: Callout
             fields:
