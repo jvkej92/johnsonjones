@@ -51,7 +51,7 @@ $rewrite_urls = false;
 |
 */
 
-$control_panel = 'cp';
+$control_panel = 'dashboard';
 
 /*
 |--------------------------------------------------------------------------
