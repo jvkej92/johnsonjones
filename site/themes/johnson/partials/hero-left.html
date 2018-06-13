@@ -1,13 +1,18 @@
 {{# HERO #}}
-<div class="hero justify-center">
-    <div class="hero-bg hero-blue-fliter" style="background-image: url({{ photo }})"></div>
-    <div class="row col-10 justify-center space-50 hero-content-wrapper">
-        <div class="hero-content light-text text-left">
-            <h1 class="headline">{{ headline }} <span class="cycle">marketing</span>.</h1>
-            <a href="{{ link | url or "/audit"}}" class="btn btn-primary my">{{buttonText or "Get Your Free Audit"}}</a>
+<div class="parallax">
+    <div class="parallax_layer parallax_layer_0">
+        <img src="" />
+    </div>
+    <div class="parallax_layer parallax_layer_1">
+        <img src="" />
+    </div>
+    <div class="parallax_layer parallax_layer_2">
+        <div class="hero-content light-text">
+            <h1>{{ headline }}</h1>
+            <a href="#" class="btn btn-primary">Get Your Free Audit</a>
         </div>
-        <div class="hero-chevron">
-            <img src="/assets/img/JohnsonJones_Icon_Chevron_Down.svg">
-        </div>
+    </div>
+    <div class="parallax_layer parallax_layer_3">
+        <img src="" />
     </div>
 </div>

@@ -1,6 +1,11 @@
 .hero {
     @extend %flex;
     position: relative;
+    background: #003359; /* Old browsers */
+    background: -moz-linear-gradient(top, #003359 0%, #406683 81%, #406683 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #003359 0%,#406683 81%,#406683 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #003359 0%,#406683 81%,#406683 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003359', endColorstr='#406683',GradientType=0 );
 }
 
 .banner{
@@ -135,4 +140,63 @@
     100%{
         opacity: 1;
     }
+}
+
+// Paralax Styles //
+@import "compass/css3";
+
+*{
+  box-sizing: border-box;
+}
+
+html,
+body{
+  background-color: #FEDCC8;
+}
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  margin-left: -1500px;
+}
+
+.parallax_layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  img{
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.parallax_cover{
+  background: #2D112B;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+}
+
+$parallax_layers: 4;
+
+@for $i from 0 through $parallax__layers {
+  $x: ($parallax__layers - $i) / 2;
+  .parallax__layer__#{$i}{
+     transform: translateZ(-100 * $x#{px}) scale($x + 1);
+  }
 }
