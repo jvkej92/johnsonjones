@@ -17,6 +17,11 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <style>
+        .col-10{
+            height: auto;
+        }
+    </style>
 </head>
 
 
@@ -38,7 +43,6 @@
                     <h1 class="headline">Change the way you think about
                         <span class="cycle"></span>
                     </h1>
-                    <a href="#" class="btn btn-primary">Get Your Free Audit</a>
                 </div>
             </div>
         </div>
@@ -62,24 +66,29 @@
                         <h4>Integrated With Your Team</h4>
                         <p>In-house marketers wear a lot of hats, but no single person can do everything effectively. Let us
                             make you look good by sharing the responsibilities, and bridging the gap between marketing and
-                            sales.</p>
+                            sales.
+                        </p>
 
                     </div>
                 </div>
 
                 <div class="row secondary p">
-                        <div class="col-10 space-100">
-                            <h4 class="py">Our Philosophy</h4>
-                            <div class="col-12"><span class="heading-divider"></span></div>
-                            <h3>We base marketing on your consumers journey - from the first time they hear about you, through becoming a loyal fan and telling their friends.</h3>
+                    <div class="col-10 space-100">
+                        <h4 class="py">Our Philosophy</h4>
+                        <div class="col-12">
+                            <span class="heading-divider"></span>
                         </div>
-                        <div class="col-10 justify-center">
-                            <div class="col-8 collapse-tablet-down">
-                                <svg id="our-model" version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 60 240 240" xml:space="preserve" preserveAspectRatio="xMinYMin">
-                                    <g id="connection" class="model-inactive" data-model-item="connection">
-                                        <path fill="#A6B8C5" d="M180,110.5c-0.4,0-0.6,0.1-0.8,0.4c-0.1,0.3-0.2,0.8-0.2,1.6v0.8h2v-1.1c0-0.6-0.1-1-0.2-1.3
+                        <h3>We base marketing on your consumers journey - from the first time they hear about you, through becoming
+                            a loyal fan and telling their friends.</h3>
+                    </div>
+                    <div class="col-10 justify-center">
+                        <div class="col-8 collapse-tablet-down">
+                            <svg id="our-model" version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px" y="0px" viewBox="0 60 240 240" xml:space="preserve" preserveAspectRatio="xMinYMin">
+                                <g id="connection" class="model-inactive" data-model-item="connection">
+                                    <path fill="#A6B8C5" d="M180,110.5c-0.4,0-0.6,0.1-0.8,0.4c-0.1,0.3-0.2,0.8-0.2,1.6v0.8h2v-1.1c0-0.6-0.1-1-0.2-1.3
                                             C180.6,110.7,180.4,110.5,180,110.5z"></path>
-                                        <path fill="#A6B8C5" d="M39.4,84.2l19.8,56h241.3l20.1-56H39.4z M146.2,110h-2.9v-1.4c0-0.8,0-1.4-0.1-1.7
+                                    <path fill="#A6B8C5" d="M39.4,84.2l19.8,56h241.3l20.1-56H39.4z M146.2,110h-2.9v-1.4c0-0.8,0-1.4-0.1-1.7
                                             c-0.2-0.6-0.6-0.9-1.3-0.9c-0.1,0-0.1,0-0.2,0c-0.3,0-0.5,0-0.7,0.1c-0.2,0.1-0.3,0.2-0.5,0.3c-0.1,0.1-0.2,0.3-0.3,0.4
                                             s-0.1,0.3-0.2,0.6c0,0.2-0.1,0.5-0.1,0.6c0,0.2,0,0.4,0,0.8v6.9c0,1,0.1,1.6,0.4,2.1s0.7,0.6,1.3,0.6c0.2,0,0.4,0,0.6-0.1
                                             c0.2,0,0.3-0.1,0.4-0.2c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.3,0.2-0.4c0-0.1,0.1-0.3,0.1-0.5c0-0.2,0-0.4,0-0.6s0-0.4,0-0.6
@@ -105,19 +114,19 @@
                                             c-0.6,0.7-1.6,1.1-2.8,1.1c-1.3,0-2.2-0.4-2.8-1.1c-0.6-0.7-0.9-1.7-0.9-3v-3.9c0-1.3,0.3-2.3,0.9-3c0.6-0.7,1.6-1.1,2.8-1.1
                                             c1.3,0,2.2,0.4,2.8,1.1c0.6,0.7,0.9,1.7,0.9,3V116.5z M222.9,120.4h-2.8v-8.7c0-0.4-0.1-0.6-0.2-0.8s-0.3-0.3-0.6-0.3
                                             c-0.3,0-0.8,0.2-1.2,0.5v9.3h-2.8v-11.7h2.8v1.1c0.9-0.9,1.9-1.3,2.9-1.3c0.7,0,1.2,0.2,1.5,0.7c0.3,0.5,0.5,1.1,0.5,1.8V120.4z"></path>
-                                        <path fill="#A6B8C5" d="M210.6,111.3c0-0.2-0.1-0.3-0.2-0.5c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.3-0.1-0.5-0.1
+                                    <path fill="#A6B8C5" d="M210.6,111.3c0-0.2-0.1-0.3-0.2-0.5c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.3-0.1-0.5-0.1
                                             c-0.2,0-0.4,0.1-0.5,0.2c-0.1,0.1-0.2,0.3-0.3,0.5c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.2,0,0.4,0,0.8v4.2c0,0.2,0,0.4,0,0.6
                                             c0,0.2,0,0.3,0.1,0.5c0,0.2,0.1,0.3,0.2,0.4s0.2,0.2,0.3,0.3c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4,0,0.5-0.1c0.1-0.1,0.2-0.3,0.3-0.5
                                             c0.1-0.2,0.1-0.4,0.1-0.6c0-0.2,0-0.4,0-0.8v-4.2c0-0.2,0-0.4,0-0.6S210.7,111.5,210.6,111.3z"></path>
-                                        <path fill="#A6B8C5" d="M152.5,111.3c0-0.2-0.1-0.3-0.2-0.5s-0.2-0.2-0.3-0.3s-0.3-0.1-0.5-0.1c-0.2,0-0.4,0.1-0.5,0.2
+                                    <path fill="#A6B8C5" d="M152.5,111.3c0-0.2-0.1-0.3-0.2-0.5s-0.2-0.2-0.3-0.3s-0.3-0.1-0.5-0.1c-0.2,0-0.4,0.1-0.5,0.2
                                             c-0.1,0.1-0.2,0.3-0.3,0.5c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.2,0,0.4,0,0.8v4.2c0,0.2,0,0.4,0,0.6c0,0.2,0,0.3,0.1,0.5
                                             c0,0.2,0.1,0.3,0.2,0.4c0.1,0.1,0.2,0.2,0.3,0.3c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4,0,0.5-0.1c0.1-0.1,0.2-0.3,0.3-0.5
                                             c0.1-0.2,0.1-0.4,0.1-0.6c0-0.2,0-0.4,0-0.8v-4.2c0-0.2,0-0.4,0-0.6C152.6,111.7,152.6,111.5,152.5,111.3z"></path>
-                                    </g>
-                                    <g id="communication" class="model-inactive" data-model-item="communication">
-                                        <path fill="#A6B8C5" d="M204.8,183.5c0,0.4,0.1,0.8,0.2,1c0.2,0.2,0.4,0.4,0.7,0.4c0.2,0,0.4-0.1,0.6-0.2s0.4-0.3,0.5-0.5v-3.2
+                                </g>
+                                <g id="communication" class="model-inactive" data-model-item="communication">
+                                    <path fill="#A6B8C5" d="M204.8,183.5c0,0.4,0.1,0.8,0.2,1c0.2,0.2,0.4,0.4,0.7,0.4c0.2,0,0.4-0.1,0.6-0.2s0.4-0.3,0.5-0.5v-3.2
                                             C205.5,181.6,204.8,182.5,204.8,183.5z"></path>
-                                        <path fill="#A6B8C5" d="M66.1,150.7l21,55.8h186.5l20.3-55.8H66.1z M129.1,176.3h-2.9v-1.4c0-0.8,0-1.4-0.1-1.7
+                                    <path fill="#A6B8C5" d="M66.1,150.7l21,55.8h186.5l20.3-55.8H66.1z M129.1,176.3h-2.9v-1.4c0-0.8,0-1.4-0.1-1.7
                                             c-0.2-0.6-0.6-0.9-1.3-0.9c-0.1,0-0.1,0-0.2,0c-0.3,0-0.5,0-0.7,0.1c-0.2,0.1-0.3,0.2-0.5,0.3c-0.1,0.1-0.2,0.3-0.3,0.4
                                             s-0.1,0.3-0.2,0.6c0,0.2-0.1,0.5-0.1,0.6c0,0.2,0,0.4,0,0.8v6.9c0,1,0.1,1.6,0.4,2.1s0.7,0.6,1.3,0.6c0.2,0,0.4,0,0.6-0.1
                                             c0.2,0,0.3-0.1,0.4-0.2s0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.3,0.2-0.4c0-0.1,0.1-0.3,0.1-0.5c0-0.2,0-0.4,0-0.6c0-0.2,0-0.4,0-0.6v-1.5
@@ -151,27 +160,27 @@
                                             c0.6-0.7,1.6-1.1,2.8-1.1c1.3,0,2.2,0.4,2.8,1.1c0.6,0.7,0.9,1.7,0.9,3V182.9z M240,186.8h-2.8V178c0-0.4-0.1-0.6-0.2-0.8
                                             s-0.3-0.3-0.6-0.3c-0.3,0-0.8,0.2-1.2,0.5v9.3h-2.8v-11.7h2.8v1.1c0.9-0.9,1.9-1.3,2.9-1.3c0.7,0,1.2,0.2,1.5,0.7
                                             c0.3,0.5,0.5,1.1,0.5,1.8V186.8z"></path>
-                                        <path fill="#A6B8C5" d="M227.7,177.7c0-0.2-0.1-0.3-0.2-0.5c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.3-0.1-0.5-0.1
+                                    <path fill="#A6B8C5" d="M227.7,177.7c0-0.2-0.1-0.3-0.2-0.5c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.3-0.1-0.5-0.1
                                             c-0.2,0-0.4,0.1-0.5,0.2c-0.1,0.1-0.2,0.3-0.3,0.5c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.2,0,0.4,0,0.8v4.2c0,0.2,0,0.4,0,0.6
                                             c0,0.2,0,0.3,0.1,0.5c0,0.2,0.1,0.3,0.2,0.4c0.1,0.1,0.2,0.2,0.3,0.3c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4,0,0.5-0.1
                                             c0.1-0.1,0.2-0.3,0.3-0.5s0.1-0.4,0.1-0.6c0-0.2,0-0.4,0-0.8v-4.2c0-0.2,0-0.4,0-0.6S227.7,177.9,227.7,177.7z"></path>
-                                        <path fill="#A6B8C5" d="M135.5,177.7c0-0.2-0.1-0.3-0.2-0.5s-0.2-0.2-0.3-0.3s-0.3-0.1-0.5-0.1c-0.2,0-0.4,0.1-0.5,0.2
+                                    <path fill="#A6B8C5" d="M135.5,177.7c0-0.2-0.1-0.3-0.2-0.5s-0.2-0.2-0.3-0.3s-0.3-0.1-0.5-0.1c-0.2,0-0.4,0.1-0.5,0.2
                                             c-0.1,0.1-0.2,0.3-0.3,0.5c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.2,0,0.4,0,0.8v4.2c0,0.2,0,0.4,0,0.6c0,0.2,0,0.3,0.1,0.5
                                             c0,0.2,0.1,0.3,0.2,0.4c0.1,0.1,0.2,0.2,0.3,0.3c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4,0,0.5-0.1c0.1-0.1,0.2-0.3,0.3-0.5
                                             c0.1-0.2,0.1-0.4,0.1-0.6c0-0.2,0-0.4,0-0.8v-4.2c0-0.2,0-0.4,0-0.6C135.6,178,135.5,177.9,135.5,177.7z"></path>
-                                    </g>
-                                    <g id="retention" class="model-active" data-model-item="retention">
-                                        <path fill="#A6B8C5" d="M157.7,242.5c-0.4,0-0.6,0.1-0.8,0.4s-0.2,0.8-0.2,1.6v0.8h2v-1.1c0-0.6-0.1-1-0.2-1.3
+                                </g>
+                                <g id="retention" class="model-active" data-model-item="retention">
+                                    <path fill="#A6B8C5" d="M157.7,242.5c-0.4,0-0.6,0.1-0.8,0.4s-0.2,0.8-0.2,1.6v0.8h2v-1.1c0-0.6-0.1-1-0.2-1.3
                                             C158.3,242.6,158.1,242.5,157.7,242.5z"></path>
-                                        <path fill="#A6B8C5" d="M204.8,243.3c0-0.2-0.1-0.3-0.2-0.5c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.3-0.1-0.5-0.1
+                                    <path fill="#A6B8C5" d="M204.8,243.3c0-0.2-0.1-0.3-0.2-0.5c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.3-0.1-0.5-0.1
                                             c-0.2,0-0.4,0.1-0.5,0.2s-0.2,0.3-0.3,0.5c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.2,0,0.4,0,0.8v4.2c0,0.2,0,0.4,0,0.6c0,0.2,0,0.3,0.1,0.5
                                             c0,0.2,0.1,0.3,0.2,0.4c0.1,0.1,0.2,0.2,0.3,0.3c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4,0,0.5-0.1c0.1-0.1,0.2-0.3,0.3-0.5
                                             s0.1-0.4,0.1-0.6c0-0.2,0-0.4,0-0.8v-4.2c0-0.2,0-0.4,0-0.6C204.9,243.7,204.9,243.5,204.8,243.3z"></path>
-                                        <path fill="#A6B8C5" d="M147,238.1h-0.9v4.9h0.7c0.9,0,1.5-0.2,1.9-0.6c0.4-0.4,0.6-1,0.6-1.9c0-0.9-0.2-1.5-0.5-1.9
+                                    <path fill="#A6B8C5" d="M147,238.1h-0.9v4.9h0.7c0.9,0,1.5-0.2,1.9-0.6c0.4-0.4,0.6-1,0.6-1.9c0-0.9-0.2-1.5-0.5-1.9
                                             C148.5,238.2,147.9,238.1,147,238.1z"></path>
-                                        <path fill="#A6B8C5" d="M173.5,242.5c-0.4,0-0.6,0.1-0.8,0.4s-0.2,0.8-0.2,1.6v0.8h2v-1.1c0-0.6-0.1-1-0.2-1.3
+                                    <path fill="#A6B8C5" d="M173.5,242.5c-0.4,0-0.6,0.1-0.8,0.4s-0.2,0.8-0.2,1.6v0.8h2v-1.1c0-0.6-0.1-1-0.2-1.3
                                             C174.1,242.6,173.9,242.5,173.5,242.5z"></path>
-                                        <path fill="#A6B8C5" d="M92.9,218.3l21,56.5h132.8l20.5-56.5H92.9z M149.4,252.4l-2-7.5h-1.3v7.5h-3V236h3.8c0.9,0,1.6,0.1,2.2,0.2
+                                    <path fill="#A6B8C5" d="M92.9,218.3l21,56.5h132.8l20.5-56.5H92.9z M149.4,252.4l-2-7.5h-1.3v7.5h-3V236h3.8c0.9,0,1.6,0.1,2.2,0.2
                                             c0.6,0.1,1.2,0.4,1.6,0.7s0.8,0.8,1,1.4c0.2,0.6,0.3,1.3,0.3,2.1c0,1-0.2,1.9-0.5,2.5c-0.3,0.7-0.8,1.1-1.5,1.4l2.3,8.1H149.4z
                                                 M161.3,246.7h-4.6v1.8c0,0.2,0,0.4,0,0.6c0,0.1,0,0.3,0,0.5s0.1,0.3,0.1,0.4s0.1,0.2,0.2,0.3c0.1,0.1,0.2,0.2,0.3,0.2
                                             c0.1,0,0.3,0.1,0.4,0.1c0.4,0,0.6-0.1,0.8-0.4c0.1-0.3,0.2-0.6,0.2-1.1v-0.7h2.6v0.5c0,1.2-0.3,2.1-0.9,2.8c-0.6,0.6-1.5,1-2.7,1
@@ -190,45 +199,91 @@
                                             c0,1.3-0.3,2.3-0.9,3c-0.6,0.7-1.6,1.1-2.8,1.1c-1.3,0-2.2-0.4-2.8-1.1s-0.9-1.7-0.9-3v-3.9c0-1.3,0.3-2.3,0.9-3s1.6-1.1,2.8-1.1
                                             c1.3,0,2.2,0.4,2.8,1.1c0.6,0.7,0.9,1.7,0.9,3V248.5z M217.1,252.4h-2.8v-8.7c0-0.4-0.1-0.6-0.2-0.8c-0.1-0.2-0.3-0.3-0.6-0.3
                                             c-0.3,0-0.8,0.2-1.2,0.5v9.3h-2.8v-11.7h2.8v1.1c0.9-0.9,1.9-1.3,2.9-1.3c0.7,0,1.2,0.2,1.5,0.7c0.3,0.5,0.5,1.1,0.5,1.8V252.4z"></path>
-                                    </g>
-                                    <g id="brand" class="model-inactive" data-model-item="brand">
-                                        <polygon fill="#A6B8C5" points="103.6,292 176.2,292 176.2,286.1 107.6,286.1 25.3,74.1 176.2,74.1 176.2,68 16.6,68 	"></polygon>
-                                        <polygon fill="#A6B8C5" points="256.4,292 183.8,292 183.8,286.1 252.4,286.1 334.7,74.1 183.8,74.1 183.8,68 343.4,68 	"></polygon>
-                                    </g>
-                               </svg>
-                            </div>
-                            <div class="col-4 collapse-tablet-down space-50">
-                                    <ul class="accordion">
-                                        <li class="accordian-list" data-model-item="connection">
-                                            <p class="accordian-list-heading">Connection</p> 
-                                            <p class="accordian-list-content" style="display: none;">Generate online traffic.
-                
-                Your website is the most effective way to introduce customers to your brand. Website traffic comes in two forms: organic and paid. Organic reach refers to the traffic created by SEO and conent (ie video, blogs, social media ect.) Paid traffic refers to pay-per-click advertising on seach engines, social media sites, and industry specific blogs. The point is, having a website is great but it needs consistent visitors.</p>
-                                        </li>
-                                        <li class="accordian-list" data-model-item="communication">
-                                            <p class="accordian-list-heading">Communication</p> 
-                                            <p class="accordian-list-content" style="display: none;">Convert clicks to leads.
-                
-                When visitors are learning about your company, it is important to effectively communicate how you can benefit the consumer. It is also important to provide a clear call to action for them to take as the next step. A visitor that participates in your call to action converts to a lead that you can nurture until a sale is made.</p>
-                                        </li>
-                                        <li class="accordian-list" data-model-item="retention">
-                                            <p class="accordian-list-heading accordion-active">Retention</p> 
-                                            <p class="accordian-list-content" style="">Create repeat customers.
-                
-                It is a lot cheaper to keep a customer than to acquire a new one. It’s even better when current customers refer you to new ones.Things like follow up communication or promotional campaigns can help turn a customer into a loyal fan who will promote your brand. This brings in new visitors and starts the cycle over again.</p>
-                                        </li>
-                                        <li class="accordian-list" data-model-item="brand">
-                                            <p class="accordian-list-heading">Brand</p> 
-                                            <p class="accordian-list-content" style="display: none;">Look good, feel good.
-                
-                Your brand personality is seen in and around every stage of our digital marketing model. Cohesive imagery, messaging, and voice present a professional brand that resonates with your demographic. The foundation of any marketing strategy is a strong brand. You only get one first impression, right?</p>
-                                        </li>
-                                    
-                                       
-                                    </ul>
-                            </div>
+                                </g>
+                                <g id="brand" class="model-inactive" data-model-item="brand">
+                                    <polygon fill="#A6B8C5" points="103.6,292 176.2,292 176.2,286.1 107.6,286.1 25.3,74.1 176.2,74.1 176.2,68 16.6,68 	"></polygon>
+                                    <polygon fill="#A6B8C5" points="256.4,292 183.8,292 183.8,286.1 252.4,286.1 334.7,74.1 183.8,74.1 183.8,68 343.4,68 	"></polygon>
+                                </g>
+                            </svg>
                         </div>
-                
+                        <div class="col-4 collapse-tablet-down space-50">
+                            <ul class="accordion">
+                                <li class="accordian-list" data-model-item="connection">
+                                    <p class="accordian-list-heading">Connection</p>
+                                    <p class="accordian-list-content" style="display: none;">Generate online traffic. Your website is the most effective way to introduce customers
+                                        to your brand. Website traffic comes in two forms: organic and paid. Organic reach
+                                        refers to the traffic created by SEO and conent (ie video, blogs, social media ect.)
+                                        Paid traffic refers to pay-per-click advertising on seach engines, social media sites,
+                                        and industry specific blogs. The point is, having a website is great but it needs
+                                        consistent visitors.</p>
+                                </li>
+                                <li class="accordian-list" data-model-item="communication">
+                                    <p class="accordian-list-heading">Communication</p>
+                                    <p class="accordian-list-content" style="display: none;">Convert clicks to leads. When visitors are learning about your company, it is important
+                                        to effectively communicate how you can benefit the consumer. It is also important
+                                        to provide a clear call to action for them to take as the next step. A visitor that
+                                        participates in your call to action converts to a lead that you can nurture until
+                                        a sale is made.</p>
+                                </li>
+                                <li class="accordian-list" data-model-item="retention">
+                                    <p class="accordian-list-heading accordion-active">Retention</p>
+                                    <p class="accordian-list-content" style="">Create repeat customers. It is a lot cheaper to keep a customer than to acquire a new
+                                        one. It’s even better when current customers refer you to new ones.Things like follow
+                                        up communication or promotional campaigns can help turn a customer into a loyal fan
+                                        who will promote your brand. This brings in new visitors and starts the cycle over
+                                        again.</p>
+                                </li>
+                                <li class="accordian-list" data-model-item="brand">
+                                    <p class="accordian-list-heading">Brand</p>
+                                    <p class="accordian-list-content" style="display: none;">Look good, feel good. Your brand personality is seen in and around every stage of our
+                                        digital marketing model. Cohesive imagery, messaging, and voice present a professional
+                                        brand that resonates with your demographic. The foundation of any marketing strategy
+                                        is a strong brand. You only get one first impression, right?</p>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row p ">
+                    <div class="col-10 little-bugger">
+                        <h4>Our Pricing</h4>
+                        <div class="col-12">
+                            <span class="heading-divider"></span>
+                        </div>
+                    </div>
+                    <div class="col-10 jumbotron" style="margin:; padding:;">
+                        <h3 class="">Marketing solutions tailored to you. Whether you need us for a day or a year.</h3>
+                    </div>
+                    <div class="col-10 justify-between pb">
+
+
+
+                        <div class="col-6" style="margin: ; padding: ;">
+                            <h4>Full Service</h4>
+                            <p>The full service pricing provides untilmited acces to our full digital marketing and creative
+                                team. The average company that works with us invests 5% of gross revenue to maintain, and
+                                10% to grow. This pricing model allows us to put your marketing dollars in the places that
+                                have the highest rate of return.</p>
+
+                        </div>
+
+                        <div class="col-6" style="margin: ; padding: ;">
+                            <h4>A La Carte</h4>
+                            <p>For clients that run their own marketing or only need help in specific areas, we offer flat rate
+                                pricing for each of our services.</p>
+
+                        </div>
+
+
+
+
+
+
+                    </div>
                 </div>
 
                 {{partial:footer}}
