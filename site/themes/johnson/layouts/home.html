@@ -2,44 +2,50 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ meta_description or "Minnesota based inbound marketing firm"}}">
+    <meta name="description" content="{{ meta_description or " Minnesota based inbound marketing firm "}}">
     <title>{{ meta_title or title or site_title }} | Johnson Jones Marketing</title>
     <link rel="stylesheet" href="{{ theme:css }}">
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
 </head>
 
 
 <body>
-    {{ partial:nav current="{{ title }}"}}
-
-    {{# HERO #}}
+    {{ partial:nav current="{{ title }}"}} {{# HERO #}}
     <div class="parallax">
         <div class="parallax_group">
-        <div class="parallax_layer parallax_layer_0">
-            <img src="/assets/img/JJ_header_layer_1.png" />
-        </div>
-        <div class="parallax_layer parallax_layer_1">
-            <img src="/assets/img/JJ_header_layer_2.png" />
-        </div>
-        <div class="parallax_layer parallax_layer_3">
-            <div class="hero-content light-text">
-                <h1 class="headline">{{ headline }} <span class="cycle"></span></h1>
-                <a href="#" class="btn btn-primary">Get Your Free Audit</a>
+            <div class="parallax_layer parallax_layer_0">
+                <img src="/assets/img/JJ_header_layer_1.png" />
+            </div>
+            <div class="parallax_layer parallax_layer_1">
+                <img src="/assets/img/JJ_header_layer_2.png" />
+            </div>
+            <div class="parallax_layer parallax_layer_3">
+                <div class="hero-content light-text">
+                    <h1 class="headline">{{ headline }}
+                        <span class="cycle"></span>
+                    </h1>
+                    <a href="#" class="btn btn-primary">Get Your Free Audit</a>
+                </div>
+            </div>
+            <div class="parallax_layer parallax_layer_2">
+                <img src="/assets/img/JJ_header_layer_3.png" />
             </div>
         </div>
-        <div class="parallax_layer parallax_layer_2">
-            <img src="/assets/img/JJ_header_layer_3.png" />
+        <div class="row">
+            Content goes here
         </div>
-    </div>
+        {{partial:footer}}
     </div>
 </body>
 
