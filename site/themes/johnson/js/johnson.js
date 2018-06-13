@@ -3010,7 +3010,7 @@
 
 }));
 
-$(document).ready(function () {
+jQuery(function ($) {
 
     $('.slider').slick({
         variablewidth: false,
@@ -3157,56 +3157,58 @@ $(document).ready(function () {
         });
       })(jQuery);
 });
-let viewHeight = window.innerHeight;
-let heroContent = $(".hero-content-wrapper");
-let hero = $(".hero, .hero-bg");
-let bannerContent = $(".banner-content-wrapper");
-let banner = $(".banner, .banner-bg");
-let calloutContent = $(".callout-content-wrapper");
-let callout = $(".callout, .callout-bg");
+jQuery(function ($) {
+
+    let viewHeight = window.innerHeight;
+    let heroContent = $(".hero-content-wrapper");
+    let hero = $(".hero, .hero-bg");
+    let bannerContent = $(".banner-content-wrapper");
+    let banner = $(".banner, .banner-bg");
+    let calloutContent = $(".callout-content-wrapper");
+    let callout = $(".callout, .callout-bg");
 
 
 
-setHeroSize(heroContent, hero, .8);
-setHeroSize(bannerContent, banner, .55);
-setHeroSize(calloutContent, callout, .45);
-
-$(window).resize(function () {
-    setHeroSize(heroContent, hero, 1);
+    setHeroSize(heroContent, hero, .8);
     setHeroSize(bannerContent, banner, .55);
     setHeroSize(calloutContent, callout, .45);
+
+    $(window).resize(function () {
+        setHeroSize(heroContent, hero, 1);
+        setHeroSize(bannerContent, banner, .55);
+        setHeroSize(calloutContent, callout, .45);
+    });
+
+    function setHeroSize(content, parent, ratio) {
+        content.css('min-height', viewHeight * ratio);
+        parent.css('min-height', (viewHeight * ratio) + 200);
+    }
+
 });
-
-function setHeroSize(content, parent, ratio){
-    content.css('min-height', viewHeight * ratio);
-    parent.css('min-height', (viewHeight * ratio) + 200);
-}
-
-
-
 //Scroll animations
-    
-    //Triggers the fade in of the navigation on scroll
-    //Controlls the fade in and out of the chevron
-$(window).scroll(function () { 
-    let windowPos = $(window).scrollTop();
-    let bannerSize = $('.banner').height();
-    if (windowPos > bannerSize - 130) {
-        $('.nav').css('position', 'fixed').addClass('nav-scroll');
-        $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoNavy.png')
-    } else if (windowPos < bannerSize) {
-        $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
-        $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoWhite.png')
-    }
 
-    if (windowPos > 110) {
-        $('.hero-chevron img').fadeOut(500);
-    }
-    if (windowPos < 90) {
-        $('.hero-chevron img').fadeIn(500);
-    }
+//Triggers the fade in of the navigation on scroll
+//Controlls the fade in and out of the chevron
+jQuery(function ($) {
+    $(window).scroll(function () {
+        let windowPos = $(window).scrollTop();
+        let bannerSize = $('.banner').height();
+        if (windowPos > bannerSize - 130) {
+            $('.nav').css('position', 'fixed').addClass('nav-scroll');
+            $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoNavy.png')
+        } else if (windowPos < bannerSize) {
+            $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
+            $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoWhite.png')
+        }
+
+        if (windowPos > 110) {
+            $('.hero-chevron img').fadeOut(500);
+        }
+        if (windowPos < 90) {
+            $('.hero-chevron img').fadeIn(500);
+        }
+    });
 });
-
 $(document).ready(function(){
     let el =".card, .hover-box, .nav-panel"
    

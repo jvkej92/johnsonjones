@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(function ($) {
 
     $('.slider').slick({
         variablewidth: false,
