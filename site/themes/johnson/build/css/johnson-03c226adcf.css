@@ -929,6 +929,10 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   padding-top: 30vh;
 }
 
+.parallax-content .jumbotron {
+  height: auto;
+}
+
 .jumbotron {
   margin-bottom: 64px;
 }
