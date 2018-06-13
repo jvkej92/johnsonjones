@@ -868,9 +868,10 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #003359 0%, #406683 81%, #406683 100%);
+  background: linear-gradient(to bottom, #003359 0%, #406683 39%, #ffffff 59%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003359', endColorstr='#406683', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003359', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
 }
 
 .parallax_layer {
@@ -916,10 +917,10 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #cccccc 0%, #ffffff 10%, #ffffff 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff', GradientType=0);
   /* IE6-9 */
   position: relative;
-  top: 200vh;
+  top: 230vh;
   right: 0;
   bottom: 0;
   left: 0;
