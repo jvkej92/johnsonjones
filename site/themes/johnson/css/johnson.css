@@ -877,16 +877,10 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 }
 
 .parallax {
-  perspective: 100px;
   height: 100vh;
-  width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  perspective: 1px;
 }
 
 .parallax_layer {
@@ -901,22 +895,6 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   display: block;
   position: absolute;
   bottom: 0;
-}
-
-.parallax_layer_0 {
-  transform: translateZ(-150px) scale(2.5);
-}
-
-.parallax_layer_1 {
-  transform: translateZ(-100px) scale(2);
-}
-
-.parallax_layer_2 {
-  transform: translateZ(-50px) scale(1.5);
-}
-
-.parallax_layer_3 {
-  transform: translateZ(0px) scale(1);
 }
 
 .jumbotron {
