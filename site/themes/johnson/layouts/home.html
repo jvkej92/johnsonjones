@@ -297,7 +297,7 @@
     <script>
             
         $('.parallax').scroll(function () {
-            let windowPos = $(window).scrollTop();
+            let windowPos = $(this).scrollTop();
             if (windowPos > 300) {
                 $('.nav').css('position', 'fixed').addClass('nav-scroll');
                 $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoNavy.png')
