@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(function($){
     let el =".card, .hover-box, .nav-panel"
    
     $(el).click(function(e){

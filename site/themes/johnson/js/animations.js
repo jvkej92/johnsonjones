@@ -52,7 +52,7 @@ jQuery(function ($) {
 
     //Finds span tag with ".cycle" class and replaces it with the next item in the array base on the animation rate
     function cycle(rate, array) {
-        jQuery.each(array, function (index) {
+        $.each(array, function (index) {
             setTimeout(function () {
                 $('.cycle').replaceWith(`<span class="cycle">${array[index]}</span>`);
             }, rate * index);
