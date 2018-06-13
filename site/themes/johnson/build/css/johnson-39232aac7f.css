@@ -913,11 +913,11 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 .parallax-content {
   background: #ffffff;
   position: relative;
-  top: 100vh;
+  top: 50vh;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100vh;
+  height: 50vh;
   transform: translateZ(-1px) scale(2);
 }
 
