@@ -228,7 +228,6 @@ blockquote:before {
   margin: 0;
   padding: 0;
   min-height: 50px;
-  height: 100%;
 }
 
 .col-1 a:not(.btn), .col-2 a:not(.btn), .col-3 a:not(.btn), .col-4 a:not(.btn), .col-5 a:not(.btn), .col-6 a:not(.btn), .col-7 a:not(.btn), .col-8 a:not(.btn), .col-9 a:not(.btn), .col-10 a:not(.btn), .col-11 a:not(.btn), .col-12 a:not(.btn), .card a:not(.btn) {
