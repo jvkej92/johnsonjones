@@ -910,6 +910,15 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   transform: translateZ(-2px) scale(3);
 }
 
+.parallax-content {
+  background: #ffffff;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .jumbotron {
   margin-bottom: 64px;
 }
