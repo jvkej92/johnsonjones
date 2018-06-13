@@ -295,18 +295,18 @@
     </div>
 
     <script>
-            jQuery(function ($) {
-                $(window).scroll(function () {
-                    let windowPos = $(window).scrollTop();
-                    if (windowPos > 300) {
-                        $('.nav').css('position', 'fixed').addClass('nav-scroll');
-                        $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoNavy.png')
-                    } else if (windowPos < bannerSize) {
-                        $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
-                        $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoWhite.png')
-                    }
-                });
-            });
+            
+        $(window).scroll(function () {
+            let windowPos = $(window).scrollTop();
+            if (windowPos > 300) {
+                $('.nav').css('position', 'fixed').addClass('nav-scroll');
+                $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoNavy.png')
+            } else if (windowPos < bannerSize) {
+                $('.nav').css('position', 'absolute').removeClass('nav-scroll');;
+                $('.nav-logo img').attr('src', '../../assets/img/johnsonJonesLogoWhite.png')
+            }
+        });
+
     </script>
 </body>
 
