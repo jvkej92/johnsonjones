@@ -877,8 +877,9 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 }
 
 .parallax {
-  perspective: 1px;
+  perspective: 100px;
   height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
 }
