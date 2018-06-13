@@ -920,12 +920,13 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 );
   /* IE6-9 */
   position: relative;
-  top: 100vh;
+  top: 70vh;
   right: 0;
   bottom: 0;
   left: 0;
   height: 100vh;
   transform: translateZ(-1px) scale(2);
+  padding-top: 30vh;
 }
 
 .jumbotron {
