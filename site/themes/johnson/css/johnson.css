@@ -910,22 +910,18 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 }
 
 .parallax_layer_0 {
-  transform: translateZ(-200px) scale(3);
-}
-
-.parallax_layer_1 {
   transform: translateZ(-150px) scale(2.5);
 }
 
-.parallax_layer_2 {
+.parallax_layer_1 {
   transform: translateZ(-100px) scale(2);
 }
 
-.parallax_layer_3 {
+.parallax_layer_2 {
   transform: translateZ(-50px) scale(1.5);
 }
 
-.parallax_layer_4 {
+.parallax_layer_3 {
   transform: translateZ(0px) scale(1);
 }
 
