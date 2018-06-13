@@ -296,7 +296,7 @@
 
     <script>
             
-        $(window).scroll(function () {
+        $('parallax').scroll(function () {
             let windowPos = $(window).scrollTop();
             if (windowPos > 300) {
                 $('.nav').css('position', 'fixed').addClass('nav-scroll');
