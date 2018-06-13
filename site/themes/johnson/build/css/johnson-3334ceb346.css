@@ -887,13 +887,6 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   right: 0;
   bottom: 0;
   margin-left: -1500px;
-  background: #003359;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #003359 0%, #406683 81%, #406683 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003359', endColorstr='#406683', GradientType=0);
 }
 
 .parallax_layer {
