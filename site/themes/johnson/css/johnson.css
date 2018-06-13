@@ -708,7 +708,7 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #003359 0%, #406683 81%, #406683 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003359', endColorstr='#406683',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003359', endColorstr='#406683', GradientType=0);
 }
 
 .banner {
@@ -716,7 +716,8 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   margin-bottom: 64px;
 }
 
-.hero-bg, .banner-bg {
+.hero-bg,
+.banner-bg {
   position: absolute;
   width: 100%;
   top: 0;
@@ -754,7 +755,8 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   font-size: 20px;
 }
 
-.hero-content-wrapper, .banner-content-wrapper {
+.hero-content-wrapper,
+.banner-content-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -764,30 +766,35 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 }
 
 @media (min-width: 1224px) {
-  .hero-content-wrapper, .banner-content-wrapper {
+  .hero-content-wrapper,
+  .banner-content-wrapper {
     width: 70%;
   }
 }
 
 @media (min-width: 968px) {
-  .hero-content-wrapper, .banner-content-wrapper {
+  .hero-content-wrapper,
+  .banner-content-wrapper {
     width: 75%;
   }
 }
 
 @media (max-width: 968px) {
-  .hero-content-wrapper, .banner-content-wrapper {
+  .hero-content-wrapper,
+  .banner-content-wrapper {
     width: 85%;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-content-wrapper, .banner-content-wrapper {
+  .hero-content-wrapper,
+  .banner-content-wrapper {
     width: 95%;
   }
 }
 
-.hero-content, .banner-content {
+.hero-content,
+.banner-content {
   text-align: center;
   position: absolute;
   box-sizing: border-box;
@@ -807,25 +814,29 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 }
 
 @media (max-width: 968px) {
-  .hero-content, .banner-content {
+  .hero-content,
+  .banner-content {
     width: 95%;
   }
 }
 
 @media (min-width: 968px) {
-  .hero-content, .banner-content {
+  .hero-content,
+  .banner-content {
     padding: 5%;
     width: 85%;
   }
 }
 
-.hero-content > h1.headline, .banner-content > h1.headline {
+.hero-content > h1.headline,
+.banner-content > h1.headline {
   font-size: 2rem;
   padding-bottom: 64px;
 }
 
 @media (max-width: 768px) {
-  .hero-content > h1.headline, .banner-content > h1.headline {
+  .hero-content > h1.headline,
+  .banner-content > h1.headline {
     font-size: 3rem;
   }
 }
@@ -870,17 +881,19 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  position: relative;
+  position: absolute;
   top: 0;
+  left: 50%;
   right: 0;
   bottom: 0;
+  margin-left: -1500px;
   background: #003359;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #003359 0%, #406683 81%, #406683 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003359', endColorstr='#406683',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003359', endColorstr='#406683', GradientType=0);
 }
 
 .parallax_layer {
