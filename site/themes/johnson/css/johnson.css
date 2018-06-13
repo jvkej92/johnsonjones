@@ -3,7 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald:500");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Poppins:600");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -119,8 +119,8 @@ html {
 }
 
 h1, h2, h3, h4, blockquote, .col-1 a:not(.btn), .col-2 a:not(.btn), .col-3 a:not(.btn), .col-4 a:not(.btn), .col-5 a:not(.btn), .col-6 a:not(.btn), .col-7 a:not(.btn), .col-8 a:not(.btn), .col-9 a:not(.btn), .col-10 a:not(.btn), .col-11 a:not(.btn), .col-12 a:not(.btn), .card a:not(.btn), .accordian-list-heading, .btn, .card-learn-more, .card-heading, .nav-item, .mobile-menu-items .nav-item, .hover-box-learn-more, .hover-box-heading, .resource-box-learn-more, .resource-box-heading, .nav-panel-content p, .nav-btn, .home a.hover-box-learn-more.child-link, .form-field-wrapper label, .col-list {
-  font-family: "oswald", sans-serif;
-  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   line-height: 1.2;
 }
 
