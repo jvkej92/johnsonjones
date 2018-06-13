@@ -1,5 +1,6 @@
 //Imports
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:600');
+
 
 //Media Queries
 @mixin for-phone-only {
@@ -48,10 +49,10 @@ $light-blue-3: #c9eef7;
 $black-steel: #080706;
 
 //Fonts
-$heading-font: "oswald", sans-serif;
+$heading-font: "Poppins", sans-serif;
 $body-font: "Open Sans" ,sans-serif;
 $font-regular: 400;
-$font-medium: 500;
+$font-medium: 600;
   /////////////////////////
  //Color Schemes Classes//
 /////////////////////////
