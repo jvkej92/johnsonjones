@@ -877,15 +877,10 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 }
 
 .parallax {
-  perspective: 100px;
+  perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .parallax_layer {
