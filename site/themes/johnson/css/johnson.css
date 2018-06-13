@@ -816,29 +816,21 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 @media (max-width: 968px) {
   .hero-content,
   .banner-content {
-    width: 95%;
+    width: 85%;
   }
 }
 
 @media (min-width: 968px) {
   .hero-content,
   .banner-content {
-    padding: 5%;
-    width: 85%;
+    padding: 10%;
+    width: 75%;
   }
 }
 
 .hero-content > h1.headline,
 .banner-content > h1.headline {
-  font-size: 2rem;
-  padding-bottom: 64px;
-}
-
-@media (max-width: 768px) {
-  .hero-content > h1.headline,
-  .banner-content > h1.headline {
-    font-size: 3rem;
-  }
+  font-size: 70px;
 }
 
 .hero-chevron {
@@ -878,9 +870,8 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 
 .parallax {
   height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 1px;
+  overflow: hidden;
+  perspective: 100px;
 }
 
 .parallax_layer {
@@ -895,6 +886,22 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   display: block;
   position: absolute;
   bottom: 0;
+}
+
+.parallax_layer_0 {
+  transform: translateZ(0);
+}
+
+.parallax_layer_1 {
+  transform: translateZ(-1px);
+}
+
+.parallax_layer_2 {
+  transform: translateZ(-2px);
+}
+
+.parallax_layer_3 {
+  transform: translateZ(-3px);
 }
 
 .jumbotron {

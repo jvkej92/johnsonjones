@@ -89,11 +89,11 @@
     position: absolute;
     box-sizing: border-box;
     @include for-tablet-only {
-        width: 95%;
+        width: 85%;
     }
     @include for-tablet-up {
-        padding: 5%;
-        width: 85%;
+        padding: 10%;
+        width: 75%;
     }
     padding: 15px;
     font-size: 2vh;
@@ -112,11 +112,7 @@
 
 .hero-content>h1.headline,
 .banner-content>h1.headline {
-    @include for-phone-only {
-        font-size: 3rem;
-    }
-    font-size: 2rem;
-    padding-bottom: 64px;
+    font-size: 70px
 }
 
 .hero-chevron {
@@ -157,10 +153,9 @@
 
 .parallax {
     height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     -webkit-perspective: 100px;
-    perspective: 1px;
+    perspective: 100px;
 }
 
 .parallax_layer {
@@ -174,4 +169,17 @@
         position: absolute;
         bottom: 0;
     }
+}
+
+.parallax_layer_0 {
+    transform: translateZ(0);
+  }
+.parallax_layer_1 {
+    transform: translateZ(-1px);
+}
+.parallax_layer_2 {
+    transform: translateZ(-2px);
+}
+.parallax_layer_3 {
+    transform: translateZ(-3px);
 }
