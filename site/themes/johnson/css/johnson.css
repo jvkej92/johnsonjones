@@ -914,7 +914,7 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #cccccc 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #cccccc 0%, #ffffff 10%, #ffffff 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 );
   /* IE6-9 */
@@ -930,6 +930,10 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 
 .parallax-content .jumbotron {
   height: auto;
+}
+
+.callout {
+  width: 100%;
 }
 
 .jumbotron {
