@@ -1,4 +1,5 @@
 template: home
+layout: home
 blocks:
   - 
     type: hero
