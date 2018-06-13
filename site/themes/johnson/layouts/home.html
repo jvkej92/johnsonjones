@@ -21,8 +21,24 @@
 <body>
     {{ partial:nav current="{{ title }}"}}
 
-    {{ template_content }}
-
+    {{# HERO #}}
+    <div class="parallax">
+        <div class="parallax_layer parallax_layer_0">
+            <img src="/assets/img/JJ_header_layer_1.png" />
+        </div>
+        <div class="parallax_layer parallax_layer_1">
+            <img src="/assets/img/JJ_header_layer_2.png" />
+        </div>
+        <div class="parallax_layer parallax_layer_3">
+            <div class="hero-content light-text">
+                <h1 class="headline">{{ headline }} <span class="cycle"></span></h1>
+                <a href="#" class="btn btn-primary">Get Your Free Audit</a>
+            </div>
+        </div>
+        <div class="parallax_layer parallax_layer_2">
+            <img src="/assets/img/JJ_header_layer_3.png" />
+        </div>
+    </div>
     {{partial:footer}}
 </body>
 
