@@ -3,29 +3,6 @@
   {{ if type == "hero"}}
     {{ partial:hero-left :photo="photo" :headline="headline" }}
   {{ /if }}
-{{ /blocks }}
-  <div class="row justify-center">
-    <div class="hover-box no-shadow col-half separater space-50 px">
-        <div class="hover-box-body px">
-            <h3>
-                I want you to run my marketing.
-            </h3>
-            <div class="space-100"></div>
-            <a href="/what-we-do" class="hover-box-learn-more child-link">What We Do ></a>
-        </div>
-    </div>
-    <div class="hover-box no-shadow col-half space-50 px">
-        <div class="hover-box-body px">
-            <h3>
-                I want to run my own marketing.
-            </h3>
-            <div class="space-100"></div>
-            <a href="/audit" class="hover-box-learn-more child-link">Resources ></a>
-        </div>
-    </div>
-  </div>
-
-  {{ blocks }}
   {{ if type == "callout"}}
     {{partial src="sets/callout" :button_text="button_text" :headline="headline" :link="{link}" }}
   {{ /if }}
