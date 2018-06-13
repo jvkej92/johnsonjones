@@ -156,13 +156,18 @@
     overflow: hidden;
     -webkit-perspective: 100px;
     perspective: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .parallax_layer {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: -200px;
+    bottom: 0;
     left: 0;
     img {
         display: block;
@@ -172,14 +177,17 @@
 }
 
 .parallax_layer_0 {
-    transform: translateZ(0);
-  }
+    transform: translateZ(-4px) scale(7);
+}
+
 .parallax_layer_1 {
-    transform: translateZ(-1px);
+    transform: translateZ(-3px) scale(5);
 }
+
 .parallax_layer_2 {
-    transform: translateZ(-2px);
+    transform: translateZ(-1px) scale(2);
 }
+
 .parallax_layer_3 {
-    transform: translateZ(-3px);
+    transform: translateZ(-2px) scale(3);
 }

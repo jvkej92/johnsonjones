@@ -3,8 +3,5 @@
   {{ if type == "hero"}}
     {{ partial:hero-left :photo="photo" :headline="headline" }}
   {{ /if }}
-  {{ if type == "callout"}}
-    {{partial src="sets/callout" :button_text="button_text" :headline="headline" :link="{link}" }}
-  {{ /if }}
 {{ /blocks }}
 </div>
