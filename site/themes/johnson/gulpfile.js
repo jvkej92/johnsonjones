@@ -20,7 +20,6 @@ elixir(function(mix) {
         .browserSync({proxy: 'johnsonjonesgroup.test'});
     mix.version('css/' + theme + '.css');
     mix.scripts([
-        'wow.js',
         'slick.js',
         'animations.js',
         'heroHeight.js',
