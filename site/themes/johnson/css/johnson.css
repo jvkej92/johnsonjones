@@ -903,17 +903,6 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   bottom: 0;
 }
 
-.parallax_cover {
-  background: #2D112B;
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 2000px;
-  z-index: 2;
-}
-
 .parallax_layer_0 {
   transform: translateZ(-150px) scale(2.5);
 }

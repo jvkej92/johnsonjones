@@ -181,17 +181,6 @@
     }
 }
 
-.parallax_cover {
-    background: #2D112B;
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 2000px;
-    z-index: 2;
-}
-
 $parallax_layers: 3;
 
 @for $i from 0 through $parallax_layers {
