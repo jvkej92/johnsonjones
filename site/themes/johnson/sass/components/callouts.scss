@@ -59,13 +59,9 @@
 }
 
 .callout-content h1 {
-    @include for-desktop-up{
-        font-size: 2rem;
-    }
-    @include for-phone-only{
-        font-size: 3.7rem;
-    }
-    font-size: 3.3rem;
+    font-size: 32px;
+    line-height: 1.7;
+    width: 70%;
     padding-bottom: 32px;
 }
 

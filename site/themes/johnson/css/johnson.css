@@ -643,20 +643,10 @@ p.card-content {
 }
 
 .callout-content h1 {
-  font-size: 3.3rem;
+  font-size: 32px;
+  line-height: 1.7;
+  width: 70%;
   padding-bottom: 32px;
-}
-
-@media (min-width: 1224px) {
-  .callout-content h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .callout-content h1 {
-    font-size: 3.7rem;
-  }
 }
 
 .callout-content p {
