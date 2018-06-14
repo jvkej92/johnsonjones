@@ -894,6 +894,7 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
+  margin-left: -5px;
 }
 
 .parallax_layer_0 {
