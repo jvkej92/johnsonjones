@@ -888,6 +888,7 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
   bottom: 0;
   left: 0;
   margin: auto;
+  width: 100vw;
 }
 
 .parallax_group {
@@ -938,6 +939,18 @@ a.plain-link:hover, .footer-nav-item > a.nav-link:hover {
 
 .callout {
   width: 100%;
+}
+
+.parallax_btn {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 240px;
+  padding: 32px 8px;
+  line-height: 0;
+  transform: translateZ(-1px) scale(2);
 }
 
 .jumbotron {

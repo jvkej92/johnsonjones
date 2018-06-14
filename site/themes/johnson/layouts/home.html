@@ -48,19 +48,19 @@
                     <h1 class="headline">Change the way you think about
                         <span class="cycle"></span>
                     </h1>
-                    <a href="{{ link | url or "/audit"}}" class="btn btn-primary my">{{buttonText or "Get Your Free Audit"}}</a>
                 </div>
             </div>
+            <a href="{{ link | url or "/audit"}}" class="btn btn-primary my parallax_btn parallax_layer">{{buttonText or "Get Your Free Audit"}}</a>
         </div>
         <div class="parallax_group" style="z-index: 1;">
             <div class="row parallax-content">
-                <div class="col-10 jumbotron" style="margin:{{ foreach:margins }} {{ value }}{{ /foreach:margins }}; padding:{{ foreach:padding }} {{ value }}{{ /foreach:padding }};">
+                <div class="col-10 jumbotron">
                     <h3 class="center">We provide companies with leads, by adding digital marketing systems and radically improving communications.</h3>
                 </div>
 
                 <div class="col-10 justify-between pb">
 
-                    <div class="col-6" style="margin:  32px  0px  64px  0px ; padding:     ;">
+                    <div class="col-6" style="margin:  32px  0px  64px  0px ; ">
                         <h4>Full Service Digital Marketing + Creative</h4>
                         <p>We all know marketing your business online is no longer optional, but with busy schedules it can
                             be hard to find the time. Web design, email marketing, social media, advertising, ect... We’ve
@@ -68,7 +68,7 @@
 
                     </div>
 
-                    <div class="col-6" style="margin:  32px  0px  64px  0px ; padding:     ;">
+                    <div class="col-6" style="margin:  32px  0px  64px  0px ; ">
                         <h4>Integrated With Your Team</h4>
                         <p>In-house marketers wear a lot of hats, but no single person can do everything effectively. Let us
                             make you look good by sharing the responsibilities, and bridging the gap between marketing and
@@ -233,7 +233,7 @@
                                 </li>
                                 <li class="accordian-list" data-model-item="retention">
                                     <p class="accordian-list-heading accordion-active">Retention</p>
-                                    <p class="accordian-list-content" style="">Create repeat customers. It is a lot cheaper to keep a customer than to acquire a new
+                                    <p class="accordian-list-content">Create repeat customers. It is a lot cheaper to keep a customer than to acquire a new
                                         one. It’s even better when current customers refer you to new ones.Things like follow
                                         up communication or promotional campaigns can help turn a customer into a loyal fan
                                         who will promote your brand. This brings in new visitors and starts the cycle over
@@ -259,11 +259,11 @@
                             <span class="heading-divider"></span>
                         </div>
                     </div>
-                    <div class="col-10 jumbotron" style="margin:; padding:;">
+                    <div class="col-10 jumbotron" >
                         <h3 class="">Marketing solutions tailored to you. Whether you need us for a day or a year.</h3>
                     </div>
                     <div class="col-10 justify-between pb">
-                        <div class="col-6" style="margin: ; padding: ;">
+                        <div class="col-6" >
                             <h4>Full Service</h4>
                             <p>The full service pricing provides untilmited acces to our full digital marketing and creative
                                 team. The average company that works with us invests 5% of gross revenue to maintain, and
@@ -271,7 +271,7 @@
                                 have the highest rate of return.</p>
 
                         </div>
-                        <div class="col-6" style="margin: ; padding: ;">
+                        <div class="col-6" >
                             <h4>A La Carte</h4>
                             <p>For clients that run their own marketing or only need help in specific areas, we offer flat rate
                                 pricing for each of our services.</p>

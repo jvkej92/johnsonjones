@@ -6,3 +6,11 @@ local/cache/*
 local/storage/*
 local/temp/*
 installer.php
+dashboard
+webalizer
+xampp
+bitnami.css
+favicon.ico
+module_table_bottom.png
+module_table_top.png
+applications.html
